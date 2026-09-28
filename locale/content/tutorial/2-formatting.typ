@@ -19,9 +19,9 @@
   en: [
     So far, you have written a report with some text, a few equations and images. However, it still looks very plain. Your teaching assistant does not yet know that you are using a new typesetting system, and you want your report to fit in with the other student's submissions. In this chapter, we will see how to format your report using Typst's styling system.
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    到目前为止，您已经写了一份包含一些文本、一些数学公式和图像的报告。但是，它看起来仍然很朴素。您的助教还不知道您正在使用新的排版系统，并且您希望您的报告与其他学生提交的报告外观上一致。在本章中，我们将了解如何使用Typst的样式系统来格式化你的报告。
+    之前您已经写了一份报告，包含若干文本、公式和图片，但它看起来还很朴素。您的助教还不知道您在使用新的排版系统，而您希望自己的报告与其他学生的提交在外观上一致。本章我们将学习使用Typst的样式系统，并设置报告的格式。
   ],
 )
 
@@ -30,9 +30,9 @@
   en: [
     As we have seen in the previous chapter, Typst has functions that _insert_ content (e.g. the @image function) and others that _manipulate_ content that they received as arguments (e.g. the @align function). The first impulse you might have when you want, for example, to change the font, could be to look for a function that does that and wrap the complete document in it.
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    正如我们在上一章中看到的，Typst具有_插入_内容块的函数（例如@image\函数），以及其他将内容块作为参数接收的_操作_函数（例如@align\函数）。您可能第一个想法是，例如，为了报告的文本左右对齐（justify），您可能会寻找一个执行此操作的函数并将整个文稿包装在其中。
+    如前一章所述，Typst既有函数单纯向文档_插入_内容块（如@image），也有函数从参数接收内容块并_处理_之（如@figure）。想更改字体时，您的第一反应可能是找到相应函数并把整篇文档套进去，像下面这样。
   ],
 )
 
@@ -58,19 +58,25 @@
 
     Fortunately, Typst has a more elegant solution. With _set rules,_ you can apply style properties to all occurrences of some kind of content. You write a set rule by entering the `{set}` keyword, followed by the name of the function whose properties you want to set, and a list of arguments in parentheses.
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    等等，函数的所有参数不应该在括号内指定吗？为什么在圆括号 _后面_ 有第二组方括号组成的内容块？  答案是，由于将内容块传递给函数在 Typst 中非常常见，因此它有着特殊的语法：  无需将内容块放在参数列表中，而是可以直接将其写在方括号中，并放在普通参数之后，从而节省标点符号。
+    等等，函数的参数不应该都填在圆括号中吗？为何圆括号_后面_又有一对方括号包裹的内容块？答案是，由于Typst中经常要将内容块传给函数，因此它有特殊语法：方括号包裹的内容块，可直接放在普通参数后传给函数。与将内容块放在参数列表中相比，这样能少写几个标点符号。
+
+    【译注】这其实只是一个语法糖，即 `{fn(…, [X], [Y], [Z])}` 可简写为 `{fn(…)[X][Y][Z]}`，其中`fn`是任意函数，`{[X], [Y], [Z]}`是内容块参数，其余参数按普通填法填在`…`处。
+
+    如上所示，这种写法确实有效，@text\函数成功修改了里面所有文本的字体。不过这种方法要将文档套在无数函数中，到处重复选用的样式，十分麻烦。
+
+    好在Typst有更优雅的解决方案。利用_set规则_，您可以将样式设置应用于某类内容的所有实例。编写set规则的方法是先输入`{set}`关键字，再跟上要设置的函数的名称，然后在圆括号中填写要设置的参数。
 
     #info[
-      译者注：这其实只是一个语法糖，即任何 `fn(...)[XXX][YYY][ZZZ]`，都会被自动转成 `fn(..., [XXX], [YYY], [ZZZ])`。
+      【译注】用Typst写中文一般需要设置中文字体，否则随机选出的中文字体可能非常魔幻，因为Typst内置字体不含汉字。对于简单需求，可如下设置，这会启用中文排版规则并设置字体为思源宋体。
 
-      所以你可以对任意一个函数使用，包括你自己的自定义函数，只要在转换后的结果符合函数入参要求即可。
+      ```typ
+      #set text(lang: "zh", font: "Noto Serif CJK SC")
+      ```
+
+      如果遇到问题，或有中英文分设字体等复杂需求，请参考中文社区导航「#link("https://typst-doc-cn.github.io/guide/FAQ/install-fonts.html")[如何设置（中文）字体]」。
     ]
-
-    如上所示，这个语法是有效的。@par 函数左右对齐了里面的所有段落。  但是，将文稿包装在无数的函数中，并选择地就地应用样式，这很快就会变得麻烦且复杂。
-
-    幸运的是，Typst 有一个更优雅的解决方案。  使用 _Set 规则_ ，您可以将样式属性应用于某类内容块的所有实例。  通过输入 `{set}` 关键字编写 Set 规则，后面跟随着你要设置属性的函数的名称，  并在括号中输入你需要的新默认参数列表。
   ],
 )
 
@@ -97,27 +103,27 @@ water).
 
       Set rules can be conceptualized as setting default values for some of the parameters of a function for all future uses of that function.
     ],
-    zh-status: "need proofread",
+    zh-status: "proofread",
     zh: [
-      想以更深层的方式了解这里发生了什么吗？
+      用更技术的方式来说：
 
-      Set规则可以概念化为，为将来该函数的所有使用的某些参数设置默认值。
+      set规则给函数的参数设置默认值。此后再调用这一函数时，参数默认取set规则设置的值。
     ],
   )
 ]
 
 = #babel(
   en: short-or-long[Autocomplete][The autocomplete panel],
-  zh-status: "need proofread",
-  zh: [自动补全面板],
+  zh-status: "proofread",
+  zh: short-or-long[自动补全][自动补全面板],
 ) <autocomplete>
 #babel(
   en: [
     If you followed along and tried a few things in the app, you might have noticed that always after you enter a `#` character, a panel pops up to show you the available functions, and, within an argument list, the available parameters. That's the autocomplete panel. It can be very useful while you are writing your document: You can apply its suggestions by hitting the Return key or navigate to the desired completion with the arrow keys. The panel can be dismissed by hitting the Escape key and opened again by typing `#` or hitting #kbd("Ctrl") + #kbd("Space"). Use the autocomplete panel to discover the right arguments for functions. Most suggestions come with a small description of what they do.
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    如果您按照操作并在App中尝试了一些操作，您可能已经注意到，在输入`#`字符后，总是会弹出一个面板，向您显示可用函数，并在参数列表中显示可用参数。这是自动补全面板。它在编写文档时非常有用：您可以通过按Return键或使用箭头键导航到所需的补全来应用该建议。面板可以通过按Esc键关闭，然后通过输入`#`或按 #kbd("Ctrl") + #kbd("Space") 再次打开。使用自动补全面板去掌握函数的正确参数。大多数建议都附有对它们所做的事情的简短描述。
+    如果您跟着在应用里操作了，那么可能已经注意到，输入`#`字符会弹出一个面板展示可用函数，该面板在参数列表中还会显示可用参数。这就是自动补全面板。它在写作时非常有用：按回车键应用补全建议，按方向键切换要应用的补全。按 #kbd("Esc") 键关闭面板，关闭后可再输入`#`或按 #kbd("Ctrl") + #kbd("Space") 打开。善用自动补全面板查找要用的函数参数。大多数补全建议还附有简短的功能说明。
   ],
 )
 
@@ -127,7 +133,11 @@ water).
   shadow: false,
 )
 
-= #babel(en: short-or-long[Page Setup][Set up the page], zh-status: "need proofread", zh: [设置页面]) <page-setup>
+= #babel(
+  en: short-or-long[Page Setup][Set up the page],
+  zh-status: "proofread",
+  zh: short-or-long[页面版式][设置页面版式],
+) <page-setup>
 #babel(
   en: [
     Back to set rules: When writing a rule, you choose the function depending on what type of element you want to style. Here is a list of some functions that are commonly used in set rules:
@@ -142,19 +152,19 @@ water).
 
     Let's add a few more styles to our document. We want larger margins and a serif font. For the purposes of the example, we'll also set another page size.
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    回到Set规则：编写规则时，您可以根据要设置样式的元素类型来选择函数。以下是Set规则中常用的一些函数的列表：
+    回到set规则：规则用什么函数取决于要给什么元素设置样式。以下列出了set规则常用的函数：
 
-    - @text\用于设置文本的字体、大小、颜色和其他属性
-    - @page\用于设置页面大小、边距、页眉、启用栏和页脚
-    - @par\用于对齐段落、设置行距等
-    - @heading\用于设置标题的外观与启用编号
-    - @document\用于设置PDF输出中包含的元数据，例如标题和作者
+    - @text——设置文本的字体、字号、颜色等属性
+    - @page——设置页面尺寸、边距、页眉页脚、分栏数量
+    - @par——启用两端对齐、设置行距等
+    - @heading——设置章节标题样式、启用编号
+    - @document——设置PDF输出包含的元数据，例如全文标题和作者
 
-    并非所有函数参数都可以设置。通常，只能设置告诉函数_如何_做某事的参数，而不能设置告诉函数_做什么_的参数。函数参考页指明了哪些参数是可以应用Set规则的。
+    并非所有函数参数都能用set规则。通常，决定函数_怎样做_某事的参数可用set规则，而决定函数_做什么_的参数用不了set规则。在参考手册中，各函数页面会标注哪些参数可用set规则。
 
-    让我们向文档添加更多样式，我们想要更大的边距和衬线字体。出于示例的目的，我们还将设置另一个页面大小。
+    让我们向文档添加更多样式。我们想要加大边距并使用衬线字体。出于示例的目的，我们还将设置另一种页面尺寸。
   ],
 )
 
@@ -213,32 +223,40 @@ behaviour of these natural structures.
 
     Finally, we have bottom aligned our image by adding a vertical alignment to our center alignment. Vertical and horizontal alignments can be combined with the `{+}` operator to yield a 2D alignment.
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    这里有几点需要注意。
+    这里有几点需要解释。
 
-    首先是@page\的Set规则，它接收两个参数：页面大小和页面边距。页面大小为字符串，Typst接受@page.paper[许多标准页面大小]，但您也可以指定自定义页面大小。边距为一个@dictionary[字典]，字典是键值对的集合。在本例中，键为`x`和`y`，值分别为水平边距和垂直边距。我们还可以通过传递带有键`{left}`、`{right}`、`{top}`和`{bottom}`的字典来为每边指定单独的边距。
+    首先是@page\的set规则，它接收两个参数：页面尺寸和边距。页面尺寸是个字符串，Typst接受@page.paper[许多标准页面尺寸]，但您也可以自行定制。页边距用@dictionary[字典]指定，字典是键值对的集合。在本例中，键为`x`和`y`，而值分别为水平和竖直边距。我们还可以给每条边单独指定边距，方法是把字典的键改为`{left}`、`{right}`、`{top}`和`{bottom}`。
 
-    其次是@text\的Set规则。在这里，我们将字体大小设置为`{10pt}`，将字体设置为`{"NewComputerModern"}`。Typst App带有许多字体，您可以在您的文档自主尝试。当您在输入`text`函数的`font`参数时，您可以在自动补全面板中发现所有可用的字体。
+    其次是@text\的set规则。此处将字号设置为`{10pt}`，将字体设置为`{"New Computer Modern"}`。Typst在线应用附带许多字体，您可在文档中随意尝试。您输入`text`函数的`font`参数时，可利用自动补全面板搜索可用字体。
 
-    我们还设置了行间距（又名行距）：它被指定为@length[length]值，我们使用`em`单位来指定相对于字体大小的行距：`{1em}`相当于当前字体大小（默认为`{11pt}`）。
+    接着我们设置了相邻两行的间距（即行距leading）：它按@length[长度]设定，可用`em`单位相对字号指定：`{1em}`相当于当前字号的尺寸（默认为`{11pt}`）。
 
-    最后，我们通过加入中心对齐和垂直对齐来对图像进行底部对齐。垂直和水平对齐可以与`{+}`运算符结合使用，以生成2D对齐。
+    最后，我们让图片对齐到底部，方法是把竖直方向的对齐加到水平方向的居中对齐上。竖直和水平对齐可用`{+}`运算符结合使用，表示二维对齐。
+
+    【译注】以上前三点都涉及中文特色，下面倒着补充一下。
+
+    - *行距与`em`：*Typst的行距模型默认按照西文习惯，用于中文会显得较挤；如想更接近中文习惯，可设置 `[#set text(top-edge: "ascender", bottom-edge: "descender")]`。详见中文社区导航「#link("https://typst-doc-cn.github.io/guide/FAQ/par-leading.html")[行距 leading 是什么距离？文字外框的计算方式？]」。此外，`{1em}`相当于一个汉字的宽度。
+
+    - *字号的号数制：*中文习惯用号数制，最常用的五号一般对应`{10.5pt}`，次常用的小四一般对应`{12pt}`。不过各家号数制并不统一，Typst也不支持；需要时请参考#link("https://typst.app/universe/package/pointless-size")[pointless-size]中的表格按`pt`点数指定。
+
+    - *版心宽度与页边距：*中文一般要求每行能排下整数个汉字，所以更习惯设置版心宽度，而间接余出版心左右的边距。这种需求可变通实现，例如 `[#set page(margin: (x: (100% - 42em) / 2))]` 表示每行42字，左右边距等宽#footnote[`{100%}`表示纸张全宽，`{42em}`表示42个汉字的宽度，二者之差的一半即为`page`函数所需水平边距。]。
   ],
 )
 
 = #babel(
   en: short-or-long[Sophistication][A hint of sophistication],
-  zh-status: "need proofread",
-  zh: [更复杂一点],
+  zh-status: "proofread",
+  zh: [精致一点],
 ) <sophistication>
 #babel(
   en: [
     To structure our document more clearly, we now want to number our headings. We can do this by setting the `numbering` parameter of the @heading function.
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    为了更清楚地组织我们的文档，我们现在要对标题进行编号。  我们可以通过设置 @heading 函数的 `numbering` 参数来做到这一点。
+    为了更清楚地组织我们的文档，现在要对章节标题编号，方法是设置@heading\函数的`numbering`参数。
   ],
 )
 
@@ -260,9 +278,11 @@ behaviour of these natural structures.
   en: [
     We specified the string `{"1."}` as the numbering parameter. This tells Typst to number the headings with arabic numerals and to put a dot between the number of each level. We can also use @numbering[letters, roman numerals, and symbols] for our headings:
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    我们指定了字符串`{"1."}`作为编号参数。这将告诉Typst用阿拉伯数字对标题进行编号，并在每个级别的编号之间放置一个点。我们还可以使用@numbering[字母，罗马数字和符号]作为编号：
+    我们向numbering参数填了字符串`{"1."}`，这会让Typst用阿拉伯数字对章节标题编号，并用句点分隔各级编号。我们还可以使用@numbering[字母、罗马数字和符号]作为编号：
+
+    【译注】若用`{"一、"}`编号，可能要参考中文社区导航「#link("https://typst-doc-cn.github.io/guide/FAQ/heading-numbering-space.html")[如何去掉标题的编号后面的空格]」。
   ],
 )
 
@@ -290,14 +310,14 @@ behaviour of these natural structures.
       Typst internally calls the `heading` function every time you write `[= Conclusion]`. In fact, the function call `[#heading[Conclusion]]` is equivalent to the heading markup above. Other markup elements work similarly, they are only _syntax sugar_ for the corresponding function calls.
     ]
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    此示例还使用@lorem\函数生成一些占位文本。此函数将一个数字作为参数，并生成许多_Lorem Ipsum_文本单词。
+    此示例还使用@lorem\函数生成一些占位文本。此函数接收一个数字作为参数，并从_Lorem Ipsum_乱数假文生成相应数量的单词。
 
     #info[
-      您是否想知道为什么标题和文本Set规则适用于所有文本和标题，即使它们不是使用函数生成的？
+      您是否好奇为何heading和text的set规则适用于所有文本和章节标题，尽管它们并不是用相应函数生成的？
 
-      Typst每次在你写`[=Conclusion]`时都会在内部调用`heading`函数。实际上，函数调用`[#heading[Conclusion]]`等效于上面的标题标记。其他标记元素的工作方式类似，它们仅仅是相应的函数调用的_语法糖_。
+      您写`[= Conclusion]`时，Typst会在内部调用`heading`函数。其实函数调用`[#heading[Conclusion]]`等效于上面的章节标题标记。其它标记元素也采用类似机制，它们仅仅是相应函数调用的_语法糖_。
     ]
   ],
 )
@@ -311,13 +331,13 @@ behaviour of these natural structures.
 
     With show rules, you can redefine how Typst displays certain elements. You specify which elements Typst should show differently and how they should look. Show rules can be applied to instances of text, many functions, and even the whole document.
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    你已经对这个结果很满意了。但最后一件事需要修改：您正在编写的报告是为一个更大的项目准备的，在该项目的名称旁始终应该附上项目的Logo，即使是仅有文字的单调文章。
+    您已经很满意这个结果了，但还有件事要改：您写的这份报告会用于一个更大的项目，每次提及其名称时，必须附上项目图标，即使在普通正文中也应如此。
 
-    你在考虑你的选择。您可以使用搜索和替换在Logo的每个实例之前添加`[#image("logo.svg")]`调用，这听起来很乏味。相反，你可以@function:defining-functions[定义一个自定义函数]，它将生成带有图像的Logo。但是，还有一种更简单的方法：
+    您在考虑有哪些实现方法。您可以使用查找替换，找到所有提及项目名称之处，并在每一处之前添加`[#image("logo.svg")]`调用——这听起来十分麻烦。换种方法，您也可以@function:defining-functions[自己定义一个函数]，专门生成图标图片。不过其实还有更简单的方法：
 
-    使用Show规则，您可以重新定义Typst显示某些元素的方式。您可以指定Typst应以不同的方式显示哪些元素以及它们的外观。显示规则可以应用于文本实例、许多函数，甚至整个文档。
+    使用show规则，您可以重新定义Typst显示某些元素的方式。您指定哪些元素要修改显示方式，再写明应如何显示。show规则可用于文本实例、各类函数，甚至整个文档。
   ],
 )
 
@@ -341,11 +361,11 @@ project of the Artos Institute.
 
     The calls to the first box function and the image function did not require a leading `#` because they were not embedded directly in markup. When Typst expects code instead of markup, the leading `#` is not needed to access functions, keywords, and variables. This can be observed in parameter lists, function definitions, and @reference:scripting[code blocks].
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    在这个例子中有很多新的语法：我们写入`{show}`关键字，后面跟一个我们希望以不同方式显示的文本字符串，以及一个冒号。然后，我们编写一个函数，该函数将应显示的内容作为参数输入，在这里，我们称该参数为`名称`。我们现在可以使用函数体中的`name`变量来输出名称`ArtosFlow`。我们的Show规则在名称前面添加Logo图像，并将结果放入`box`中，以防止Logo和名称之间出现换行符。图像也放在一个`box`中，这样它就不会出现在自己的段落中。
+    这个例子涉及几种新语法：我们写上`{show}`关键字，后面跟一个我们希望以不同方式显示的文本字符串，再跟一个冒号。然后，我们编写一个函数，该函数输入的参数是应显示的内容。此处我们称该参数为`name`，这样在函数体内就能用`name`变量输出项目名称ArtosFlow。我们这条show规则在名称前添加图标图片，并将结果放入box中，以防止在图标和名称之间断行。图片本身也放在box中，以避免它单独成段。
 
-    对第一个`box`函数和`image`函数的调用不需要前导`#`，因为它们没有直接嵌入到标记文本中。当Typst处于代码模式而不是标记模式时，不需要前导`#`来访问函数、关键字和变量。同样的现象也可以在函数参数列表、函数定义和@reference:scripting[代码块]中观察到。
+    调用第一个box函数和image函数时，不需要前导`#`，因为它们没有直接写在标记模式中。Typst处于脚本模式而非标记模式时，访问函数、关键字和变量不需要前导`#`。函数参数列表、函数定义和@reference:scripting[脚本块]中也是同样的道理。
   ],
 )
 
@@ -356,10 +376,10 @@ project of the Artos Institute.
 
     You have handed in your report. Your supervisor was so happy with it that they want to adapt it into a conference paper! In the next section, we will learn how to format your document as a paper using more advanced show rules and functions.
   ],
-  zh-status: "need proofread",
+  zh-status: "proofread",
   zh: [
-    您现在知道如何将基本格式应用于Typst文档。您学习了如何设置字体、对齐段落、更改页面尺寸以及使用Set规则向标题添加编号。您还学习了如何使用基本的Show规则来更改文本在整个文档中的显示方式。
+    现在您已知道如何设置Typst文档的基本格式。您学习了如何设置字体、两端对齐段落、更改页面尺寸，以及用set规则给章节标题编号。您还学习了如何使用基本的show规则来更改文本在整个文档中的显示方式。
 
-    您提交了报告。您的导师对此非常满意，他们想将其改编成会议论文！在下一节中，我们将学习如何使用更高级的Show规则和函数将文档格式化为论文。
+    您提交了报告。您的导师对此非常满意，想将其改编成会议论文！在下一节中，我们将学习如何使用更高级的show规则和函数将文档编排为论文。
   ],
 )

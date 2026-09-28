@@ -37,15 +37,11 @@
   [Typst],
   [翻译对象的名称，#link("https://typst-doc-cn.github.io/clreq/#chinese-name")[目前绝大多数人认为没有必要翻译]],
 
-  [web app],
+  [web app, Typst app],
   [在线应用],
   [#link("https://typst.app/docs/web-app/")[官方文档Web App]部分#link("https://github.com/typst/typst/pull/4688")[在Typst仓库以外]，目前本站不译],
 
   gap,
-
-  [content (block)],
-  [内容 / 内容块],
-  [出现于@tutorial:writing-in-typst:figure，详见@content],
 
   [set rule],
   [set规则],
@@ -61,9 +57,17 @@
   [标记 / 标记模式 / 标记文本],
   [详见@reference:syntax:modes],
 
+  [content (block)],
+  [内容 / 内容块],
+  [出现于@tutorial:writing-in-typst:figure，详见@content],
+
   [script, code (mode)],
   [脚本 / 脚本模式],
   [详见@reference:syntax:modes，应与@raw\区分],
+
+  [code block],
+  [脚本块],
+  [出现于@tutorial:formatting:show-rules，应与raw block区分],
 
   [math (mode)],
   [数学公式 / 数学模式],
@@ -187,6 +191,10 @@
   [run-in heading],
   [同行标题#footnote[有人译作「接排标题」，但接排一词有歧义：它有时与「另面起排」相对，表示章节标题与前一段在同一面，和run-in不是一个意思。]],
   [出现于@tutorial；参考#clreq("#types_of_headings")[§7.1.3.1 标题的种类]],
+
+  [font size],
+  [字号],
+  [出现于@tutorial:formatting:page-setup；即使不采用号数制，也称「字号」],
 
   [OpenType feature],
   [OpenType特性],
