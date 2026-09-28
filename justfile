@@ -16,7 +16,7 @@ setup: && resetup
     set -euxo pipefail
 
     mkdir -p target && cd target
-    git clone --depth 1 --no-checkout --filter="tree:0" https://github.com/typst/typst
+    git clone --depth 1 --no-checkout --filter="tree:0" --no-tags https://github.com/typst/typst
 
     cd typst
     git sparse-checkout init
