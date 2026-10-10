@@ -29,7 +29,7 @@ index c1252dac94..9d211aa423 100644
  
  // Displays an informational callout.
 diff --git a/docs/components/category.typ b/docs/components/category.typ
-index 67056904b1..3170433c7b 100644
+index 000ea44b83..885fdc2afe 100644
 --- a/docs/components/category.typ
 +++ b/docs/components/category.typ
 @@ -1,3 +1,4 @@
@@ -78,7 +78,7 @@ index 67056904b1..3170433c7b 100644
      raw(lang: "typc", repr(param.default))
    }
  
-@@ -222,7 +216,7 @@
+@@ -223,7 +217,7 @@
      show raw.where(lang: "example"): example.with(folding: true)
      set par(spacing: 1em)
      heading-offset(2, prose-styling(
@@ -87,7 +87,7 @@ index 67056904b1..3170433c7b 100644
        base-target: param-label,
      ))
    }
-@@ -241,12 +235,12 @@
+@@ -242,12 +236,12 @@
              } else {
                html.code(class: "typ-str", "\"" + variant + "\"")
              },
@@ -102,7 +102,7 @@ index 67056904b1..3170433c7b 100644
        } else {
          t
        }
-@@ -316,7 +310,7 @@
+@@ -317,7 +311,7 @@
  
    if info.since != none {
      gap
@@ -111,7 +111,7 @@ index 67056904b1..3170433c7b 100644
    } else {
      panic("missing `since` for " + repr(info))
    }
-@@ -332,12 +326,10 @@
+@@ -333,12 +327,10 @@
  
    if info.deprecation != none {
      gap
@@ -128,7 +128,7 @@ index 67056904b1..3170433c7b 100644
    }
  }
  
-@@ -367,15 +359,11 @@
+@@ -368,15 +360,11 @@
    set text(0.75em)
    if info.element {
      gap
@@ -146,7 +146,7 @@ index 67056904b1..3170433c7b 100644
    }
    if binding-info != none {
      definition-info(binding-info)
-@@ -442,7 +430,7 @@
+@@ -444,7 +432,7 @@
  
    show raw.where(lang: "example"): example.with(folding: true, open: true)
    prose-styling(
@@ -155,7 +155,7 @@ index 67056904b1..3170433c7b 100644
      base-target: value,
    )
  }
-@@ -494,7 +482,7 @@
+@@ -497,7 +485,7 @@
  
    {
      show raw.where(lang: "example"): example.with(folding: true, open: true)
@@ -164,7 +164,7 @@ index 67056904b1..3170433c7b 100644
    }
  
    let params = info.params
-@@ -532,11 +520,8 @@
+@@ -535,11 +523,8 @@
    let base-label = <constructor>
  
    let title = short-or-long(
@@ -178,7 +178,7 @@ index 67056904b1..3170433c7b 100644
    )
  
    {
-@@ -643,12 +628,11 @@
+@@ -647,12 +632,11 @@
  
    let section(label, heading-kinds, sentence-kinds, sentence-kind) = {
      let body = short-or-long(
@@ -196,7 +196,7 @@ index 67056904b1..3170433c7b 100644
      )
      labelled(heading(body), label)
    }
-@@ -723,19 +707,27 @@
+@@ -730,19 +714,27 @@
      description: "Documentation for the `" + name + "` function.",
    )
  
@@ -226,7 +226,7 @@ index 67056904b1..3170433c7b 100644
      )
    }
  
-@@ -825,7 +817,7 @@
+@@ -832,7 +824,7 @@
    let functions = info.definitions.filter(is-function)
    if functions.len() > 0 {
      let base-label = <functions>
@@ -235,7 +235,7 @@ index 67056904b1..3170433c7b 100644
      for (key, value) in functions {
        func-member(
          value,
-@@ -911,12 +903,12 @@
+@@ -918,12 +910,12 @@
      }
  
      outline(
@@ -250,7 +250,7 @@ index 67056904b1..3170433c7b 100644
      html.ul(class: "subgridded catgrid", lis.join())
    }
  }
-@@ -967,7 +959,11 @@
+@@ -974,7 +966,11 @@
      sub-categories.pairs().map(((k, v)) => ("category", k, v, stdx.describe(v)))
    }
  
@@ -263,7 +263,7 @@ index 67056904b1..3170433c7b 100644
  }
  
  // Show a list of category definitions built by `build-category-definitions()`.
-@@ -1046,7 +1042,10 @@
+@@ -1053,7 +1049,10 @@
  
        {
          let base-label = <parameters>
@@ -449,7 +449,7 @@ index 8ea050c623..b187e8739e 100644
    v(1fr)
  })
 diff --git a/docs/components/section.typ b/docs/components/section.typ
-index 58463d1257..748beb83db 100644
+index 48a227880a..ddc979ddde 100644
 --- a/docs/components/section.typ
 +++ b/docs/components/section.typ
 @@ -1,3 +1,4 @@
@@ -474,7 +474,7 @@ index 58463d1257..748beb83db 100644
  // One section in the paged documentation.
  #let paged-section(
    title-fmt: none,
-@@ -83,6 +94,7 @@
+@@ -84,6 +95,7 @@
    if not route.ends-with("/") {
      route += "/"
    }
@@ -482,7 +482,7 @@ index 58463d1257..748beb83db 100644
  
    if def-target != none {
      register-def(def-target, route, title: def-title)
-@@ -91,7 +103,7 @@
+@@ -92,7 +104,7 @@
    // Reset the tooltip counter for each page.
    tooltip-counter.update((0,))
  
@@ -491,7 +491,7 @@ index 58463d1257..748beb83db 100644
      // The index item is placed here so that all body text of this HTML document
      // is considered part of this index item.
      register-index-item(
-@@ -119,7 +131,8 @@
+@@ -121,7 +133,8 @@
        html.link(href: stdx.config.asset-base + "base.css", rel: "stylesheet")
        html.link(href: stdx.config.asset-base + "docs.css", rel: "stylesheet")
        html.script(type: "module", src: stdx.config.asset-base + "docs.js")
@@ -501,7 +501,7 @@ index 58463d1257..748beb83db 100644
      })
  
      html.body(class: classnames("docs", class), {
-@@ -131,19 +144,23 @@
+@@ -133,19 +146,23 @@
            class: "hamburger",
            icon(16, "hamburger-dark", "Open navigation"),
          )

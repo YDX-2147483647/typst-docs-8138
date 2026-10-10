@@ -1,7 +1,7 @@
 #import "/i18n-scope.typ": *
 #let live-item-data = resolve-lines((
   "TableElem": (
-    22,
+    23,
     [
       #babel(
         en: [
@@ -310,7 +310,7 @@
     ),
   ),
   "TableElem::children": (
-    35,
+    37,
     babel(
       en: [
         The contents of the table cells, plus any extra table lines specified
