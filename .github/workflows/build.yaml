@@ -65,17 +65,6 @@ jobs:
           path: target/typst-docs
           fail-on-cache-miss: true
 
-      - name: Run just fmt
-        run: |
-          just fmt
-          git add --all
-          git diff --exit-code --staged
-      - name: Run just save-patches
-        run: |
-          just save-patches
-          git add --all
-          git diff --exit-code --staged
-
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: scripts/babelize/
