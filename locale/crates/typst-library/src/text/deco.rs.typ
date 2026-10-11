@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "UnderlineElem": (
     6,
     [
@@ -16,7 +16,7 @@
     ],
   ),
   "UnderlineElem::stroke": (
-    14,
+    8,
     [
       #babel(
         en: [
@@ -37,7 +37,7 @@
     ],
   ),
   "UnderlineElem::offset": (
-    29,
+    15,
     [
       #babel(
         en: [
@@ -54,7 +54,7 @@
     ],
   ),
   "UnderlineElem::extent": (
-    39,
+    10,
     [
       #babel(
         en: [
@@ -71,7 +71,7 @@
     ],
   ),
   "UnderlineElem::evade": (
-    49,
+    10,
     [
       #babel(
         en: [
@@ -87,7 +87,7 @@
     ],
   ),
   "UnderlineElem::background": (
-    59,
+    10,
     [
       #babel(
         en: [
@@ -103,7 +103,7 @@
     ],
   ),
   "UnderlineElem::body": (
-    69,
+    10,
     babel(
       en: [
         The content to underline.
@@ -111,7 +111,7 @@
     ),
   ),
   "OverlineElem": (
-    74,
+    5,
     [
       #babel(
         en: [
@@ -126,7 +126,7 @@
     ],
   ),
   "OverlineElem::stroke": (
-    82,
+    8,
     [
       #babel(
         en: [
@@ -148,7 +148,7 @@
     ],
   ),
   "OverlineElem::offset": (
-    98,
+    16,
     [
       #babel(
         en: [
@@ -165,7 +165,7 @@
     ],
   ),
   "OverlineElem::extent": (
-    108,
+    10,
     [
       #babel(
         en: [
@@ -182,7 +182,7 @@
     ],
   ),
   "OverlineElem::evade": (
-    118,
+    10,
     [
       #babel(
         en: [
@@ -203,7 +203,7 @@
     ],
   ),
   "OverlineElem::background": (
-    133,
+    15,
     [
       #babel(
         en: [
@@ -219,7 +219,7 @@
     ],
   ),
   "OverlineElem::body": (
-    143,
+    10,
     babel(
       en: [
         The content to add a line over.
@@ -227,7 +227,7 @@
     ),
   ),
   "StrikeElem": (
-    148,
+    5,
     [
       #babel(
         en: [
@@ -242,7 +242,7 @@
     ],
   ),
   "StrikeElem::stroke": (
-    156,
+    8,
     [
       #babel(
         en: [
@@ -263,7 +263,7 @@
     ],
   ),
   "StrikeElem::offset": (
-    171,
+    15,
     [
       #babel(
         en: [
@@ -282,7 +282,7 @@
     ],
   ),
   "StrikeElem::extent": (
-    183,
+    12,
     [
       #babel(
         en: [
@@ -298,7 +298,7 @@
     ],
   ),
   "StrikeElem::background": (
-    192,
+    9,
     [
       #babel(
         en: [
@@ -314,7 +314,7 @@
     ],
   ),
   "StrikeElem::body": (
-    202,
+    10,
     babel(
       en: [
         The content to strike through.
@@ -322,7 +322,7 @@
     ),
   ),
   "HighlightElem": (
-    207,
+    5,
     [
       #babel(
         en: [
@@ -337,7 +337,7 @@
     ],
   ),
   "HighlightElem::fill": (
-    215,
+    8,
     [
       #babel(
         en: [
@@ -353,7 +353,7 @@
     ],
   ),
   "HighlightElem::stroke": (
-    225,
+    10,
     [
       #babel(
         en: [
@@ -370,7 +370,7 @@
     ],
   ),
   "HighlightElem::top_edge": (
-    236,
+    11,
     [
       #babel(
         en: [
@@ -388,7 +388,7 @@
     ],
   ),
   "HighlightElem::bottom_edge": (
-    248,
+    12,
     [
       #babel(
         en: [
@@ -406,7 +406,7 @@
     ],
   ),
   "HighlightElem::extent": (
-    260,
+    12,
     [
       #babel(
         en: [
@@ -421,7 +421,7 @@
     ],
   ),
   "HighlightElem::radius": (
-    268,
+    8,
     [
       #babel(
         en: [
@@ -438,11 +438,11 @@
     ],
   ),
   "HighlightElem::body": (
-    279,
+    11,
     babel(
       en: [
         The content that should be highlighted.
       ],
     ),
   ),
-)
+))

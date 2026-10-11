@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "ColumnsElem": (
     6,
     [
@@ -70,7 +70,7 @@
     ],
   ),
   "ColumnsElem::count": (
-    60,
+    54,
     babel(
       en: [
         The number of columns.
@@ -78,7 +78,7 @@
     ),
   ),
   "ColumnsElem::gutter": (
-    65,
+    5,
     [
       #babel(
         en: [
@@ -95,7 +95,7 @@
     ],
   ),
   "ColumnsElem::balanced": (
-    76,
+    11,
     [
       #babel(
         en: [
@@ -113,7 +113,7 @@
     ],
   ),
   "ColumnsElem::separator": (
-    88,
+    12,
     [
       #babel(
         en: [
@@ -165,7 +165,7 @@
     ],
   ),
   "ColumnsElem::body": (
-    134,
+    46,
     babel(
       en: [
         The content that should be layouted into the columns.
@@ -173,7 +173,7 @@
     ),
   ),
   "ColbreakElem": (
-    139,
+    5,
     [
       #babel(
         en: [
@@ -205,7 +205,7 @@
     ],
   ),
   "ColbreakElem::weak": (
-    164,
+    25,
     babel(
       en: [
         If `{true}`, the column break is skipped if the current column is
@@ -213,4 +213,4 @@
       ],
     ),
   ),
-)
+))

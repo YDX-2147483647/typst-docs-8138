@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "cbor": (
     10,
     [
@@ -77,7 +77,7 @@
     ],
   ),
   "cbor::source": (
-    76,
+    66,
     babel(
       en: [
         A path to a CBOR file or raw CBOR bytes.
@@ -85,7 +85,7 @@
     ),
   ),
   "cbor::encode": (
-    102,
+    26,
     babel(
       en: [
         Encode structured data into CBOR bytes.
@@ -93,11 +93,11 @@
     ),
   ),
   "cbor::encode::value": (
-    105,
+    3,
     babel(
       en: [
         Value to be encoded.
       ],
     ),
   ),
-)
+))

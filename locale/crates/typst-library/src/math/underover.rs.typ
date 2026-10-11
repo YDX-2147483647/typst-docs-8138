@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "UnderlineElem": (
     4,
     [
@@ -15,7 +15,7 @@
     ],
   ),
   "UnderlineElem::body": (
-    11,
+    7,
     babel(
       en: [
         The content above the line.
@@ -23,7 +23,7 @@
     ),
   ),
   "OverlineElem": (
-    16,
+    5,
     [
       #babel(
         en: [
@@ -37,7 +37,7 @@
     ],
   ),
   "OverlineElem::body": (
-    23,
+    7,
     babel(
       en: [
         The content below the line.
@@ -45,7 +45,7 @@
     ),
   ),
   "UnderbraceElem": (
-    28,
+    5,
     [
       #babel(
         en: [
@@ -59,7 +59,7 @@
     ],
   ),
   "UnderbraceElem::body": (
-    35,
+    7,
     babel(
       en: [
         The content above the brace.
@@ -67,7 +67,7 @@
     ),
   ),
   "UnderbraceElem::annotation": (
-    39,
+    4,
     babel(
       en: [
         The optional content below the brace.
@@ -75,7 +75,7 @@
     ),
   ),
   "OverbraceElem": (
-    44,
+    5,
     [
       #babel(
         en: [
@@ -89,7 +89,7 @@
     ],
   ),
   "OverbraceElem::body": (
-    51,
+    7,
     babel(
       en: [
         The content below the brace.
@@ -97,7 +97,7 @@
     ),
   ),
   "OverbraceElem::annotation": (
-    55,
+    4,
     babel(
       en: [
         The optional content above the brace.
@@ -105,7 +105,7 @@
     ),
   ),
   "UnderbracketElem": (
-    60,
+    5,
     [
       #babel(
         en: [
@@ -119,7 +119,7 @@
     ],
   ),
   "UnderbracketElem::body": (
-    67,
+    7,
     babel(
       en: [
         The content above the bracket.
@@ -127,7 +127,7 @@
     ),
   ),
   "UnderbracketElem::annotation": (
-    71,
+    4,
     babel(
       en: [
         The optional content below the bracket.
@@ -135,7 +135,7 @@
     ),
   ),
   "OverbracketElem": (
-    76,
+    5,
     [
       #babel(
         en: [
@@ -149,7 +149,7 @@
     ],
   ),
   "OverbracketElem::body": (
-    83,
+    7,
     babel(
       en: [
         The content below the bracket.
@@ -157,7 +157,7 @@
     ),
   ),
   "OverbracketElem::annotation": (
-    87,
+    4,
     babel(
       en: [
         The optional content above the bracket.
@@ -165,7 +165,7 @@
     ),
   ),
   "UnderparenElem": (
-    92,
+    5,
     [
       #babel(
         en: [
@@ -179,7 +179,7 @@
     ],
   ),
   "UnderparenElem::body": (
-    99,
+    7,
     babel(
       en: [
         The content above the parenthesis.
@@ -187,7 +187,7 @@
     ),
   ),
   "UnderparenElem::annotation": (
-    103,
+    4,
     babel(
       en: [
         The optional content below the parenthesis.
@@ -195,7 +195,7 @@
     ),
   ),
   "OverparenElem": (
-    108,
+    5,
     [
       #babel(
         en: [
@@ -209,7 +209,7 @@
     ],
   ),
   "OverparenElem::body": (
-    115,
+    7,
     babel(
       en: [
         The content below the parenthesis.
@@ -217,7 +217,7 @@
     ),
   ),
   "OverparenElem::annotation": (
-    119,
+    4,
     babel(
       en: [
         The optional content above the parenthesis.
@@ -225,7 +225,7 @@
     ),
   ),
   "UndershellElem": (
-    124,
+    5,
     [
       #babel(
         en: [
@@ -240,7 +240,7 @@
     ],
   ),
   "UndershellElem::body": (
-    132,
+    8,
     babel(
       en: [
         The content above the tortoise shell bracket.
@@ -248,7 +248,7 @@
     ),
   ),
   "UndershellElem::annotation": (
-    136,
+    4,
     babel(
       en: [
         The optional content below the tortoise shell bracket.
@@ -256,7 +256,7 @@
     ),
   ),
   "OvershellElem": (
-    141,
+    5,
     [
       #babel(
         en: [
@@ -271,7 +271,7 @@
     ],
   ),
   "OvershellElem::body": (
-    149,
+    8,
     babel(
       en: [
         The content below the tortoise shell bracket.
@@ -279,11 +279,11 @@
     ),
   ),
   "OvershellElem::annotation": (
-    153,
+    4,
     babel(
       en: [
         The optional content above the tortoise shell bracket.
       ],
     ),
   ),
-)
+))

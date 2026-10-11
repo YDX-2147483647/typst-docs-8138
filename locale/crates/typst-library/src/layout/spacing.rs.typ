@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "HElem": (
     6,
     [
@@ -45,7 +45,7 @@
     ],
   ),
   "HElem::amount": (
-    35,
+    29,
     babel(
       en: [
         How much spacing to insert.
@@ -53,7 +53,7 @@
     ),
   ),
   "HElem::weak": (
-    39,
+    4,
     [
       #babel(
         en: [
@@ -87,7 +87,7 @@
     ],
   ),
   "VElem": (
-    75,
+    36,
     [
       #babel(
         en: [
@@ -116,7 +116,7 @@
     ],
   ),
   "VElem::amount": (
-    97,
+    22,
     babel(
       en: [
         How much spacing to insert.
@@ -124,7 +124,7 @@
     ),
   ),
   "VElem::weak": (
-    101,
+    4,
     [
       #babel(
         en: [
@@ -145,4 +145,4 @@
       ```
     ],
   ),
-)
+))

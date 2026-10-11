@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "read": (
     8,
     [
@@ -25,7 +25,7 @@
     ],
   ),
   "read::path": (
-    26,
+    18,
     babel(
       en: [
         Path to a file.
@@ -33,7 +33,7 @@
     ),
   ),
   "read::encoding": (
-    28,
+    2,
     babel(
       en: [
         The encoding to read the file with.
@@ -42,4 +42,4 @@
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Tiling": (
     15,
     [
@@ -56,7 +56,7 @@
     ],
   ),
   "Tiling::construct": (
-    81,
+    66,
     [
       #babel(
         en: [
@@ -83,7 +83,7 @@
     ],
   ),
   "Tiling::construct::size": (
-    103,
+    22,
     babel(
       en: [
         The bounding box of each cell of the tiling, specified as a `(x, y)`
@@ -95,7 +95,7 @@
     ),
   ),
   "Tiling::construct::spacing": (
-    111,
+    8,
     [
       #babel(
         en: [
@@ -125,7 +125,7 @@
     ],
   ),
   "Tiling::construct::offset": (
-    135,
+    24,
     [
       #babel(
         en: [
@@ -167,7 +167,7 @@
     ],
   ),
   "Tiling::construct::angle": (
-    171,
+    36,
     [
       #babel(
         en: [
@@ -188,7 +188,7 @@
     ],
   ),
   "Tiling::construct::relative": (
-    186,
+    15,
     [
       #babel(
         en: [
@@ -238,11 +238,11 @@
     ],
   ),
   "Tiling::construct::body": (
-    230,
+    44,
     babel(
       en: [
         The content of each cell of the tiling.
       ],
     ),
   ),
-)
+))

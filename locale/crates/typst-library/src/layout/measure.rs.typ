@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "measure": (
     12,
     [
@@ -58,7 +58,7 @@
     ],
   ),
   "measure::width": (
-    53,
+    41,
     [
       #babel(
         en: [
@@ -81,7 +81,7 @@
     ],
   ),
   "measure::height": (
-    70,
+    17,
     babel(
       en: [
         The height available to layout the content.
@@ -91,11 +91,11 @@
     ),
   ),
   "measure::content": (
-    76,
+    6,
     babel(
       en: [
         The content whose size to measure.
       ],
     ),
   ),
-)
+))

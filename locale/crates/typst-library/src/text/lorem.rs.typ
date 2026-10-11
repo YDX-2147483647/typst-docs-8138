@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "lorem": (
     8,
     [
@@ -25,11 +25,11 @@
     ],
   ),
   "lorem::words": (
-    25,
+    17,
     babel(
       en: [
         The length of the blind text in words.
       ],
     ),
   ),
-)
+))

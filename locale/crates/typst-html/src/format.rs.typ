@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "HtmlFormat": (
     16,
     [
@@ -132,7 +132,7 @@
     ],
   ),
   "HtmlFormat::pretty": (
-    129,
+    113,
     babel(
       en: [
         Whether to pretty-print the produced HTML document.
@@ -143,7 +143,7 @@
     ),
   ),
   "HtmlElem": (
-    183,
+    54,
     [
       #babel(
         en: [
@@ -173,7 +173,7 @@
     ],
   ),
   "HtmlElem::tag": (
-    206,
+    23,
     babel(
       en: [
         The element's tag.
@@ -181,7 +181,7 @@
     ),
   ),
   "HtmlElem::attrs": (
-    210,
+    4,
     babel(
       en: [
         The element's HTML attributes.
@@ -189,7 +189,7 @@
     ),
   ),
   "HtmlElem::body": (
-    219,
+    9,
     babel(
       en: [
         The contents of the HTML element.
@@ -199,7 +199,7 @@
     ),
   ),
   "FrameElem": (
-    266,
+    47,
     babel(
       en: [
         An element that lays out its content as an inline SVG.
@@ -216,11 +216,11 @@
     ),
   ),
   "FrameElem::body": (
-    278,
+    12,
     babel(
       en: [
         The content that shall be laid out.
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Gradient": (
     19,
     [
@@ -263,7 +263,7 @@
     ],
   ),
   "Gradient::linear": (
-    245,
+    226,
     [
       #babel(
         en: [
@@ -284,7 +284,7 @@
     ],
   ),
   "Gradient::linear::stops": (
-    261,
+    16,
     babel(
       en: [
         The color @gradient:stops[stops] of the gradient.
@@ -302,7 +302,7 @@
     ),
   ),
   "Gradient::linear::space": (
-    274,
+    13,
     babel(
       en: [
         The color space in which to interpolate the gradient.
@@ -313,7 +313,7 @@
     ),
   ),
   "Gradient::linear::relative": (
-    281,
+    7,
     babel(
       en: [
         The @gradient:relativeness[relative placement] of the gradient.
@@ -324,7 +324,7 @@
     ),
   ),
   "Gradient::linear::dir": (
-    288,
+    7,
     babel(
       en: [
         The direction of the gradient.
@@ -332,7 +332,7 @@
     ),
   ),
   "Gradient::linear::angle": (
-    292,
+    4,
     babel(
       en: [
         The angle of the gradient.
@@ -340,7 +340,7 @@
     ),
   ),
   "Gradient::radial": (
-    327,
+    35,
     [
       #babel(
         en: [
@@ -379,7 +379,7 @@
     ],
   ),
   "Gradient::radial::stops": (
-    360,
+    33,
     babel(
       en: [
         The color @gradient:stops[stops] of the gradient.
@@ -390,7 +390,7 @@
     ),
   ),
   "Gradient::radial::space": (
-    366,
+    6,
     babel(
       en: [
         The color space in which to interpolate the gradient.
@@ -401,7 +401,7 @@
     ),
   ),
   "Gradient::radial::relative": (
-    373,
+    7,
     babel(
       en: [
         The @gradient:relativeness[relative placement] of the gradient.
@@ -412,7 +412,7 @@
     ),
   ),
   "Gradient::radial::center": (
-    380,
+    7,
     babel(
       en: [
         The center of the end circle of the gradient.
@@ -423,7 +423,7 @@
     ),
   ),
   "Gradient::radial::radius": (
-    387,
+    7,
     babel(
       en: [
         The radius of the end circle of the gradient.
@@ -434,7 +434,7 @@
     ),
   ),
   "Gradient::radial::focal_center": (
-    394,
+    7,
     babel(
       en: [
         The center of the focal circle of the gradient.
@@ -449,7 +449,7 @@
     ),
   ),
   "Gradient::radial::focal_radius": (
-    405,
+    11,
     babel(
       en: [
         The radius of the focal circle of the gradient.
@@ -462,7 +462,7 @@
     ),
   ),
   "Gradient::conic": (
-    457,
+    52,
     [
       #babel(
         en: [
@@ -491,7 +491,7 @@
     ],
   ),
   "Gradient::conic::stops": (
-    480,
+    23,
     babel(
       en: [
         The color @gradient:stops[stops] of the gradient.
@@ -502,7 +502,7 @@
     ),
   ),
   "Gradient::conic::angle": (
-    486,
+    6,
     babel(
       en: [
         The angle of the gradient.
@@ -510,7 +510,7 @@
     ),
   ),
   "Gradient::conic::space": (
-    490,
+    4,
     babel(
       en: [
         The color space in which to interpolate the gradient.
@@ -521,7 +521,7 @@
     ),
   ),
   "Gradient::conic::relative": (
-    497,
+    7,
     babel(
       en: [
         The @gradient:relativeness[relative placement] of the gradient.
@@ -532,7 +532,7 @@
     ),
   ),
   "Gradient::conic::center": (
-    504,
+    7,
     babel(
       en: [
         The center of the circle of the gradient.
@@ -543,7 +543,7 @@
     ),
   ),
   "Gradient::sharp": (
-    531,
+    27,
     [
       #babel(
         en: [
@@ -565,7 +565,7 @@
     ],
   ),
   "Gradient::sharp::steps": (
-    547,
+    16,
     babel(
       en: [
         The number of stops in the gradient.
@@ -573,7 +573,7 @@
     ),
   ),
   "Gradient::sharp::smoothness": (
-    549,
+    2,
     babel(
       en: [
         How much to smooth the gradient.
@@ -581,7 +581,7 @@
     ),
   ),
   "Gradient::repeat": (
-    628,
+    79,
     [
       #babel(
         en: [
@@ -601,7 +601,7 @@
     ],
   ),
   "Gradient::repeat::repetitions": (
-    642,
+    14,
     babel(
       en: [
         The number of times to repeat the gradient.
@@ -609,7 +609,7 @@
     ),
   ),
   "Gradient::repeat::mirror": (
-    644,
+    2,
     [
       #babel(
         en: [
@@ -629,7 +629,7 @@
     ],
   ),
   "Gradient::kind": (
-    718,
+    74,
     babel(
       en: [
         Returns the kind of this gradient.
@@ -637,7 +637,7 @@
     ),
   ),
   "Gradient::stops": (
-    728,
+    10,
     babel(
       en: [
         Returns the stops of this gradient.
@@ -645,7 +645,7 @@
     ),
   ),
   "Gradient::space": (
-    759,
+    31,
     babel(
       en: [
         Returns the mixing space of this gradient.
@@ -653,7 +653,7 @@
     ),
   ),
   "Gradient::relative": (
-    769,
+    10,
     babel(
       en: [
         Returns the relative placement of this gradient.
@@ -661,7 +661,7 @@
     ),
   ),
   "Gradient::angle": (
-    779,
+    10,
     babel(
       en: [
         Returns the angle of this gradient.
@@ -671,7 +671,7 @@
     ),
   ),
   "Gradient::center": (
-    791,
+    12,
     babel(
       en: [
         Returns the center of this gradient.
@@ -681,7 +681,7 @@
     ),
   ),
   "Gradient::radius": (
-    803,
+    12,
     babel(
       en: [
         Returns the radius of this gradient.
@@ -691,7 +691,7 @@
     ),
   ),
   "Gradient::focal_center": (
-    815,
+    12,
     babel(
       en: [
         Returns the focal-center of this gradient.
@@ -701,7 +701,7 @@
     ),
   ),
   "Gradient::focal_radius": (
-    827,
+    12,
     babel(
       en: [
         Returns the focal-radius of this gradient.
@@ -711,7 +711,7 @@
     ),
   ),
   "Gradient::sample": (
-    839,
+    12,
     babel(
       en: [
         Sample the gradient at a given position.
@@ -723,7 +723,7 @@
     ),
   ),
   "Gradient::sample::t": (
-    847,
+    8,
     babel(
       en: [
         The position at which to sample the gradient.
@@ -731,7 +731,7 @@
     ),
   ),
   "Gradient::samples": (
-    863,
+    16,
     babel(
       en: [
         Samples the gradient at multiple positions at once and returns the
@@ -740,11 +740,11 @@
     ),
   ),
   "Gradient::samples::ts": (
-    868,
+    5,
     babel(
       en: [
         The positions at which to sample the gradient.
       ],
     ),
   ),
-)
+))

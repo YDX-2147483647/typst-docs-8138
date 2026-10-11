@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "BundleFormat": (
     24,
     [
@@ -140,7 +140,7 @@
     ],
   ),
   "AssetElem": (
-    163,
+    139,
     [
       #babel(
         en: [
@@ -209,7 +209,7 @@
     ],
   ),
   "AssetElem::path": (
-    213,
+    50,
     babel(
       en: [
         The path in the bundle at which the asset will be placed.
@@ -220,7 +220,7 @@
     ),
   ),
   "AssetElem::data": (
-    220,
+    7,
     babel(
       en: [
         The raw data that will be written into the file at the specified path.
@@ -229,4 +229,4 @@
       ],
     ),
   ),
-)
+))

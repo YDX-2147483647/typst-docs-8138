@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "AccentElem": (
     20,
     [
@@ -22,7 +22,7 @@
     ],
   ),
   "AccentElem::base": (
-    34,
+    14,
     [
       #babel(
         en: [
@@ -37,7 +37,7 @@
     ],
   ),
   "AccentElem::accent": (
-    43,
+    9,
     [
       #babel(
         en: [
@@ -129,7 +129,7 @@
     ],
   ),
   "AccentElem::size": (
-    129,
+    86,
     [
       #babel(
         en: [
@@ -171,7 +171,7 @@
     ],
   ),
   "AccentElem::dotless": (
-    161,
+    32,
     [
       #babel(
         en: [
@@ -187,4 +187,4 @@
       ```
     ],
   ),
-)
+))

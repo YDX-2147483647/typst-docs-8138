@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "sqrt": (
     6,
     [
@@ -15,7 +15,7 @@
     ],
   ),
   "sqrt::radicand": (
-    14,
+    8,
     babel(
       en: [
         The expression to take the square root of.
@@ -23,7 +23,7 @@
     ),
   ),
   "RootElem": (
-    20,
+    6,
     [
       #babel(
         en: [
@@ -37,7 +37,7 @@
     ],
   ),
   "RootElem::index": (
-    27,
+    7,
     babel(
       en: [
         Which root of the radicand to take.
@@ -45,11 +45,11 @@
     ),
   ),
   "RootElem::radicand": (
-    31,
+    4,
     babel(
       en: [
         The expression to take the root of.
       ],
     ),
   ),
-)
+))

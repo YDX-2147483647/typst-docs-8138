@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Content": (
     39,
     [
@@ -61,7 +61,7 @@
     ],
   ),
   "Content::func": (
-    528,
+    489,
     babel(
       en: [
         The content's element function. This function can be used to create the
@@ -72,7 +72,7 @@
     ),
   ),
   "Content::has": (
-    537,
+    9,
     babel(
       en: [
         Whether the content has the specified field.
@@ -80,7 +80,7 @@
     ),
   ),
   "Content::has::field": (
-    541,
+    4,
     babel(
       en: [
         The field to look for.
@@ -88,7 +88,7 @@
     ),
   ),
   "Content::at": (
-    558,
+    17,
     babel(
       en: [
         Access the specified field on the content. Returns the default value if
@@ -98,7 +98,7 @@
     ),
   ),
   "Content::at::field": (
-    564,
+    6,
     babel(
       en: [
         The field to access.
@@ -106,7 +106,7 @@
     ),
   ),
   "Content::at::default": (
-    566,
+    2,
     babel(
       en: [
         A default value to return if the field does not exist.
@@ -114,7 +114,7 @@
     ),
   ),
   "Content::fields": (
-    575,
+    9,
     [
       #babel(
         en: [
@@ -131,7 +131,7 @@
     ],
   ),
   "Content::location": (
-    597,
+    22,
     babel(
       en: [
         The location of the content. This is only available on content returned
@@ -142,4 +142,4 @@
       ],
     ),
   ),
-)
+))

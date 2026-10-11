@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "ArtifactElem": (
     8,
     babel(
@@ -30,7 +30,7 @@
     ),
   ),
   "ArtifactElem::kind": (
-    33,
+    25,
     babel(
       en: [
         The artifact kind.
@@ -46,11 +46,11 @@
     ),
   ),
   "ArtifactElem::body": (
-    45,
+    12,
     babel(
       en: [
         The content that is an artifact.
       ],
     ),
   ),
-)
+))

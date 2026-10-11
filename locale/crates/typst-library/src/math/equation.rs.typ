@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "EquationElem": (
     20,
     [
@@ -45,7 +45,7 @@
     ],
   ),
   "EquationElem::block": (
-    59,
+    39,
     babel(
       en: [
         Whether the equation is displayed as a separate block.
@@ -53,7 +53,7 @@
     ),
   ),
   "EquationElem::numbering": (
-    63,
+    4,
     [
       #babel(
         en: [
@@ -74,7 +74,7 @@
     ],
   ),
   "EquationElem::number_align": (
-    77,
+    14,
     [
       #babel(
         en: [
@@ -97,7 +97,7 @@
     ],
   ),
   "EquationElem::supplement": (
-    94,
+    17,
     [
       #babel(
         en: [
@@ -122,7 +122,7 @@
     ],
   ),
   "EquationElem::alt": (
-    112,
+    18,
     [
       #babel(
         en: [
@@ -145,11 +145,11 @@
     ],
   ),
   "EquationElem::body": (
-    128,
+    16,
     babel(
       en: [
         The contents of the equation.
       ],
     ),
   ),
-)
+))

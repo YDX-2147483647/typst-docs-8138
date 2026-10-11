@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "SmallcapsElem": (
     3,
     [
@@ -62,7 +62,7 @@
     ],
   ),
   "SmallcapsElem::all": (
-    45,
+    42,
     [
       #babel(
         en: [
@@ -80,11 +80,11 @@
     ],
   ),
   "SmallcapsElem::body": (
-    56,
+    11,
     babel(
       en: [
         The content to display in small capitals.
       ],
     ),
   ),
-)
+))

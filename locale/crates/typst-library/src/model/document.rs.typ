@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "DocumentElem": (
     12,
     [
@@ -180,7 +180,7 @@
     ],
   ),
   "DocumentElem::path": (
-    148,
+    136,
     babel(
       en: [
         The path in the bundle at which the exported document will be placed.
@@ -193,7 +193,7 @@
     ),
   ),
   "DocumentElem::format": (
-    157,
+    9,
     babel(
       en: [
         Which format to export in.
@@ -206,7 +206,7 @@
     ),
   ),
   "DocumentElem::title": (
-    165,
+    8,
     babel(
       en: [
         The document's title. This is rendered as the title of the PDF viewer
@@ -226,7 +226,7 @@
     ),
   ),
   "DocumentElem::author": (
-    180,
+    15,
     babel(
       en: [
         The document's authors.
@@ -234,7 +234,7 @@
     ),
   ),
   "DocumentElem::description": (
-    183,
+    3,
     babel(
       en: [
         The document's description.
@@ -242,7 +242,7 @@
     ),
   ),
   "DocumentElem::keywords": (
-    186,
+    3,
     babel(
       en: [
         The document's keywords.
@@ -250,7 +250,7 @@
     ),
   ),
   "DocumentElem::date": (
-    189,
+    3,
     babel(
       en: [
         The document's creation date.
@@ -268,7 +268,7 @@
     ),
   ),
   "DocumentElem::body": (
-    202,
+    13,
     babel(
       en: [
         The content that makes up the document.
@@ -277,4 +277,4 @@
       ],
     ),
   ),
-)
+))

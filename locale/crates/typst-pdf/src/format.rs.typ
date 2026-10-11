@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "PdfFormat": (
     38,
     [
@@ -85,7 +85,7 @@ a11y-extras` #babel(en: [
     ],
   ),
   "PdfFormat::pages": (
-    103,
+    65,
     [
       #babel(
         en: [
@@ -127,7 +127,7 @@ a11y-extras` #babel(en: [
     ],
   ),
   "PdfFormat::standard": (
-    135,
+    32,
     [
       #babel(
         en: [
@@ -345,7 +345,7 @@ a11y-extras` #babel(en: [
     ],
   ),
   "PdfFormat::tagged": (
-    335,
+    200,
     babel(
       en: [
         Whether to produce a tagged PDF document.
@@ -357,7 +357,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "PdfFormat::pretty": (
-    343,
+    8,
     babel(
       en: [
         Whether to pretty-print the produced PDF document.
@@ -368,7 +368,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "PdfFormat::table_summary": (
-    369,
+    26,
     [
       #babel(
         en: [
@@ -419,7 +419,7 @@ a11y-extras` #babel(en: [
     ],
   ),
   "PdfFormat::table_summary::summary": (
-    414,
+    45,
     babel(
       en: [
 
@@ -427,7 +427,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "PdfFormat::table_summary::table": (
-    415,
+    1,
     babel(
       en: [
         The table.
@@ -435,7 +435,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "PdfFormat::header_cell": (
-    421,
+    6,
     [
       #babel(
         en: [
@@ -501,7 +501,7 @@ a11y-extras` #babel(en: [
     ],
   ),
   "PdfFormat::header_cell::level": (
-    481,
+    60,
     babel(
       en: [
         The nesting level of this header cell.
@@ -509,7 +509,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "PdfFormat::header_cell::scope": (
-    485,
+    4,
     babel(
       en: [
         What track of the table this header cell applies to.
@@ -517,7 +517,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "PdfFormat::header_cell::cell": (
-    489,
+    4,
     babel(
       en: [
         The table cell.
@@ -527,7 +527,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "PdfFormat::data_cell": (
-    498,
+    9,
     [
       #babel(
         en: [
@@ -578,7 +578,7 @@ a11y-extras` #babel(en: [
     ],
   ),
   "PdfFormat::data_cell::cell": (
-    543,
+    45,
     babel(
       en: [
         The table cell.
@@ -588,7 +588,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "AttachElem": (
-    872,
+    329,
     [
       #babel(
         en: [
@@ -624,7 +624,7 @@ a11y-extras` #babel(en: [
     ],
   ),
   "AttachElem::path": (
-    897,
+    25,
     babel(
       en: [
         The path of the file to be attached.
@@ -635,7 +635,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "AttachElem::data": (
-    912,
+    15,
     babel(
       en: [
         Raw file data, optionally.
@@ -645,7 +645,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "AttachElem::relationship": (
-    927,
+    15,
     babel(
       en: [
         The relationship of the attached file to the document.
@@ -655,7 +655,7 @@ a11y-extras` #babel(en: [
     ),
   ),
   "AttachElem::mime_type": (
-    932,
+    5,
     babel(
       en: [
         The MIME type of the attached file.
@@ -663,11 +663,11 @@ a11y-extras` #babel(en: [
     ),
   ),
   "AttachElem::description": (
-    938,
+    6,
     babel(
       en: [
         A description for the attached file.
       ],
     ),
   ),
-)
+))

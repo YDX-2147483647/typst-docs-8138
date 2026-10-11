@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Stroke": (
     12,
     [
@@ -58,7 +58,7 @@
     ],
   ),
   "Stroke::construct": (
-    82,
+    70,
     [
       #babel(
         en: [
@@ -84,7 +84,7 @@
     ],
   ),
   "Stroke::construct::paint": (
-    103,
+    21,
     babel(
       en: [
         The color or gradient to use for the stroke.
@@ -94,7 +94,7 @@
     ),
   ),
   "Stroke::construct::thickness": (
-    109,
+    6,
     babel(
       en: [
         The stroke's thickness.
@@ -104,7 +104,7 @@
     ),
   ),
   "Stroke::construct::cap": (
-    115,
+    6,
     babel(
       en: [
         How the ends of the stroke are rendered.
@@ -115,7 +115,7 @@
     ),
   ),
   "Stroke::construct::join": (
-    122,
+    7,
     babel(
       en: [
         How sharp turns are rendered.
@@ -126,7 +126,7 @@
     ),
   ),
   "Stroke::construct::dash": (
-    129,
+    7,
     [
       #babel(
         en: [
@@ -201,7 +201,7 @@
     ],
   ),
   "Stroke::construct::miter_limit": (
-    198,
+    69,
     [
       #babel(
         en: [
@@ -236,4 +236,4 @@
       ```
     ],
   ),
-)
+))

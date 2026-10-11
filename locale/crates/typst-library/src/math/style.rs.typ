@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "bold": (
     9,
     [
@@ -15,7 +15,7 @@
     ],
   ),
   "bold::body": (
-    16,
+    7,
     babel(
       en: [
         The content to style.
@@ -23,7 +23,7 @@
     ),
   ),
   "upright": (
-    22,
+    6,
     [
       #babel(
         en: [
@@ -37,7 +37,7 @@
     ],
   ),
   "upright::body": (
-    29,
+    7,
     babel(
       en: [
         The content to style.
@@ -45,7 +45,7 @@
     ),
   ),
   "italic": (
-    35,
+    6,
     babel(
       en: [
         Italic font style in math.
@@ -55,7 +55,7 @@
     ),
   ),
   "italic::body": (
-    40,
+    5,
     babel(
       en: [
         The content to style.
@@ -63,7 +63,7 @@
     ),
   ),
   "serif": (
-    46,
+    6,
     babel(
       en: [
         Serif (roman) font style in math.
@@ -73,7 +73,7 @@
     ),
   ),
   "serif::body": (
-    51,
+    5,
     babel(
       en: [
         The content to style.
@@ -81,7 +81,7 @@
     ),
   ),
   "sans": (
-    57,
+    6,
     [
       #babel(
         en: [
@@ -95,7 +95,7 @@
     ],
   ),
   "sans::body": (
-    64,
+    7,
     babel(
       en: [
         The content to style.
@@ -103,7 +103,7 @@
     ),
   ),
   "cal": (
-    70,
+    6,
     [
       #babel(
         en: [
@@ -124,7 +124,7 @@
     ],
   ),
   "cal::body": (
-    80,
+    10,
     babel(
       en: [
         The content to style.
@@ -132,7 +132,7 @@
     ),
   ),
   "scr": (
-    86,
+    6,
     [
       #babel(
         en: [
@@ -172,7 +172,7 @@
     ],
   ),
   "scr::body": (
-    115,
+    29,
     babel(
       en: [
         The content to style.
@@ -180,7 +180,7 @@
     ),
   ),
   "frak": (
-    121,
+    6,
     [
       #babel(
         en: [
@@ -194,7 +194,7 @@
     ],
   ),
   "frak::body": (
-    132,
+    11,
     babel(
       en: [
         The content to style.
@@ -202,7 +202,7 @@
     ),
   ),
   "mono": (
-    138,
+    6,
     [
       #babel(
         en: [
@@ -216,7 +216,7 @@
     ],
   ),
   "mono::body": (
-    145,
+    7,
     babel(
       en: [
         The content to style.
@@ -224,7 +224,7 @@
     ),
   ),
   "bb": (
-    151,
+    6,
     [
       #babel(
         en: [
@@ -243,7 +243,7 @@
     ],
   ),
   "bb::body": (
-    163,
+    12,
     babel(
       en: [
         The content to style.
@@ -251,7 +251,7 @@
     ),
   ),
   "display": (
-    169,
+    6,
     [
       #babel(
         en: [
@@ -267,7 +267,7 @@
     ],
   ),
   "display::body": (
-    178,
+    9,
     babel(
       en: [
         The content to size.
@@ -275,7 +275,7 @@
     ),
   ),
   "display::cramped": (
-    180,
+    2,
     babel(
       en: [
         Whether to impose a height restriction for exponents, like regular sub-
@@ -284,7 +284,7 @@
     ),
   ),
   "inline": (
-    190,
+    10,
     [
       #babel(
         en: [
@@ -301,7 +301,7 @@
     ],
   ),
   "inline::body": (
-    200,
+    10,
     babel(
       en: [
         The content to size.
@@ -309,7 +309,7 @@
     ),
   ),
   "inline::cramped": (
-    202,
+    2,
     babel(
       en: [
         Whether to impose a height restriction for exponents, like regular sub-
@@ -318,7 +318,7 @@
     ),
   ),
   "script": (
-    212,
+    10,
     [
       #babel(
         en: [
@@ -334,7 +334,7 @@
     ],
   ),
   "script::body": (
-    221,
+    9,
     babel(
       en: [
         The content to size.
@@ -342,7 +342,7 @@
     ),
   ),
   "script::cramped": (
-    223,
+    2,
     babel(
       en: [
         Whether to impose a height restriction for exponents, like regular sub-
@@ -351,7 +351,7 @@
     ),
   ),
   "sscript": (
-    233,
+    10,
     [
       #babel(
         en: [
@@ -368,7 +368,7 @@
     ],
   ),
   "sscript::body": (
-    243,
+    10,
     babel(
       en: [
         The content to size.
@@ -376,7 +376,7 @@
     ),
   ),
   "sscript::cramped": (
-    245,
+    2,
     babel(
       en: [
         Whether to impose a height restriction for exponents, like regular sub-
@@ -384,4 +384,4 @@
       ],
     ),
   ),
-)
+))

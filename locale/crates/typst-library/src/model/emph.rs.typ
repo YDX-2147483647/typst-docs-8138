@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "EmphElem": (
     3,
     [
@@ -37,11 +37,11 @@
     ],
   ),
   "EmphElem::body": (
-    28,
+    25,
     babel(
       en: [
         The content to emphasize.
       ],
     ),
   ),
-)
+))

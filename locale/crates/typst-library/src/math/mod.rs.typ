@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "ClassElem": (
     209,
     [
@@ -27,7 +27,7 @@
     ],
   ),
   "ClassElem::class": (
-    228,
+    19,
     babel(
       en: [
         The class to apply to the content.
@@ -35,11 +35,11 @@
     ),
   ),
   "ClassElem::body": (
-    232,
+    4,
     babel(
       en: [
         The content to which the class is applied.
       ],
     ),
   ),
-)
+))

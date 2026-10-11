@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "MetadataElem": (
     3,
     [
@@ -30,11 +30,11 @@
     ],
   ),
   "MetadataElem::value": (
-    25,
+    22,
     babel(
       en: [
         The value to embed into the document.
       ],
     ),
   ),
-)
+))

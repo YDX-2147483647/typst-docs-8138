@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "TitleElem": (
     7,
     [
@@ -33,7 +33,7 @@
     ],
   ),
   "TitleElem::body": (
-    32,
+    25,
     [
       #babel(
         en: [
@@ -53,4 +53,4 @@
       ```
     ],
   ),
-)
+))

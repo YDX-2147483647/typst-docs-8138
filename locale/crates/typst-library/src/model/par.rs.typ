@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "ParElem": (
     15,
     [
@@ -101,7 +101,7 @@
     ],
   ),
   "ParElem::leading": (
-    100,
+    85,
     [
       #babel(
         en: [
@@ -220,7 +220,7 @@
     ],
   ),
   "ParElem::spacing": (
-    213,
+    113,
     babel(
       en: [
         The spacing between paragraphs.
@@ -238,7 +238,7 @@
     ),
   ),
   "ParElem::justify": (
-    227,
+    14,
     babel(
       en: [
         Whether to justify text in its line.
@@ -259,7 +259,7 @@
     ),
   ),
   "ParElem::justification_limits": (
-    244,
+    17,
     [
       #babel(
         en: [
@@ -375,7 +375,7 @@
     ],
   ),
   "ParElem::linebreaks": (
-    354,
+    110,
     [
       #babel(
         en: [
@@ -405,7 +405,7 @@
     ],
   ),
   "ParElem::first_line_indent": (
-    377,
+    23,
     [
       #babel(
         en: [
@@ -457,7 +457,7 @@
     ],
   ),
   "ParElem::hanging_indent": (
-    423,
+    46,
     [
       #babel(
         en: [
@@ -473,7 +473,7 @@
     ],
   ),
   "ParElem::body": (
-    432,
+    9,
     babel(
       en: [
         The contents of the paragraph.
@@ -481,7 +481,7 @@
     ),
   ),
   "ParbreakElem": (
-    707,
+    275,
     [
       #babel(
         en: [
@@ -512,7 +512,7 @@
     ],
   ),
   "ParLine": (
-    737,
+    30,
     [
       #babel(
         en: [
@@ -582,7 +582,7 @@
     ],
   ),
   "ParLine::numbering": (
-    792,
+    55,
     [
       #babel(
         en: [
@@ -611,7 +611,7 @@
     ],
   ),
   "ParLine::number_align": (
-    815,
+    23,
     [
       #babel(
         en: [
@@ -637,7 +637,7 @@
     ],
   ),
   "ParLine::number_margin": (
-    835,
+    20,
     [
       #babel(
         en: [
@@ -665,7 +665,7 @@
     ],
   ),
   "ParLine::number_clearance": (
-    858,
+    23,
     [
       #babel(
         en: [
@@ -690,7 +690,7 @@
     ],
   ),
   "ParLine::numbering_scope": (
-    878,
+    20,
     [
       #babel(
         en: [
@@ -718,4 +718,4 @@
       ```
     ],
   ),
-)
+))

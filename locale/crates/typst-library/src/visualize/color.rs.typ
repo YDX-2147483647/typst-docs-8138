@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Color": (
     58,
     [
@@ -133,7 +133,7 @@
     ],
   ),
   "Color::MAP": (
-    236,
+    178,
     [
       #babel(
         en: [
@@ -251,7 +251,7 @@
     ],
   ),
   "Color::luma": (
-    344,
+    108,
     [
       #babel(
         en: [
@@ -273,7 +273,7 @@
     ],
   ),
   "Color::luma::lightness": (
-    360,
+    16,
     babel(
       en: [
         The lightness component.
@@ -281,7 +281,7 @@
     ),
   ),
   "Color::luma::alpha": (
-    363,
+    3,
     babel(
       en: [
         The alpha component.
@@ -289,7 +289,7 @@
     ),
   ),
   "Color::luma::color": (
-    366,
+    3,
     babel(
       en: [
         Alternatively: The color to convert to grayscale.
@@ -299,7 +299,7 @@
     ),
   ),
   "Color::oklab": (
-    394,
+    28,
     [
       #babel(
         en: [
@@ -333,7 +333,7 @@
     ],
   ),
   "Color::oklab::lightness": (
-    422,
+    28,
     babel(
       en: [
         The lightness component.
@@ -341,7 +341,7 @@
     ),
   ),
   "Color::oklab::a": (
-    425,
+    3,
     babel(
       en: [
         The a ("green/red") component.
@@ -349,7 +349,7 @@
     ),
   ),
   "Color::oklab::b": (
-    428,
+    3,
     babel(
       en: [
         The b ("blue/yellow") component.
@@ -357,7 +357,7 @@
     ),
   ),
   "Color::oklab::alpha": (
-    431,
+    3,
     babel(
       en: [
         The alpha component.
@@ -365,7 +365,7 @@
     ),
   ),
   "Color::oklab::color": (
-    434,
+    3,
     babel(
       en: [
         Alternatively: The color to convert to Oklab.
@@ -375,7 +375,7 @@
     ),
   ),
   "Color::oklch": (
-    454,
+    20,
     [
       #babel(
         en: [
@@ -408,7 +408,7 @@
     ],
   ),
   "Color::oklch::lightness": (
-    481,
+    27,
     babel(
       en: [
         The lightness component.
@@ -416,7 +416,7 @@
     ),
   ),
   "Color::oklch::chroma": (
-    484,
+    3,
     babel(
       en: [
         The chroma component.
@@ -424,7 +424,7 @@
     ),
   ),
   "Color::oklch::hue": (
-    487,
+    3,
     babel(
       en: [
         The hue component.
@@ -432,7 +432,7 @@
     ),
   ),
   "Color::oklch::alpha": (
-    490,
+    3,
     babel(
       en: [
         The alpha component.
@@ -440,7 +440,7 @@
     ),
   ),
   "Color::oklch::color": (
-    493,
+    3,
     babel(
       en: [
         Alternatively: The color to convert to Oklch.
@@ -450,7 +450,7 @@
     ),
   ),
   "Color::linear_rgb": (
-    518,
+    25,
     [
       #babel(
         en: [
@@ -481,7 +481,7 @@
     ],
   ),
   "Color::linear_rgb::red": (
-    543,
+    25,
     babel(
       en: [
         The red component.
@@ -489,7 +489,7 @@
     ),
   ),
   "Color::linear_rgb::green": (
-    546,
+    3,
     babel(
       en: [
         The green component.
@@ -497,7 +497,7 @@
     ),
   ),
   "Color::linear_rgb::blue": (
-    549,
+    3,
     babel(
       en: [
         The blue component.
@@ -505,7 +505,7 @@
     ),
   ),
   "Color::linear_rgb::alpha": (
-    552,
+    3,
     babel(
       en: [
         The alpha component.
@@ -513,7 +513,7 @@
     ),
   ),
   "Color::linear_rgb::color": (
-    555,
+    3,
     babel(
       en: [
         Alternatively: The color to convert to linear RGB(A).
@@ -523,7 +523,7 @@
     ),
   ),
   "Color::rgb": (
-    579,
+    24,
     [
       #babel(
         en: [
@@ -551,7 +551,7 @@
     ],
   ),
   "Color::rgb::red": (
-    601,
+    22,
     babel(
       en: [
         The red component.
@@ -559,7 +559,7 @@
     ),
   ),
   "Color::rgb::green": (
-    604,
+    3,
     babel(
       en: [
         The green component.
@@ -567,7 +567,7 @@
     ),
   ),
   "Color::rgb::blue": (
-    607,
+    3,
     babel(
       en: [
         The blue component.
@@ -575,7 +575,7 @@
     ),
   ),
   "Color::rgb::alpha": (
-    610,
+    3,
     babel(
       en: [
         The alpha component.
@@ -583,7 +583,7 @@
     ),
   ),
   "Color::rgb::hex": (
-    613,
+    3,
     [
       #babel(
         en: [
@@ -604,7 +604,7 @@
     ],
   ),
   "Color::rgb::color": (
-    627,
+    14,
     babel(
       en: [
         Alternatively: The color to convert to RGB(a).
@@ -614,7 +614,7 @@
     ),
   ),
   "Color::cmyk": (
-    651,
+    24,
     [
       #babel(
         en: [
@@ -646,7 +646,7 @@
     ],
   ),
   "Color::cmyk::cyan": (
-    677,
+    26,
     babel(
       en: [
         The cyan component.
@@ -654,7 +654,7 @@
     ),
   ),
   "Color::cmyk::magenta": (
-    680,
+    3,
     babel(
       en: [
         The magenta component.
@@ -662,7 +662,7 @@
     ),
   ),
   "Color::cmyk::yellow": (
-    683,
+    3,
     babel(
       en: [
         The yellow component.
@@ -670,7 +670,7 @@
     ),
   ),
   "Color::cmyk::key": (
-    686,
+    3,
     babel(
       en: [
         The key component.
@@ -678,7 +678,7 @@
     ),
   ),
   "Color::cmyk::color": (
-    689,
+    3,
     babel(
       en: [
         Alternatively: The color to convert to CMYK.
@@ -688,7 +688,7 @@
     ),
   ),
   "Color::hsl": (
-    708,
+    19,
     [
       #babel(
         en: [
@@ -717,7 +717,7 @@
     ],
   ),
   "Color::hsl::hue": (
-    731,
+    23,
     babel(
       en: [
         The hue angle.
@@ -725,7 +725,7 @@
     ),
   ),
   "Color::hsl::saturation": (
-    734,
+    3,
     babel(
       en: [
         The saturation component.
@@ -733,7 +733,7 @@
     ),
   ),
   "Color::hsl::lightness": (
-    737,
+    3,
     babel(
       en: [
         The lightness component.
@@ -741,7 +741,7 @@
     ),
   ),
   "Color::hsl::alpha": (
-    740,
+    3,
     babel(
       en: [
         The alpha component.
@@ -749,7 +749,7 @@
     ),
   ),
   "Color::hsl::color": (
-    743,
+    3,
     babel(
       en: [
         Alternatively: The color to convert to HSL.
@@ -759,7 +759,7 @@
     ),
   ),
   "Color::hsv": (
-    765,
+    22,
     [
       #babel(
         en: [
@@ -788,7 +788,7 @@
     ],
   ),
   "Color::hsv::hue": (
-    788,
+    23,
     babel(
       en: [
         The hue angle.
@@ -796,7 +796,7 @@
     ),
   ),
   "Color::hsv::saturation": (
-    791,
+    3,
     babel(
       en: [
         The saturation component.
@@ -804,7 +804,7 @@
     ),
   ),
   "Color::hsv::value": (
-    794,
+    3,
     babel(
       en: [
         The value component.
@@ -812,7 +812,7 @@
     ),
   ),
   "Color::hsv::alpha": (
-    797,
+    3,
     babel(
       en: [
         The alpha component.
@@ -820,7 +820,7 @@
     ),
   ),
   "Color::hsv::color": (
-    800,
+    3,
     babel(
       en: [
         Alternatively: The color to convert to HSL.
@@ -830,7 +830,7 @@
     ),
   ),
   "Color::components": (
-    822,
+    22,
     [
       #babel(
         en: [
@@ -917,7 +917,7 @@
     ],
   ),
   "Color::components::alpha": (
-    899,
+    77,
     babel(
       en: [
         Whether to include the alpha component.
@@ -925,7 +925,7 @@
     ),
   ),
   "Color::space": (
-    910,
+    11,
     [
       #babel(
         en: [
@@ -950,7 +950,7 @@
     ],
   ),
   "Color::to_hex": (
-    934,
+    24,
     babel(
       en: [
         Returns the color's RGB(A) hex representation (such as `#ffaa32` or
@@ -960,7 +960,7 @@
     ),
   ),
   "Color::lighten": (
-    945,
+    11,
     babel(
       en: [
         Lightens a color by a given factor.
@@ -968,7 +968,7 @@
     ),
   ),
   "Color::lighten::factor": (
-    949,
+    4,
     babel(
       en: [
         The factor to lighten the color by.
@@ -976,7 +976,7 @@
     ),
   ),
   "Color::darken": (
-    958,
+    9,
     babel(
       en: [
         Darkens a color by a given factor.
@@ -984,7 +984,7 @@
     ),
   ),
   "Color::darken::factor": (
-    962,
+    4,
     babel(
       en: [
         The factor to darken the color by.
@@ -992,7 +992,7 @@
     ),
   ),
   "Color::saturate": (
-    971,
+    9,
     babel(
       en: [
         Increases the saturation of a color by a given factor.
@@ -1003,7 +1003,7 @@
     ),
   ),
   "Color::saturate::factor": (
-    979,
+    8,
     babel(
       en: [
         The factor to saturate the color by.
@@ -1011,7 +1011,7 @@
     ),
   ),
   "Color::desaturate": (
-    992,
+    13,
     babel(
       en: [
         Decreases the saturation of a color by a given factor.
@@ -1022,7 +1022,7 @@
     ),
   ),
   "Color::desaturate::factor": (
-    1000,
+    8,
     babel(
       en: [
         The factor to desaturate the color by.
@@ -1030,7 +1030,7 @@
     ),
   ),
   "Color::negate": (
-    1013,
+    13,
     [
       #babel(
         en: [
@@ -1047,7 +1047,7 @@
     ],
   ),
   "Color::negate::space": (
-    1024,
+    11,
     babel(
       en: [
         The color space used for the transformation. By default, a
@@ -1056,7 +1056,7 @@
     ),
   ),
   "Color::rotate": (
-    1042,
+    18,
     babel(
       en: [
         Rotates the hue of the color by a given angle.
@@ -1067,7 +1067,7 @@
     ),
   ),
   "Color::rotate::angle": (
-    1050,
+    8,
     babel(
       en: [
         The angle to rotate the hue by.
@@ -1075,7 +1075,7 @@
     ),
   ),
   "Color::rotate::space": (
-    1052,
+    2,
     babel(
       en: [
         The color space used to rotate. By default, this happens in a
@@ -1084,7 +1084,7 @@
     ),
   ),
   "Color::mix": (
-    1084,
+    32,
     [
       #babel(
         en: [
@@ -1106,7 +1106,7 @@
     ],
   ),
   "Color::mix::colors": (
-    1099,
+    15,
     babel(
       en: [
         The colors, optionally with weights, specified as a pair (array of
@@ -1118,7 +1118,7 @@
     ),
   ),
   "Color::mix::space": (
-    1106,
+    7,
     babel(
       en: [
         The color space to mix in. By default, this happens in a perceptual
@@ -1130,7 +1130,7 @@
     ),
   ),
   "Color::transparentize": (
-    1118,
+    12,
     [
       #babel(
         en: [
@@ -1150,7 +1150,7 @@
     ],
   ),
   "Color::transparentize::scale": (
-    1132,
+    14,
     babel(
       en: [
         The factor to change the alpha value by.
@@ -1158,7 +1158,7 @@
     ),
   ),
   "Color::opacify": (
-    1138,
+    6,
     [
       #babel(
         en: [
@@ -1179,7 +1179,7 @@
     ],
   ),
   "Color::opacify::scale": (
-    1153,
+    15,
     babel(
       en: [
         The scale to change the alpha value by.
@@ -1187,7 +1187,7 @@
     ),
   ),
   "SpotColorant": (
-    2323,
+    1170,
     babel(
       en: [
         A spot colorant from which spot colors can be created.
@@ -1199,7 +1199,7 @@
     ),
   ),
   "SpotColorant::construct": (
-    2345,
+    22,
     babel(
       en: [
         Create a new spot colorant.
@@ -1207,7 +1207,7 @@
     ),
   ),
   "SpotColorant::construct::name": (
-    2348,
+    3,
     babel(
       en: [
         Name of the spot colorant to use.
@@ -1239,7 +1239,7 @@
     ),
   ),
   "SpotColorant::construct::fallback": (
-    2374,
+    26,
     babel(
       en: [
         How to render this color if the specified colorant is not available.
@@ -1251,7 +1251,7 @@
     ),
   ),
   "SpotColorant::tint": (
-    2384,
+    10,
     [
       #babel(
         en: [
@@ -1276,11 +1276,11 @@
     ],
   ),
   "SpotColorant::tint::value": (
-    2403,
+    19,
     babel(
       en: [
         The tint percentage, between `{0%}` and `{100%}`.
       ],
     ),
   ),
-)
+))

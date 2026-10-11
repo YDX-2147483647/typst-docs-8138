@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "VecElem": (
     18,
     [
@@ -24,7 +24,7 @@
     ],
   ),
   "VecElem::delim": (
-    34,
+    16,
     [
       #babel(
         en: [
@@ -43,7 +43,7 @@
     ],
   ),
   "VecElem::align": (
-    47,
+    13,
     [
       #babel(
         en: [
@@ -58,7 +58,7 @@
     ],
   ),
   "VecElem::gap": (
-    56,
+    9,
     [
       #babel(
         en: [
@@ -73,7 +73,7 @@
     ],
   ),
   "VecElem::children": (
-    65,
+    9,
     babel(
       en: [
         The elements of the vector.
@@ -81,7 +81,7 @@
     ),
   ),
   "MatElem": (
-    70,
+    5,
     [
       #babel(
         en: [
@@ -111,7 +111,7 @@
     ],
   ),
   "MatElem::delim": (
-    93,
+    23,
     [
       #babel(
         en: [
@@ -130,7 +130,7 @@
     ],
   ),
   "MatElem::align": (
-    106,
+    13,
     [
       #babel(
         en: [
@@ -145,7 +145,7 @@
     ],
   ),
   "MatElem::augment": (
-    115,
+    9,
     [
       #babel(
         en: [
@@ -191,7 +191,7 @@
     ],
   ),
   "MatElem::gap": (
-    155,
+    40,
     [
       #babel(
         en: [
@@ -208,7 +208,7 @@
     ],
   ),
   "MatElem::row_gap": (
-    166,
+    11,
     [
       #babel(
         en: [
@@ -223,7 +223,7 @@
     ],
   ),
   "MatElem::column_gap": (
-    179,
+    13,
     [
       #babel(
         en: [
@@ -238,7 +238,7 @@
     ],
   ),
   "MatElem::rows": (
-    189,
+    10,
     [
       #babel(
         en: [
@@ -254,7 +254,7 @@
     ],
   ),
   "CasesElem": (
-    224,
+    35,
     [
       #babel(
         en: [
@@ -276,7 +276,7 @@
     ],
   ),
   "CasesElem::delim": (
-    239,
+    15,
     [
       #babel(
         en: [
@@ -295,7 +295,7 @@
     ],
   ),
   "CasesElem::reverse": (
-    252,
+    13,
     [
       #babel(
         en: [
@@ -310,7 +310,7 @@
     ],
   ),
   "CasesElem::gap": (
-    261,
+    9,
     [
       #babel(
         en: [
@@ -325,11 +325,11 @@
     ],
   ),
   "CasesElem::children": (
-    270,
+    9,
     babel(
       en: [
         The branches of the case distinction.
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "LineElem": (
     5,
     [
@@ -23,7 +23,7 @@
     ],
   ),
   "LineElem::start": (
-    20,
+    15,
     babel(
       en: [
         The start point of the line.
@@ -33,7 +33,7 @@
     ),
   ),
   "LineElem::end": (
-    25,
+    5,
     babel(
       en: [
         The point where the line ends.
@@ -41,7 +41,7 @@
     ),
   ),
   "LineElem::length": (
-    28,
+    3,
     babel(
       en: [
         The line's length. This is only respected if `end` is `{none}`.
@@ -49,7 +49,7 @@
     ),
   ),
   "LineElem::angle": (
-    32,
+    4,
     babel(
       en: [
         The angle at which the line points away from the origin. This is only
@@ -58,7 +58,7 @@
     ),
   ),
   "LineElem::stroke": (
-    36,
+    4,
     [
       #babel(
         en: [
@@ -78,4 +78,4 @@
       ```
     ],
   ),
-)
+))

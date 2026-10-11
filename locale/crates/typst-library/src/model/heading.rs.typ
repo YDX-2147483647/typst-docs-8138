@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "HeadingElem": (
     16,
     [
@@ -82,7 +82,7 @@
     ],
   ),
   "HeadingElem::level": (
-    88,
+    72,
     [
       #babel(
         en: [
@@ -109,7 +109,7 @@
     ],
   ),
   "HeadingElem::depth": (
-    108,
+    20,
     babel(
       en: [
         The relative nesting depth of the heading, starting from one. This is
@@ -123,7 +123,7 @@
     ),
   ),
   "HeadingElem::offset": (
-    118,
+    10,
     [
       #babel(
         en: [
@@ -145,7 +145,7 @@
     ],
   ),
   "HeadingElem::numbering": (
-    134,
+    16,
     [
       #babel(
         en: [
@@ -164,7 +164,7 @@
     ],
   ),
   "HeadingElem::supplement": (
-    158,
+    24,
     [
       #babel(
         en: [
@@ -189,7 +189,7 @@
     ],
   ),
   "HeadingElem::outlined": (
-    176,
+    18,
     [
       #babel(
         en: [
@@ -214,7 +214,7 @@
     ],
   ),
   "HeadingElem::bookmarked": (
-    195,
+    19,
     [
       #babel(
         en: [
@@ -242,7 +242,7 @@
     ],
   ),
   "HeadingElem::hanging_indent": (
-    217,
+    22,
     [
       #babel(
         en: [
@@ -265,11 +265,11 @@
     ],
   ),
   "HeadingElem::body": (
-    234,
+    17,
     babel(
       en: [
         The heading's title.
       ],
     ),
   ),
-)
+))

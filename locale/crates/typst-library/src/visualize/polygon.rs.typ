@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "PolygonElem": (
     9,
     [
@@ -25,7 +25,7 @@
     ],
   ),
   "PolygonElem::fill": (
-    26,
+    17,
     babel(
       en: [
         How to fill the polygon.
@@ -36,7 +36,7 @@
     ),
   ),
   "PolygonElem::fill_rule": (
-    32,
+    6,
     babel(
       en: [
         The drawing rule used to fill the polygon.
@@ -46,7 +46,7 @@
     ),
   ),
   "PolygonElem::stroke": (
-    38,
+    6,
     babel(
       en: [
         How to @stroke[stroke] the polygon.
@@ -57,7 +57,7 @@
     ),
   ),
   "PolygonElem::vertices": (
-    45,
+    7,
     babel(
       en: [
         The vertices of the polygon. Each point is specified as an array of two
@@ -66,7 +66,7 @@
     ),
   ),
   "PolygonElem::regular": (
-    53,
+    8,
     [
       #babel(
         en: [
@@ -85,7 +85,7 @@
     ],
   ),
   "PolygonElem::regular::fill": (
-    67,
+    14,
     babel(
       en: [
         How to fill the polygon. See the general
@@ -94,7 +94,7 @@
     ),
   ),
   "PolygonElem::regular::stroke": (
-    72,
+    5,
     babel(
       en: [
         How to stroke the polygon. See the general
@@ -103,7 +103,7 @@
     ),
   ),
   "PolygonElem::regular::size": (
-    77,
+    5,
     babel(
       en: [
         The diameter of the
@@ -113,11 +113,11 @@
     ),
   ),
   "PolygonElem::regular::vertices": (
-    84,
+    7,
     babel(
       en: [
         The number of vertices in the polygon.
       ],
     ),
   ),
-)
+))

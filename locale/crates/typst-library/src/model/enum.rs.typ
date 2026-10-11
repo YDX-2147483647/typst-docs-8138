@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "EnumElem": (
     9,
     [
@@ -79,7 +79,7 @@
     ],
   ),
   "EnumElem::tight": (
-    68,
+    59,
     [
       #babel(
         en: [
@@ -109,7 +109,7 @@
     ],
   ),
   "EnumElem::numbering": (
-    92,
+    24,
     [
       #babel(
         en: [
@@ -137,7 +137,7 @@
     ],
   ),
   "EnumElem::start": (
-    114,
+    22,
     [
       #babel(
         en: [
@@ -155,7 +155,7 @@
     ],
   ),
   "EnumElem::full": (
-    125,
+    11,
     [
       #babel(
         en: [
@@ -174,7 +174,7 @@
     ],
   ),
   "EnumElem::reversed": (
-    138,
+    13,
     [
       #babel(
         en: [
@@ -191,7 +191,7 @@
     ],
   ),
   "EnumElem::indent": (
-    149,
+    11,
     babel(
       en: [
         The indentation of each item.
@@ -199,7 +199,7 @@
     ),
   ),
   "EnumElem::body_indent": (
-    152,
+    3,
     babel(
       en: [
         The space between the numbering and the body of each item.
@@ -207,7 +207,7 @@
     ),
   ),
   "EnumElem::spacing": (
-    156,
+    4,
     babel(
       en: [
         The spacing between the items of the enumeration.
@@ -219,7 +219,7 @@
     ),
   ),
   "EnumElem::number_align": (
-    163,
+    7,
     [
       #babel(en: [
         The alignment that enum numbers should have.
@@ -262,7 +262,7 @@ bottom}` #babel(en: [
     ],
   ),
   "EnumElem::children": (
-    200,
+    37,
     [
       #babel(
         en: [
@@ -283,7 +283,7 @@ bottom}` #babel(en: [
     ],
   ),
   "EnumItem": (
-    228,
+    28,
     babel(
       en: [
         An enumeration item.
@@ -291,7 +291,7 @@ bottom}` #babel(en: [
     ),
   ),
   "EnumItem::number": (
-    231,
+    3,
     babel(
       en: [
         The item's number.
@@ -299,11 +299,11 @@ bottom}` #babel(en: [
     ),
   ),
   "EnumItem::body": (
-    235,
+    4,
     babel(
       en: [
         The item's body.
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "SmartQuoteElem": (
     13,
     [
@@ -33,7 +33,7 @@
     ],
   ),
   "SmartQuoteElem::double": (
-    34,
+    21,
     babel(
       en: [
         Whether this should be a double quote.
@@ -41,7 +41,7 @@
     ),
   ),
   "SmartQuoteElem::enabled": (
-    38,
+    4,
     [
       #babel(
         en: [
@@ -60,7 +60,7 @@
     ],
   ),
   "SmartQuoteElem::alternative": (
-    51,
+    13,
     [
       #babel(
         en: [
@@ -80,7 +80,7 @@
     ],
   ),
   "SmartQuoteElem::quotes": (
-    65,
+    14,
     [
       #babel(
         en: [
@@ -112,4 +112,4 @@
       ```
     ],
   ),
-)
+))

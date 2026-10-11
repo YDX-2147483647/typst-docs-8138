@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Selector": (
     40,
     [
@@ -44,7 +44,7 @@
     ],
   ),
   "Selector::construct": (
-    160,
+    120,
     babel(
       en: [
         Turns a value into a selector. The following values are accepted:
@@ -57,7 +57,7 @@
     ),
   ),
   "Selector::construct::target": (
-    168,
+    8,
     babel(
       en: [
         Can be an element function like a `heading` or `figure`, a
@@ -67,7 +67,7 @@
     ),
   ),
   "Selector::or": (
-    176,
+    8,
     babel(
       en: [
         Selects all elements that match this or any of the other selectors.
@@ -75,7 +75,7 @@
     ),
   ),
   "Selector::or::others": (
-    180,
+    4,
     babel(
       en: [
         The other selectors to match on.
@@ -83,7 +83,7 @@
     ),
   ),
   "Selector::and": (
-    187,
+    7,
     babel(
       en: [
         Selects all elements that match this and all of the other selectors.
@@ -91,7 +91,7 @@
     ),
   ),
   "Selector::and::others": (
-    191,
+    4,
     babel(
       en: [
         The other selectors to match on.
@@ -99,7 +99,7 @@
     ),
   ),
   "Selector::before": (
-    198,
+    7,
     babel(
       en: [
         Returns a modified selector that will only match elements that occur
@@ -111,7 +111,7 @@
     ),
   ),
   "Selector::before::end": (
-    206,
+    8,
     babel(
       en: [
         The original selection will end at the first match of `end`.
@@ -119,7 +119,7 @@
     ),
   ),
   "Selector::before::inclusive": (
-    208,
+    2,
     babel(
       en: [
         Whether `end` itself should match or not. This is only relevant if
@@ -128,7 +128,7 @@
     ),
   ),
   "Selector::after": (
-    221,
+    13,
     babel(
       en: [
         Returns a modified selector that will only match elements that occur
@@ -140,7 +140,7 @@
     ),
   ),
   "Selector::after::start": (
-    229,
+    8,
     babel(
       en: [
         The original selection will start at the first match of `start`.
@@ -148,7 +148,7 @@
     ),
   ),
   "Selector::after::inclusive": (
-    231,
+    2,
     babel(
       en: [
         Whether `start` itself should match or not. This is only relevant if
@@ -157,7 +157,7 @@
     ),
   ),
   "Selector::within": (
-    244,
+    13,
     [
       #babel(
         en: [
@@ -214,7 +214,7 @@
     ],
   ),
   "Selector::within::ancestor": (
-    287,
+    43,
     babel(
       en: [
         Only matches of `self` that are descendants of any element matching
@@ -224,4 +224,4 @@
       ],
     ),
   ),
-)
+))

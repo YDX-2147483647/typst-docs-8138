@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "RootedPath": (
     9,
     [
@@ -167,7 +167,7 @@
     ],
   ),
   "RootedPath::construct": (
-    140,
+    131,
     [
       #babel(
         en: [
@@ -187,7 +187,7 @@
     ],
   ),
   "RootedPath::construct::path": (
-    153,
+    13,
     babel(
       en: [
         Converts a string or path to a path.
@@ -202,4 +202,4 @@
       ],
     ),
   ),
-)
+))

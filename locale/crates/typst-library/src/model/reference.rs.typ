@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "RefElem": (
     20,
     [
@@ -140,7 +140,7 @@
     ],
   ),
   "RefElem::target": (
-    140,
+    120,
     babel(
       en: [
         The target label that should be referenced.
@@ -152,7 +152,7 @@
     ),
   ),
   "RefElem::supplement": (
-    148,
+    8,
     [
       #babel(
         en: [
@@ -192,7 +192,7 @@
     ],
   ),
   "RefElem::form": (
-    181,
+    33,
     [
       #babel(
         en: [
@@ -208,4 +208,4 @@
       ```
     ],
   ),
-)
+))

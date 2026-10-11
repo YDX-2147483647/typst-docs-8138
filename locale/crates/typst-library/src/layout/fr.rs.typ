@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Fr": (
     11,
     [
@@ -21,4 +21,4 @@
       ```
     ],
   ),
-)
+))

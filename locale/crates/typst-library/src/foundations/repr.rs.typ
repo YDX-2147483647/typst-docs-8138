@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "repr": (
     11,
     [
@@ -44,11 +44,11 @@
     ],
   ),
   "repr::value": (
-    43,
+    32,
     babel(
       en: [
         The value whose string representation to produce.
       ],
     ),
   ),
-)
+))

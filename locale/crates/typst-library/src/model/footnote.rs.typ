@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "FootnoteElem": (
     21,
     [
@@ -63,7 +63,7 @@
     ],
   ),
   "FootnoteElem::numbering": (
-    64,
+    43,
     [
       #babel(
         en: [
@@ -87,7 +87,7 @@
     ],
   ),
   "FootnoteElem::body": (
-    82,
+    18,
     babel(
       en: [
         The content to put into the footnote. Can also be the label of another
@@ -96,7 +96,7 @@
     ),
   ),
   "FootnoteEntry": (
-    198,
+    116,
     [
       #babel(
         en: [
@@ -126,7 +126,7 @@
     ],
   ),
   "FootnoteEntry::note": (
-    224,
+    26,
     [
       #babel(
         en: [
@@ -148,7 +148,7 @@
     ],
   ),
   "FootnoteEntry::separator": (
-    240,
+    16,
     [
       #babel(
         en: [
@@ -170,7 +170,7 @@
     ],
   ),
   "FootnoteEntry::clearance": (
-    264,
+    24,
     [
       #babel(
         en: [
@@ -189,7 +189,7 @@
     ],
   ),
   "FootnoteEntry::gap": (
-    277,
+    13,
     [
       #babel(
         en: [
@@ -207,7 +207,7 @@
     ],
   ),
   "FootnoteEntry::indent": (
-    289,
+    12,
     [
       #babel(
         en: [
@@ -224,4 +224,4 @@
       ```
     ],
   ),
-)
+))

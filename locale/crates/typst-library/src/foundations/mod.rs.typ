@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "panic": (
     125,
     [
@@ -24,7 +24,7 @@
     ],
   ),
   "panic::values": (
-    137,
+    12,
     babel(
       en: [
         The values to panic with and display to the user.
@@ -32,7 +32,7 @@
     ),
   ),
   "assert": (
-    157,
+    20,
     [
       #babel(
         en: [
@@ -53,7 +53,7 @@
     ],
   ),
   "assert::condition": (
-    171,
+    14,
     babel(
       en: [
         The condition that must be true for the assertion to pass.
@@ -61,7 +61,7 @@
     ),
   ),
   "assert::message": (
-    173,
+    2,
     babel(
       en: [
         The error message when the assertion fails.
@@ -69,7 +69,7 @@
     ),
   ),
   "assert::eq": (
-    189,
+    16,
     [
       #babel(
         en: [
@@ -86,7 +86,7 @@
     ],
   ),
   "assert::eq::left": (
-    199,
+    10,
     babel(
       en: [
         The first value to compare.
@@ -94,7 +94,7 @@
     ),
   ),
   "assert::eq::right": (
-    201,
+    2,
     babel(
       en: [
         The second value to compare.
@@ -102,7 +102,7 @@
     ),
   ),
   "assert::eq::message": (
-    203,
+    2,
     babel(
       en: [
         An optional message to display on error instead of the
@@ -111,7 +111,7 @@
     ),
   ),
   "assert::ne": (
-    222,
+    19,
     [
       #babel(
         en: [
@@ -128,7 +128,7 @@
     ],
   ),
   "assert::ne::left": (
-    232,
+    10,
     babel(
       en: [
         The first value to compare.
@@ -136,7 +136,7 @@
     ),
   ),
   "assert::ne::right": (
-    234,
+    2,
     babel(
       en: [
         The second value to compare.
@@ -144,7 +144,7 @@
     ),
   ),
   "assert::ne::message": (
-    236,
+    2,
     babel(
       en: [
         An optional message to display on error instead of the
@@ -153,7 +153,7 @@
     ),
   ),
   "eval": (
-    256,
+    20,
     [
       #babel(
         en: [
@@ -172,7 +172,7 @@
     ],
   ),
   "eval::source": (
-    269,
+    13,
     babel(
       en: [
         A string of Typst code to evaluate.
@@ -180,7 +180,7 @@
     ),
   ),
   "eval::mode": (
-    271,
+    2,
     [
       #babel(
         en: [
@@ -196,7 +196,7 @@
     ],
   ),
   "eval::scope": (
-    281,
+    10,
     [
       #babel(
         en: [
@@ -217,4 +217,4 @@
       ```
     ],
   ),
-)
+))

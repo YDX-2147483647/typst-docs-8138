@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "SubElem": (
     7,
     [
@@ -18,7 +18,7 @@
     ],
   ),
   "SubElem::typographic": (
-    17,
+    10,
     [
       #babel(
         en: [
@@ -42,7 +42,7 @@
     ],
   ),
   "SubElem::baseline": (
-    35,
+    18,
     babel(
       en: [
         The downward baseline shift for synthesized subscripts.
@@ -62,7 +62,7 @@
     ),
   ),
   "SubElem::size": (
-    50,
+    15,
     babel(
       en: [
         The font size for synthesized subscripts.
@@ -78,7 +78,7 @@
     ),
   ),
   "SubElem::body": (
-    61,
+    11,
     babel(
       en: [
         The text to display in subscript.
@@ -86,7 +86,7 @@
     ),
   ),
   "SuperElem": (
-    66,
+    5,
     [
       #babel(
         en: [
@@ -103,7 +103,7 @@
     ],
   ),
   "SuperElem::typographic": (
-    76,
+    10,
     [
       #babel(
         en: [
@@ -127,7 +127,7 @@
     ],
   ),
   "SuperElem::baseline": (
-    94,
+    18,
     [
       #babel(
         en: [
@@ -172,7 +172,7 @@
     ],
   ),
   "SuperElem::size": (
-    132,
+    38,
     babel(
       en: [
         The font size for synthesized superscripts.
@@ -188,11 +188,11 @@
     ),
   ),
   "SuperElem::body": (
-    143,
+    11,
     babel(
       en: [
         The text to display in superscript.
       ],
     ),
   ),
-)
+))

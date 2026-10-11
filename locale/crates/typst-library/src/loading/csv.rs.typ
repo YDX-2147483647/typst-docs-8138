@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "csv": (
     9,
     [
@@ -27,7 +27,7 @@
     ],
   ),
   "csv::source": (
-    29,
+    20,
     babel(
       en: [
         A path to a CSV file or raw CSV bytes.
@@ -35,7 +35,7 @@
     ),
   ),
   "csv::delimiter": (
-    31,
+    2,
     babel(
       en: [
         The delimiter that separates columns in the CSV file. Must be a single
@@ -44,7 +44,7 @@
     ),
   ),
   "csv::row_type": (
-    36,
+    5,
     babel(
       en: [
         How to represent the file's rows.
@@ -57,4 +57,4 @@
       ],
     ),
   ),
-)
+))

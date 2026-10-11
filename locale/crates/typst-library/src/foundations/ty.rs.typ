@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Type": (
     17,
     [
@@ -69,7 +69,7 @@
     ],
   ),
   "Type::construct": (
-    140,
+    123,
     [
       #babel(
         en: [
@@ -89,11 +89,11 @@
     ],
   ),
   "Type::construct::value": (
-    153,
+    13,
     babel(
       en: [
         The value whose type's to determine.
       ],
     ),
   ),
-)
+))

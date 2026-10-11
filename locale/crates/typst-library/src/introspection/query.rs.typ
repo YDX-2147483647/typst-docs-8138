@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "query": (
     13,
     [
@@ -192,7 +192,7 @@
     ],
   ),
   "query::target": (
-    164,
+    151,
     babel(
       en: [
         Can be
@@ -205,4 +205,4 @@
       ],
     ),
   ),
-)
+))

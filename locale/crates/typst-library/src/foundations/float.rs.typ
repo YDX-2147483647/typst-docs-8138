@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "f64": (
     12,
     [
@@ -24,7 +24,7 @@
     ],
   ),
   "f64::INF": (
-    31,
+    19,
     [
       #babel(
         en: [
@@ -44,7 +44,7 @@
     ],
   ),
   "f64::NAN": (
-    45,
+    14,
     babel(
       en: [
         A NaN value, as defined by the
@@ -53,7 +53,7 @@
     ),
   ),
   "f64::construct": (
-    50,
+    5,
     [
       #babel(
         en: [
@@ -80,7 +80,7 @@
     ],
   ),
   "f64::construct::value": (
-    70,
+    20,
     babel(
       en: [
         The value that should be converted to a float.
@@ -88,7 +88,7 @@
     ),
   ),
   "f64::is_nan": (
-    76,
+    6,
     [
       #babel(
         en: [
@@ -107,7 +107,7 @@
     ],
   ),
   "f64::is_infinite": (
-    91,
+    15,
     [
       #babel(
         en: [
@@ -126,7 +126,7 @@
     ],
   ),
   "f64::signum": (
-    106,
+    15,
     [
       #babel(
         en: [
@@ -147,7 +147,7 @@
     ],
   ),
   "f64::from_bytes": (
-    123,
+    17,
     [
       #babel(
         en: [
@@ -162,7 +162,7 @@
     ],
   ),
   "f64::from_bytes::bytes": (
-    131,
+    8,
     babel(
       en: [
         The bytes that should be converted to a float.
@@ -175,7 +175,7 @@
     ),
   ),
   "f64::from_bytes::endian": (
-    138,
+    7,
     babel(
       en: [
         The endianness of the conversion.
@@ -183,7 +183,7 @@
     ),
   ),
   "f64::to_bytes": (
-    160,
+    22,
     [
       #babel(
         en: [
@@ -198,7 +198,7 @@
     ],
   ),
   "f64::to_bytes::endian": (
-    169,
+    9,
     babel(
       en: [
         The endianness of the conversion.
@@ -206,7 +206,7 @@
     ),
   ),
   "f64::to_bytes::size": (
-    173,
+    4,
     babel(
       en: [
         The size of the resulting bytes.
@@ -219,4 +219,4 @@
       ],
     ),
   ),
-)
+))

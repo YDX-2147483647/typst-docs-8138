@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "toml": (
     9,
     [
@@ -101,7 +101,7 @@
     ],
   ),
   "toml::source": (
-    95,
+    86,
     babel(
       en: [
         A path to a TOML file or raw TOML bytes.
@@ -109,7 +109,7 @@
     ),
   ),
   "toml::encode": (
-    105,
+    10,
     babel(
       en: [
         Encodes structured data into a TOML string.
@@ -117,7 +117,7 @@
     ),
   ),
   "toml::encode::value": (
-    108,
+    3,
     babel(
       en: [
         Value to be encoded.
@@ -128,11 +128,11 @@
     ),
   ),
   "toml::encode::pretty": (
-    113,
+    5,
     babel(
       en: [
         Whether to pretty-print the resulting TOML.
       ],
     ),
   ),
-)
+))

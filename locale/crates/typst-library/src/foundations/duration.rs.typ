@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Duration": (
     9,
     babel(
@@ -9,7 +9,7 @@
     ),
   ),
   "Duration::construct": (
-    38,
+    29,
     [
       #babel(
         en: [
@@ -30,7 +30,7 @@
     ],
   ),
   "Duration::construct::seconds": (
-    52,
+    14,
     babel(
       en: [
         The number of seconds.
@@ -38,7 +38,7 @@
     ),
   ),
   "Duration::construct::minutes": (
-    56,
+    4,
     babel(
       en: [
         The number of minutes.
@@ -46,7 +46,7 @@
     ),
   ),
   "Duration::construct::hours": (
-    60,
+    4,
     babel(
       en: [
         The number of hours.
@@ -54,7 +54,7 @@
     ),
   ),
   "Duration::construct::days": (
-    64,
+    4,
     babel(
       en: [
         The number of days.
@@ -62,7 +62,7 @@
     ),
   ),
   "Duration::construct::weeks": (
-    68,
+    4,
     babel(
       en: [
         The number of weeks.
@@ -70,7 +70,7 @@
     ),
   ),
   "Duration::seconds": (
-    82,
+    14,
     babel(
       en: [
         The duration expressed in seconds.
@@ -82,7 +82,7 @@
     ),
   ),
   "Duration::minutes": (
-    92,
+    10,
     babel(
       en: [
         The duration expressed in minutes.
@@ -94,7 +94,7 @@
     ),
   ),
   "Duration::hours": (
-    102,
+    10,
     babel(
       en: [
         The duration expressed in hours.
@@ -105,7 +105,7 @@
     ),
   ),
   "Duration::days": (
-    111,
+    9,
     babel(
       en: [
         The duration expressed in days.
@@ -116,7 +116,7 @@
     ),
   ),
   "Duration::weeks": (
-    120,
+    9,
     babel(
       en: [
         The duration expressed in weeks.
@@ -126,4 +126,4 @@
       ],
     ),
   ),
-)
+))

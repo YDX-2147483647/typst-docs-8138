@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Bytes": (
     16,
     [
@@ -38,7 +38,7 @@
     ],
   ),
   "Bytes::construct": (
-    230,
+    214,
     [
       #babel(
         en: [
@@ -59,7 +59,7 @@
     ],
   ),
   "Bytes::construct::value": (
-    244,
+    14,
     babel(
       en: [
         The value that should be converted to bytes.
@@ -67,7 +67,7 @@
     ),
   ),
   "Bytes::len": (
-    250,
+    6,
     babel(
       en: [
         The length in bytes.
@@ -75,7 +75,7 @@
     ),
   ),
   "Bytes::at": (
-    256,
+    6,
     babel(
       en: [
         Returns the byte at the specified index. Returns the default value if
@@ -85,7 +85,7 @@
     ),
   ),
   "Bytes::at::index": (
-    262,
+    6,
     babel(
       en: [
         The index at which to retrieve the byte.
@@ -93,7 +93,7 @@
     ),
   ),
   "Bytes::at::default": (
-    264,
+    2,
     babel(
       en: [
         A default value to return if the index is out of bounds.
@@ -101,7 +101,7 @@
     ),
   ),
   "Bytes::slice": (
-    274,
+    10,
     babel(
       en: [
         Extracts a subslice of the bytes. Fails with an error if the start or
@@ -110,7 +110,7 @@
     ),
   ),
   "Bytes::slice::start": (
-    279,
+    5,
     babel(
       en: [
         The start index (inclusive).
@@ -118,7 +118,7 @@
     ),
   ),
   "Bytes::slice::end": (
-    281,
+    2,
     babel(
       en: [
         The end index (exclusive). If omitted, the whole slice until the end
@@ -127,7 +127,7 @@
     ),
   ),
   "Bytes::slice::count": (
-    285,
+    4,
     babel(
       en: [
         The number of items to extract. This is equivalent to passing
@@ -136,4 +136,4 @@
       ],
     ),
   ),
-)
+))

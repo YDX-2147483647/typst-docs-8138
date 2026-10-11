@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "RepeatElem": (
     4,
     [
@@ -40,7 +40,7 @@
     ],
   ),
   "RepeatElem::body": (
-    32,
+    28,
     babel(
       en: [
         The content to repeat.
@@ -48,7 +48,7 @@
     ),
   ),
   "RepeatElem::gap": (
-    36,
+    4,
     babel(
       en: [
         The gap between each instance of the body.
@@ -56,7 +56,7 @@
     ),
   ),
   "RepeatElem::justify": (
-    40,
+    4,
     babel(
       en: [
         Whether to increase the gap between instances to completely fill the
@@ -64,4 +64,4 @@
       ],
     ),
   ),
-)
+))

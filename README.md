@@ -10,7 +10,7 @@ Typst文档有以下三种来源。
 
 - **源码注释：**在Rust源代码中以Typst格式添加注释，主要是[参考手册](https://typst.app/docs/reference/)中各种函数及其参数的文档。
 
-  这类文档在[`locale/crates/**/*.rs.typ`](./locale/crates/)本地化，与[Typst源代码](https://github.com/typst/typst/tree/main/crates/)对应，`*.rs.typ`中的数字表示`*.rs`中的行号。
+  这类文档在[`locale/crates/**/*.rs.typ`](./locale/crates/)本地化，与[Typst源代码](https://github.com/typst/typst/tree/main/crates/)对应，`*.rs.typ`中每项的数字表示与上一项在`*.rs`中相差的行数。
 
 - **程序计算：**由Rust程序根据类型规则推导计算，例如[`page.page`页面尺寸](https://typst.app/docs/reference/layout/page/#parameters-paper)的取值列表。
 

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Angle": (
     12,
     [
@@ -21,7 +21,7 @@
     ],
   ),
   "Angle::to_rad": (
-    142,
+    130,
     babel(
       en: [
         Converts this angle to radians.
@@ -29,11 +29,11 @@
     ),
   ),
   "Angle::to_deg": (
-    148,
+    6,
     babel(
       en: [
         Converts this angle to degrees.
       ],
     ),
   ),
-)
+))

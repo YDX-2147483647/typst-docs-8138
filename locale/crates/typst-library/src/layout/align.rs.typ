@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "AlignElem": (
     13,
     [
@@ -95,7 +95,7 @@
     ],
   ),
   "AlignElem::alignment": (
-    80,
+    67,
     [
       #babel(
         en: [
@@ -116,7 +116,7 @@
     ],
   ),
   "AlignElem::body": (
-    97,
+    17,
     babel(
       en: [
         The content to align.
@@ -124,7 +124,7 @@
     ),
   ),
   "Alignment": (
-    102,
+    5,
     [
       #babel(
         en: [
@@ -178,7 +178,7 @@
     ],
   ),
   "Alignment::START": (
-    175,
+    73,
     [
       #babel(
         en: [
@@ -197,7 +197,7 @@
     ],
   ),
   "Alignment::END": (
-    188,
+    13,
     [
       #babel(
         en: [
@@ -216,7 +216,7 @@
     ],
   ),
   "Alignment::LEFT": (
-    201,
+    13,
     [
       #babel(
         en: [
@@ -230,7 +230,7 @@
     ],
   ),
   "Alignment::CENTER": (
-    209,
+    8,
     [
       #babel(
         en: [
@@ -244,7 +244,7 @@
     ],
   ),
   "Alignment::RIGHT": (
-    217,
+    8,
     [
       #babel(
         en: [
@@ -258,7 +258,7 @@
     ],
   ),
   "Alignment::TOP": (
-    225,
+    8,
     [
       #babel(
         en: [
@@ -273,7 +273,7 @@
     ],
   ),
   "Alignment::HORIZON": (
-    234,
+    9,
     [
       #babel(
         en: [
@@ -288,7 +288,7 @@
     ],
   ),
   "Alignment::BOTTOM": (
-    243,
+    9,
     [
       #babel(
         en: [
@@ -303,7 +303,7 @@
     ],
   ),
   "Alignment::axis": (
-    252,
+    9,
     [
       #babel(
         en: [
@@ -321,7 +321,7 @@
     ],
   ),
   "Alignment::inv": (
-    270,
+    18,
     [
       #babel(
         en: [
@@ -337,4 +337,4 @@
       ```
     ],
   ),
-)
+))

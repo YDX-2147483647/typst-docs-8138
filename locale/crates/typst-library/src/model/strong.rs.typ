@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "StrongElem": (
     3,
     [
@@ -32,7 +32,7 @@
     ],
   ),
   "StrongElem::delta": (
-    23,
+    20,
     [
       #babel(
         en: [
@@ -47,11 +47,11 @@
     ],
   ),
   "StrongElem::body": (
-    32,
+    9,
     babel(
       en: [
         The content to strongly emphasize.
       ],
     ),
   ),
-)
+))

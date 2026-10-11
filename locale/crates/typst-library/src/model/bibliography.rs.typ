@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "BibliographyElem": (
     46,
     [
@@ -82,7 +82,7 @@
     ],
   ),
   "BibliographyElem::sources": (
-    112,
+    66,
     babel(
       en: [
         One or multiple paths to or raw bytes for Hayagriva `.yaml` and/or
@@ -96,7 +96,7 @@
     ),
   ),
   "BibliographyElem::title": (
-    126,
+    14,
     babel(
       en: [
         The title of the bibliography.
@@ -113,7 +113,7 @@
     ),
   ),
   "BibliographyElem::full": (
-    138,
+    12,
     babel(
       en: [
         Whether to include all works from the given bibliography files, even
@@ -125,7 +125,7 @@
     ),
   ),
   "BibliographyElem::style": (
-    146,
+    8,
     babel(
       en: [
         The bibliography style.
@@ -141,7 +141,7 @@
     ),
   ),
   "BibliographyElem::target": (
-    165,
+    19,
     [
       #babel(
         en: [
@@ -194,7 +194,7 @@
     ],
   ),
   "BibliographyElem::group": (
-    211,
+    46,
     [
       #babel(
         en: [
@@ -262,4 +262,4 @@
       )
     ],
   ),
-)
+))

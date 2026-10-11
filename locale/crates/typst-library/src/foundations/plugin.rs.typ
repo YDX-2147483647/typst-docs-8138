@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "plugin": (
     14,
     [
@@ -176,7 +176,7 @@
     ],
   ),
   "plugin::source": (
-    151,
+    137,
     babel(
       en: [
         A path to a WebAssembly file or raw WebAssembly bytes.
@@ -184,7 +184,7 @@
     ),
   ),
   "plugin::transition": (
-    160,
+    9,
     [
       #babel(
         en: [
@@ -225,7 +225,7 @@
     ],
   ),
   "plugin::transition::func": (
-    194,
+    34,
     babel(
       en: [
         The plugin function to call.
@@ -233,11 +233,11 @@
     ),
   ),
   "plugin::transition::arguments": (
-    196,
+    2,
     babel(
       en: [
         The byte buffers to call the function with.
       ],
     ),
   ),
-)
+))

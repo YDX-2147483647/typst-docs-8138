@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "ImageElem": (
     35,
     [
@@ -58,7 +58,7 @@
     ],
   ),
   "ImageElem::source": (
-    81,
+    46,
     [
       #babel(
         en: [
@@ -83,7 +83,7 @@
     ],
   ),
   "ImageElem::format": (
-    105,
+    24,
     [
       #babel(
         en: [
@@ -148,7 +148,7 @@
     ],
   ),
   "ImageElem::width": (
-    163,
+    58,
     babel(
       en: [
         The width of the image.
@@ -156,7 +156,7 @@
     ),
   ),
   "ImageElem::height": (
-    166,
+    3,
     babel(
       en: [
         The height of the image.
@@ -164,7 +164,7 @@
     ),
   ),
   "ImageElem::alt": (
-    169,
+    3,
     babel(
       en: [
         An alternative description of the image.
@@ -185,7 +185,7 @@
     ),
   ),
   "ImageElem::page": (
-    185,
+    16,
     babel(
       en: [
         The page number that should be embedded as an image. This attribute only
@@ -194,7 +194,7 @@
     ),
   ),
   "ImageElem::fit": (
-    190,
+    5,
     [
       #babel(
         en: [
@@ -214,7 +214,7 @@
     ],
   ),
   "ImageElem::scaling": (
-    204,
+    14,
     babel(
       en: [
         A hint to viewers how they should scale the image.
@@ -228,7 +228,7 @@
     ),
   ),
   "ImageElem::icc": (
-    213,
+    9,
     babel(
       en: [
         An ICC profile for the image.
@@ -238,4 +238,4 @@
       ],
     ),
   ),
-)
+))

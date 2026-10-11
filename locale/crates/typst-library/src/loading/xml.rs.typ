@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "xml": (
     9,
     [
@@ -58,11 +58,11 @@
     ],
   ),
   "xml::source": (
-    60,
+    51,
     babel(
       en: [
         A path to an XML file or raw XML bytes.
       ],
     ),
   ),
-)
+))

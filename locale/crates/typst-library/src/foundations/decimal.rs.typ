@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Decimal": (
     15,
     [
@@ -103,7 +103,7 @@
     ],
   ),
   "Decimal::construct": (
-    276,
+    261,
     [
       #babel(
         en: [
@@ -133,11 +133,11 @@
     ],
   ),
   "Decimal::construct::value": (
-    300,
+    24,
     babel(
       en: [
         The value that should be converted to a decimal.
       ],
     ),
   ),
-)
+))

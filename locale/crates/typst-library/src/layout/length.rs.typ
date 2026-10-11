@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Length": (
     14,
     [
@@ -42,7 +42,7 @@
     ],
   ),
   "Length::to_pt": (
-    98,
+    84,
     babel(
       en: [
         Converts this length to points.
@@ -55,7 +55,7 @@
     ),
   ),
   "Length::to_mm": (
-    110,
+    12,
     babel(
       en: [
         Converts this length to millimeters.
@@ -66,7 +66,7 @@
     ),
   ),
   "Length::to_cm": (
-    120,
+    10,
     babel(
       en: [
         Converts this length to centimeters.
@@ -77,7 +77,7 @@
     ),
   ),
   "Length::to_inches": (
-    130,
+    10,
     babel(
       en: [
         Converts this length to inches.
@@ -88,7 +88,7 @@
     ),
   ),
   "Length::to_absolute": (
-    140,
+    10,
     [
       #babel(
         en: [
@@ -113,4 +113,4 @@
       ```
     ],
   ),
-)
+))

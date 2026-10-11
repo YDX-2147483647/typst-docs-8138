@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "PageElem": (
     21,
     [
@@ -50,7 +50,7 @@
     ],
   ),
   "PageElem::paper": (
-    55,
+    34,
     babel(
       en: [
         A standard paper size to set width and height.
@@ -61,7 +61,7 @@
     ),
   ),
   "PageElem::width": (
-    63,
+    8,
     [
       #babel(
         en: [
@@ -88,7 +88,7 @@
     ],
   ),
   "PageElem::height": (
-    90,
+    27,
     babel(
       en: [
         The height of the final page area, after any trims have been applied.
@@ -102,7 +102,7 @@
     ),
   ),
   "PageElem::flipped": (
-    105,
+    15,
     [
       #babel(
         en: [
@@ -129,7 +129,7 @@
     ],
   ),
   "PageElem::margin": (
-    127,
+    22,
     [
       #babel(
         en: [
@@ -177,7 +177,7 @@
     ],
   ),
   "PageElem::bleed": (
-    170,
+    43,
     [
       #babel(
         en: [
@@ -234,7 +234,7 @@
     ],
   ),
   "PageElem::binding": (
-    221,
+    51,
     babel(
       en: [
         On which side the pages will be bound.
@@ -250,7 +250,7 @@
     ),
   ),
   "PageElem::columns": (
-    233,
+    12,
     [
       #babel(
         en: [
@@ -279,7 +279,7 @@
     ],
   ),
   "PageElem::fill": (
-    257,
+    24,
     [
       #babel(
         en: [
@@ -308,7 +308,7 @@
     ],
   ),
   "PageElem::numbering": (
-    280,
+    23,
     [
       #babel(
         en: [
@@ -347,7 +347,7 @@
     ],
   ),
   "PageElem::supplement": (
-    313,
+    33,
     [
       #babel(
         en: [
@@ -366,7 +366,7 @@
     ],
   ),
   "PageElem::number_align": (
-    326,
+    13,
     [
       #babel(
         en: [
@@ -391,7 +391,7 @@
     ],
   ),
   "PageElem::header": (
-    346,
+    20,
     [
       #babel(
         en: [
@@ -420,7 +420,7 @@
     ],
   ),
   "PageElem::header_ascent": (
-    369,
+    23,
     babel(
       en: [
         The amount the header is raised into the top margin. Ratios are relative
@@ -429,7 +429,7 @@
     ),
   ),
   "PageElem::footer": (
-    375,
+    6,
     [
       #babel(
         en: [
@@ -466,7 +466,7 @@
     ],
   ),
   "PageElem::footer_descent": (
-    406,
+    31,
     [
       #babel(
         en: [
@@ -517,7 +517,7 @@
     ],
   ),
   "PageElem::background": (
-    452,
+    46,
     [
       #babel(
         en: [
@@ -547,7 +547,7 @@
     ],
   ),
   "PageElem::foreground": (
-    476,
+    24,
     [
       #babel(
         en: [
@@ -571,7 +571,7 @@
     ],
   ),
   "PageElem::body": (
-    494,
+    18,
     babel(
       en: [
         The contents of the page(s).
@@ -583,7 +583,7 @@
     ),
   ),
   "PagebreakElem": (
-    530,
+    36,
     [
       #babel(
         en: [
@@ -618,7 +618,7 @@
     ],
   ),
   "PagebreakElem::weak": (
-    554,
+    24,
     babel(
       en: [
         If `{true}`, the page break is skipped if the current page is already
@@ -627,7 +627,7 @@
     ),
   ),
   "PagebreakElem::to": (
-    559,
+    5,
     [
       #babel(
         en: [
@@ -645,4 +645,4 @@
       ```
     ],
   ),
-)
+))

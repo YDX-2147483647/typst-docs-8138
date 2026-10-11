@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Datetime": (
     18,
     [
@@ -147,7 +147,7 @@
     ],
   ),
   "Datetime::construct": (
-    243,
+    225,
     [
       #babel(
         en: [
@@ -178,7 +178,7 @@
     ],
   ),
   "Datetime::construct::year": (
-    267,
+    24,
     babel(
       en: [
         The year of the datetime.
@@ -186,7 +186,7 @@
     ),
   ),
   "Datetime::construct::month": (
-    270,
+    3,
     babel(
       en: [
         The month of the datetime.
@@ -194,7 +194,7 @@
     ),
   ),
   "Datetime::construct::day": (
-    273,
+    3,
     babel(
       en: [
         The day of the datetime.
@@ -202,7 +202,7 @@
     ),
   ),
   "Datetime::construct::hour": (
-    276,
+    3,
     babel(
       en: [
         The hour of the datetime.
@@ -210,7 +210,7 @@
     ),
   ),
   "Datetime::construct::minute": (
-    279,
+    3,
     babel(
       en: [
         The minute of the datetime.
@@ -218,7 +218,7 @@
     ),
   ),
   "Datetime::construct::second": (
-    282,
+    3,
     babel(
       en: [
         The second of the datetime.
@@ -226,7 +226,7 @@
     ),
   ),
   "Datetime::today": (
-    357,
+    75,
     [
       #babel(
         en: [
@@ -247,7 +247,7 @@
     ],
   ),
   "Datetime::today::offset": (
-    372,
+    15,
     babel(
       en: [
         An offset to apply to the current UTC date. If set to `{auto}`, the
@@ -259,7 +259,7 @@
     ),
   ),
   "Datetime::display": (
-    385,
+    13,
     babel(
       en: [
         Displays the datetime in a specified format.
@@ -275,7 +275,7 @@
     ),
   ),
   "Datetime::display::pattern": (
-    397,
+    12,
     babel(
       en: [
         The format used to display the datetime.
@@ -283,7 +283,7 @@
     ),
   ),
   "Datetime::year": (
-    420,
+    23,
     babel(
       en: [
         The year if it was specified, or `{none}` for times without a date.
@@ -291,7 +291,7 @@
     ),
   ),
   "Datetime::month": (
-    430,
+    10,
     babel(
       en: [
         The month if it was specified, or `{none}` for times without a date.
@@ -299,7 +299,7 @@
     ),
   ),
   "Datetime::weekday": (
-    440,
+    10,
     babel(
       en: [
         The weekday (counting Monday as 1) or `{none}` for times without a date.
@@ -307,7 +307,7 @@
     ),
   ),
   "Datetime::day": (
-    450,
+    10,
     babel(
       en: [
         The day if it was specified, or `{none}` for times without a date.
@@ -315,7 +315,7 @@
     ),
   ),
   "Datetime::hour": (
-    460,
+    10,
     babel(
       en: [
         The hour if it was specified, or `{none}` for dates without a time.
@@ -323,7 +323,7 @@
     ),
   ),
   "Datetime::minute": (
-    470,
+    10,
     babel(
       en: [
         The minute if it was specified, or `{none}` for dates without a time.
@@ -331,7 +331,7 @@
     ),
   ),
   "Datetime::second": (
-    480,
+    10,
     babel(
       en: [
         The second if it was specified, or `{none}` for dates without a time.
@@ -339,11 +339,11 @@
     ),
   ),
   "Datetime::ordinal": (
-    490,
+    10,
     babel(
       en: [
         The ordinal (day of the year), or `{none}` for times without a date.
       ],
     ),
   ),
-)
+))

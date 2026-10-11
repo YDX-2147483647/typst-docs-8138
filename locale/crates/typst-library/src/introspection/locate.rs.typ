@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "locate": (
     9,
     [
@@ -32,7 +32,7 @@
     ],
   ),
   "locate::selector": (
-    32,
+    23,
     babel(
       en: [
         A selector that should match exactly one element. This element will be
@@ -45,4 +45,4 @@
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "RectElem": (
     6,
     [
@@ -23,7 +23,7 @@
     ],
   ),
   "RectElem::width": (
-    21,
+    15,
     babel(
       en: [
         The rectangle's width, relative to its parent container.
@@ -31,7 +31,7 @@
     ),
   ),
   "RectElem::height": (
-    24,
+    3,
     babel(
       en: [
         The rectangle's height, relative to its parent container.
@@ -39,7 +39,7 @@
     ),
   ),
   "RectElem::fill": (
-    27,
+    3,
     [
       #babel(
         en: [
@@ -56,7 +56,7 @@
     ],
   ),
   "RectElem::stroke": (
-    37,
+    10,
     [
       #babel(
         en: [
@@ -98,7 +98,7 @@
     ],
   ),
   "RectElem::radius": (
-    73,
+    36,
     [
       #babel(
         en: [
@@ -142,7 +142,7 @@
     ],
   ),
   "RectElem::inset": (
-    111,
+    38,
     babel(
       en: [
         How much to pad the rectangle's content. See the
@@ -151,7 +151,7 @@
     ),
   ),
   "RectElem::outset": (
-    117,
+    6,
     babel(
       en: [
         How much to expand the rectangle's size without affecting the layout.
@@ -160,7 +160,7 @@
     ),
   ),
   "RectElem::body": (
-    122,
+    5,
     babel(
       en: [
         The content to place into the rectangle.
@@ -171,7 +171,7 @@
     ),
   ),
   "SquareElem": (
-    130,
+    8,
     [
       #babel(
         en: [
@@ -193,7 +193,7 @@
     ],
   ),
   "SquareElem::size": (
-    145,
+    15,
     babel(
       en: [
         The square's side length. This is mutually exclusive with `width` and
@@ -202,7 +202,7 @@
     ),
   ),
   "SquareElem::width": (
-    150,
+    5,
     babel(
       en: [
         The square's width. This is mutually exclusive with `size` and `height`.
@@ -213,7 +213,7 @@
     ),
   ),
   "SquareElem::height": (
-    163,
+    13,
     babel(
       en: [
         The square's height. This is mutually exclusive with `size` and `width`.
@@ -224,7 +224,7 @@
     ),
   ),
   "SquareElem::fill": (
-    173,
+    10,
     babel(
       en: [
         How to fill the square. See the @rect.fill[rectangle's documentation]
@@ -233,7 +233,7 @@
     ),
   ),
   "SquareElem::stroke": (
-    177,
+    4,
     babel(
       en: [
         How to stroke the square. See the
@@ -242,7 +242,7 @@
     ),
   ),
   "SquareElem::radius": (
-    182,
+    5,
     babel(
       en: [
         How much to round the square's corners. See the
@@ -251,7 +251,7 @@
     ),
   ),
   "SquareElem::inset": (
-    187,
+    5,
     babel(
       en: [
         How much to pad the square's content. See the
@@ -260,7 +260,7 @@
     ),
   ),
   "SquareElem::outset": (
-    193,
+    6,
     babel(
       en: [
         How much to expand the square's size without affecting the layout. See
@@ -269,7 +269,7 @@
     ),
   ),
   "SquareElem::body": (
-    198,
+    5,
     babel(
       en: [
         The content to place into the square. The square expands to fit this
@@ -281,7 +281,7 @@
     ),
   ),
   "EllipseElem": (
-    207,
+    9,
     [
       #babel(
         en: [
@@ -304,7 +304,7 @@
     ],
   ),
   "EllipseElem::width": (
-    223,
+    16,
     babel(
       en: [
         The ellipse's width, relative to its parent container.
@@ -312,7 +312,7 @@
     ),
   ),
   "EllipseElem::height": (
-    226,
+    3,
     babel(
       en: [
         The ellipse's height, relative to its parent container.
@@ -320,7 +320,7 @@
     ),
   ),
   "EllipseElem::fill": (
-    229,
+    3,
     babel(
       en: [
         How to fill the ellipse. See the @rect.fill[rectangle's documentation]
@@ -329,7 +329,7 @@
     ),
   ),
   "EllipseElem::stroke": (
-    233,
+    4,
     babel(
       en: [
         How to stroke the ellipse. See the
@@ -338,7 +338,7 @@
     ),
   ),
   "EllipseElem::inset": (
-    238,
+    5,
     babel(
       en: [
         How much to pad the ellipse's content. See the
@@ -347,7 +347,7 @@
     ),
   ),
   "EllipseElem::outset": (
-    244,
+    6,
     babel(
       en: [
         How much to expand the ellipse's size without affecting the layout. See
@@ -356,7 +356,7 @@
     ),
   ),
   "EllipseElem::body": (
-    249,
+    5,
     babel(
       en: [
         The content to place into the ellipse.
@@ -367,7 +367,7 @@
     ),
   ),
   "CircleElem": (
-    257,
+    8,
     [
       #babel(
         en: [
@@ -390,7 +390,7 @@
     ],
   ),
   "CircleElem::radius": (
-    273,
+    16,
     babel(
       en: [
         The circle's radius. This is mutually exclusive with `width` and
@@ -399,7 +399,7 @@
     ),
   ),
   "CircleElem::width": (
-    278,
+    5,
     babel(
       en: [
         The circle's width. This is mutually exclusive with `radius` and
@@ -411,7 +411,7 @@
     ),
   ),
   "CircleElem::height": (
-    294,
+    16,
     babel(
       en: [
         The circle's height. This is mutually exclusive with `radius` and
@@ -423,7 +423,7 @@
     ),
   ),
   "CircleElem::fill": (
-    305,
+    11,
     babel(
       en: [
         How to fill the circle. See the @rect.fill[rectangle's documentation]
@@ -432,7 +432,7 @@
     ),
   ),
   "CircleElem::stroke": (
-    309,
+    4,
     babel(
       en: [
         How to stroke the circle. See the
@@ -441,7 +441,7 @@
     ),
   ),
   "CircleElem::inset": (
-    315,
+    6,
     babel(
       en: [
         How much to pad the circle's content. See the
@@ -450,7 +450,7 @@
     ),
   ),
   "CircleElem::outset": (
-    321,
+    6,
     babel(
       en: [
         How much to expand the circle's size without affecting the layout. See
@@ -459,7 +459,7 @@
     ),
   ),
   "CircleElem::body": (
-    326,
+    5,
     babel(
       en: [
         The content to place into the circle. The circle expands to fit this
@@ -467,4 +467,4 @@
       ],
     ),
   ),
-)
+))

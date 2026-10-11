@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "ListElem": (
     12,
     [
@@ -45,7 +45,7 @@
     ],
   ),
   "ListElem::tight": (
-    45,
+    33,
     [
       #babel(
         en: [
@@ -74,7 +74,7 @@
     ],
   ),
   "ListElem::marker": (
-    68,
+    23,
     [
       #babel(
         en: [
@@ -102,7 +102,7 @@
     ],
   ),
   "ListElem::indent": (
-    97,
+    29,
     babel(
       en: [
         The indent of each item.
@@ -110,7 +110,7 @@
     ),
   ),
   "ListElem::body_indent": (
-    100,
+    3,
     babel(
       en: [
         The spacing between the marker and the body of each item.
@@ -118,7 +118,7 @@
     ),
   ),
   "ListElem::spacing": (
-    104,
+    4,
     babel(
       en: [
         The spacing between the items of the list.
@@ -129,7 +129,7 @@
     ),
   ),
   "ListElem::marker_align": (
-    110,
+    6,
     [
       #babel(
         en: [
@@ -164,7 +164,7 @@
     ],
   ),
   "ListElem::children": (
-    139,
+    29,
     [
       #babel(
         en: [
@@ -183,7 +183,7 @@
     ],
   ),
   "ListItem": (
-    165,
+    26,
     babel(
       en: [
         A bullet list item.
@@ -191,11 +191,11 @@
     ),
   ),
   "ListItem::body": (
-    168,
+    3,
     babel(
       en: [
         The item's body.
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "HideElem": (
     3,
     [
@@ -35,11 +35,11 @@
     ],
   ),
   "HideElem::body": (
-    26,
+    23,
     babel(
       en: [
         The content to hide.
       ],
     ),
   ),
-)
+))

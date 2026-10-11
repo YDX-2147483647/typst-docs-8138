@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "FigureElem": (
     23,
     [
@@ -139,7 +139,7 @@
     ],
   ),
   "FigureElem::body": (
-    132,
+    109,
     babel(
       en: [
         The content of the figure. Often, an @image[image].
@@ -147,7 +147,7 @@
     ),
   ),
   "FigureElem::alt": (
-    136,
+    4,
     babel(
       en: [
         An alternative description of the figure.
@@ -169,7 +169,7 @@
     ),
   ),
   "FigureElem::placement": (
-    153,
+    17,
     [
       #babel(
         en: [
@@ -205,7 +205,7 @@
     ],
   ),
   "FigureElem::scope": (
-    182,
+    29,
     [
       #babel(
         en: [
@@ -233,7 +233,7 @@
     ],
   ),
   "FigureElem::caption": (
-    203,
+    21,
     babel(
       en: [
         The figure's caption.
@@ -241,7 +241,7 @@
     ),
   ),
   "FigureElem::kind": (
-    206,
+    3,
     [
       #babel(
         en: [
@@ -325,7 +325,7 @@
     ],
   ),
   "FigureElem::supplement": (
-    275,
+    69,
     [
       #babel(
         en: [
@@ -353,7 +353,7 @@
     ],
   ),
   "FigureElem::numbering": (
-    296,
+    21,
     babel(
       en: [
         How to number the figure. Accepts a
@@ -362,7 +362,7 @@
     ),
   ),
   "FigureElem::gap": (
-    301,
+    5,
     babel(
       en: [
         The vertical gap between the body and caption.
@@ -370,7 +370,7 @@
     ),
   ),
   "FigureElem::outlined": (
-    305,
+    4,
     babel(
       en: [
         Whether the figure should appear in an @outline of figures.
@@ -378,7 +378,7 @@
     ),
   ),
   "FigureCaption": (
-    493,
+    188,
     [
       #babel(
         en: [
@@ -404,7 +404,7 @@
     ],
   ),
   "FigureCaption::position": (
-    512,
+    19,
     [
       #babel(
         en: [
@@ -438,7 +438,7 @@
     ],
   ),
   "FigureCaption::separator": (
-    540,
+    28,
     [
       #babel(
         en: [
@@ -460,7 +460,7 @@
     ],
   ),
   "FigureCaption::body": (
-    555,
+    15,
     [
       #babel(
         en: [
@@ -485,4 +485,4 @@
       ```
     ],
   ),
-)
+))

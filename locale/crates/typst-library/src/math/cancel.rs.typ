@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "CancelElem": (
     6,
     [
@@ -21,7 +21,7 @@
     ],
   ),
   "CancelElem::body": (
-    19,
+    13,
     babel(
       en: [
         The content over which the line should be placed.
@@ -29,7 +29,7 @@
     ),
   ),
   "CancelElem::length": (
-    23,
+    4,
     [
       #babel(
         en: [
@@ -47,7 +47,7 @@
     ],
   ),
   "CancelElem::inverted": (
-    35,
+    12,
     [
       #babel(
         en: [
@@ -65,7 +65,7 @@
     ],
   ),
   "CancelElem::cross": (
-    47,
+    12,
     [
       #babel(
         en: [
@@ -81,7 +81,7 @@
     ],
   ),
   "CancelElem::angle": (
-    57,
+    10,
     [
       #babel(
         en: [
@@ -109,7 +109,7 @@
     ],
   ),
   "CancelElem::stroke": (
-    78,
+    21,
     [
       #babel(
         en: [
@@ -131,7 +131,7 @@
     ],
   ),
   "CancelElem::background": (
-    99,
+    21,
     [
       #babel(
         en: [
@@ -147,4 +147,4 @@
       ```
     ],
   ),
-)
+))

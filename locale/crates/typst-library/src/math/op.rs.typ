@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "OpElem": (
     9,
     [
@@ -29,7 +29,7 @@
     ],
   ),
   "OpElem::text": (
-    26,
+    17,
     babel(
       en: [
         The operator's text.
@@ -37,11 +37,11 @@
     ),
   ),
   "OpElem::limits": (
-    30,
+    4,
     babel(
       en: [
         Whether the operator should show attachments as limits in display mode.
       ],
     ),
   ),
-)
+))

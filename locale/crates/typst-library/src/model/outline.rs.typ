@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "OutlineElem": (
     27,
     [
@@ -153,7 +153,7 @@
     ],
   ),
   "OutlineElem::title": (
-    152,
+    125,
     babel(
       en: [
         The title of the outline.
@@ -170,7 +170,7 @@
     ),
   ),
   "OutlineElem::target": (
-    164,
+    12,
     [
       #babel(
         en: [
@@ -201,7 +201,7 @@
     ],
   ),
   "OutlineElem::depth": (
-    189,
+    25,
     [
       #babel(
         en: [
@@ -226,7 +226,7 @@
     ],
   ),
   "OutlineElem::indent": (
-    207,
+    18,
     [
       #babel(
         en: [
@@ -271,7 +271,7 @@
     ],
   ),
   "OutlineEntry": (
-    468,
+    261,
     babel(
       en: [
         Represents an entry line in an outline.
@@ -283,7 +283,7 @@
     ),
   ),
   "OutlineEntry::level": (
-    482,
+    14,
     babel(
       en: [
         The nesting level of this outline entry. Starts at `{1}` for top-level
@@ -292,7 +292,7 @@
     ),
   ),
   "OutlineEntry::element": (
-    487,
+    5,
     babel(
       en: [
         The element this entry refers to. Its location will be available through
@@ -302,7 +302,7 @@
     ),
   ),
   "OutlineEntry::fill": (
-    493,
+    6,
     [
       #babel(
         en: [
@@ -328,7 +328,7 @@
     ],
   ),
   "OutlineEntry::indented": (
-    526,
+    33,
     babel(
       en: [
         A helper function for producing an indented entry layout: Lays out a
@@ -348,7 +348,7 @@
     ),
   ),
   "OutlineEntry::indented::prefix": (
-    545,
+    19,
     babel(
       en: [
         The `prefix` is aligned with the `inner` content of entries that
@@ -360,7 +360,7 @@
     ),
   ),
   "OutlineEntry::indented::inner": (
-    551,
+    6,
     babel(
       en: [
         The formatted inner content of the entry.
@@ -371,7 +371,7 @@
     ),
   ),
   "OutlineEntry::indented::gap": (
-    556,
+    5,
     babel(
       en: [
         The gap between the prefix and the inner content.
@@ -379,7 +379,7 @@
     ),
   ),
   "OutlineEntry::prefix": (
-    631,
+    75,
     babel(
       en: [
         Formats the element's numbering (if any).
@@ -391,7 +391,7 @@
     ),
   ),
   "OutlineEntry::inner": (
-    653,
+    22,
     babel(
       en: [
         Creates the default inner content of the entry.
@@ -401,7 +401,7 @@
     ),
   ),
   "OutlineEntry::body": (
-    668,
+    15,
     babel(
       en: [
         The content which is displayed in place of the referred element at its
@@ -411,7 +411,7 @@
     ),
   ),
   "OutlineEntry::page": (
-    676,
+    8,
     babel(
       en: [
         The page number of this entry's element, formatted with the numbering
@@ -419,4 +419,4 @@
       ],
     ),
   ),
-)
+))

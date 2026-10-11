@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "PlaceElem": (
     4,
     [
@@ -92,7 +92,7 @@
     ],
   ),
   "PlaceElem::alignment": (
-    76,
+    72,
     babel(
       en: [
         Relative to which position in the parent container to place the content.
@@ -108,7 +108,7 @@
     ),
   ),
   "PlaceElem::scope": (
-    89,
+    13,
     [
       #babel(
         en: [
@@ -140,7 +140,7 @@
     ],
   ),
   "PlaceElem::float": (
-    114,
+    25,
     [
       #babel(
         en: [
@@ -172,7 +172,7 @@
     ],
   ),
   "PlaceElem::clearance": (
-    139,
+    25,
     babel(
       en: [
         The spacing between the placed element and other elements in a floating
@@ -183,7 +183,7 @@
     ),
   ),
   "PlaceElem::dx": (
-    146,
+    7,
     [
       #babel(
         en: [
@@ -213,7 +213,7 @@
     ],
   ),
   "PlaceElem::dy": (
-    165,
+    19,
     babel(
       en: [
         The vertical displacement of the placed content.
@@ -224,7 +224,7 @@
     ),
   ),
   "PlaceElem::body": (
-    171,
+    6,
     babel(
       en: [
         The content to place.
@@ -232,7 +232,7 @@
     ),
   ),
   "FlushElem": (
-    192,
+    21,
     [
       #babel(
         en: [
@@ -260,4 +260,4 @@
       ```
     ],
   ),
-)
+))

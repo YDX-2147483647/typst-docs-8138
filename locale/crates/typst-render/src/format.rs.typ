@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "PngFormat": (
     12,
     [
@@ -86,11 +86,11 @@
     ],
   ),
   "PngFormat::ppi": (
-    82,
+    70,
     babel(
       en: [
         The PPI (pixels per inch) to use for PNG export.
       ],
     ),
   ),
-)
+))

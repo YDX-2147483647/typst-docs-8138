@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "yaml": (
     9,
     [
@@ -100,7 +100,7 @@
     ],
   ),
   "yaml::source": (
-    98,
+    89,
     babel(
       en: [
         A path to a YAML file or raw YAML bytes.
@@ -108,7 +108,7 @@
     ),
   ),
   "yaml::encode": (
-    109,
+    11,
     babel(
       en: [
         Encode structured data into a YAML string.
@@ -116,11 +116,11 @@
     ),
   ),
   "yaml::encode::value": (
-    112,
+    3,
     babel(
       en: [
         Value to be encoded.
       ],
     ),
   ),
-)
+))

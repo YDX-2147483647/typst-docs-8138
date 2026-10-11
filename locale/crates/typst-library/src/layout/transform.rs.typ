@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "MoveElem": (
     4,
     [
@@ -38,7 +38,7 @@
     ],
   ),
   "MoveElem::dx": (
-    30,
+    26,
     babel(
       en: [
         The horizontal displacement of the content.
@@ -46,7 +46,7 @@
     ),
   ),
   "MoveElem::dy": (
-    33,
+    3,
     babel(
       en: [
         The vertical displacement of the content.
@@ -54,7 +54,7 @@
     ),
   ),
   "MoveElem::body": (
-    36,
+    3,
     babel(
       en: [
         The content to move.
@@ -62,7 +62,7 @@
     ),
   ),
   "RotateElem": (
-    41,
+    5,
     [
       #babel(
         en: [
@@ -85,7 +85,7 @@
     ],
   ),
   "RotateElem::angle": (
-    57,
+    16,
     [
       #babel(
         en: [
@@ -99,7 +99,7 @@
     ],
   ),
   "RotateElem::origin": (
-    65,
+    8,
     [
       #babel(
         en: [
@@ -123,7 +123,7 @@
     ],
   ),
   "RotateElem::reflow": (
-    84,
+    19,
     [
       #babel(
         en: [
@@ -141,7 +141,7 @@
     ],
   ),
   "RotateElem::body": (
-    96,
+    12,
     babel(
       en: [
         The content to rotate.
@@ -149,7 +149,7 @@
     ),
   ),
   "ScaleElem": (
-    101,
+    5,
     [
       #babel(
         en: [
@@ -168,7 +168,7 @@
     ],
   ),
   "ScaleElem::factor": (
-    113,
+    12,
     babel(
       en: [
         The scaling factor for both axes, as a positional argument. This is just
@@ -178,7 +178,7 @@
     ),
   ),
   "ScaleElem::x": (
-    121,
+    8,
     babel(
       en: [
         The horizontal scaling factor.
@@ -188,7 +188,7 @@
     ),
   ),
   "ScaleElem::y": (
-    131,
+    10,
     babel(
       en: [
         The vertical scaling factor.
@@ -198,7 +198,7 @@
     ),
   ),
   "ScaleElem::origin": (
-    138,
+    7,
     [
       #babel(
         en: [
@@ -213,7 +213,7 @@
     ],
   ),
   "ScaleElem::reflow": (
-    148,
+    10,
     [
       #babel(
         en: [
@@ -231,7 +231,7 @@
     ],
   ),
   "ScaleElem::body": (
-    160,
+    12,
     babel(
       en: [
         The content to scale.
@@ -239,7 +239,7 @@
     ),
   ),
   "SkewElem": (
-    182,
+    22,
     [
       #babel(
         en: [
@@ -259,7 +259,7 @@
     ],
   ),
   "SkewElem::ax": (
-    195,
+    13,
     [
       #babel(
         en: [
@@ -273,7 +273,7 @@
     ],
   ),
   "SkewElem::ay": (
-    203,
+    8,
     [
       #babel(
         en: [
@@ -287,7 +287,7 @@
     ],
   ),
   "SkewElem::origin": (
-    211,
+    8,
     [
       #babel(
         en: [
@@ -305,7 +305,7 @@
     ],
   ),
   "SkewElem::reflow": (
-    224,
+    13,
     [
       #babel(
         en: [
@@ -324,11 +324,11 @@
     ],
   ),
   "SkewElem::body": (
-    237,
+    13,
     babel(
       en: [
         The content to skew.
       ],
     ),
   ),
-)
+))

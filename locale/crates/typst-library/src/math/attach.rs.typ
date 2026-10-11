@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "AttachElem": (
     8,
     [
@@ -25,7 +25,7 @@
     ],
   ),
   "AttachElem::base": (
-    21,
+    13,
     babel(
       en: [
         The base to which things are attached.
@@ -33,7 +33,7 @@
     ),
   ),
   "AttachElem::t": (
-    25,
+    4,
     babel(
       en: [
         The top attachment, smartly positioned at top-right or above the base.
@@ -44,7 +44,7 @@
     ),
   ),
   "AttachElem::b": (
-    31,
+    6,
     babel(
       en: [
         The bottom attachment, smartly positioned at the bottom-right or below
@@ -56,7 +56,7 @@
     ),
   ),
   "AttachElem::tl": (
-    38,
+    7,
     babel(
       en: [
         The top-left attachment (before the base).
@@ -64,7 +64,7 @@
     ),
   ),
   "AttachElem::bl": (
-    41,
+    3,
     babel(
       en: [
         The bottom-left attachment (before base).
@@ -72,7 +72,7 @@
     ),
   ),
   "AttachElem::tr": (
-    44,
+    3,
     babel(
       en: [
         The top-right attachment (after the base).
@@ -80,7 +80,7 @@
     ),
   ),
   "AttachElem::br": (
-    47,
+    3,
     babel(
       en: [
         The bottom-right attachment (after the base).
@@ -88,7 +88,7 @@
     ),
   ),
   "PrimesElem": (
-    51,
+    4,
     [
       #babel(
         en: [
@@ -111,7 +111,7 @@
     ],
   ),
   "PrimesElem::count": (
-    63,
+    12,
     babel(
       en: [
         The number of grouped primes.
@@ -119,7 +119,7 @@
     ),
   ),
   "ScriptsElem": (
-    68,
+    5,
     [
       #babel(
         en: [
@@ -133,7 +133,7 @@
     ],
   ),
   "ScriptsElem::body": (
-    75,
+    7,
     babel(
       en: [
         The base to attach the scripts to.
@@ -141,7 +141,7 @@
     ),
   ),
   "LimitsElem": (
-    80,
+    5,
     [
       #babel(
         en: [
@@ -155,7 +155,7 @@
     ],
   ),
   "LimitsElem::body": (
-    87,
+    7,
     babel(
       en: [
         The base to attach the limits to.
@@ -163,7 +163,7 @@
     ),
   ),
   "LimitsElem::inline": (
-    91,
+    4,
     babel(
       en: [
         Whether to also force limits in inline equations.
@@ -174,7 +174,7 @@
     ),
   ),
   "StretchElem": (
-    99,
+    8,
     [
       #babel(
         en: [
@@ -198,7 +198,7 @@
     ],
   ),
   "StretchElem::body": (
-    116,
+    17,
     babel(
       en: [
         The glyph to stretch.
@@ -206,7 +206,7 @@
     ),
   ),
   "StretchElem::size": (
-    120,
+    4,
     [
       #babel(
         en: [
@@ -237,4 +237,4 @@
       )
     ],
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "CurveElem": (
     12,
     [
@@ -40,7 +40,7 @@
     ],
   ),
   "CurveElem::fill": (
-    44,
+    32,
     babel(
       en: [
         How to fill the curve.
@@ -51,7 +51,7 @@
     ),
   ),
   "CurveElem::fill_rule": (
-    50,
+    6,
     [
       #babel(
         en: [
@@ -79,7 +79,7 @@
     ],
   ),
   "CurveElem::stroke": (
-    72,
+    22,
     [
       #babel(
         en: [
@@ -102,7 +102,7 @@
     ],
   ),
   "CurveElem::components": (
-    89,
+    17,
     babel(
       en: [
         The components of the curve, in the form of moves, line and Bézier
@@ -111,7 +111,7 @@
     ),
   ),
   "CurveMove": (
-    152,
+    63,
     [
       #babel(
         en: [
@@ -141,7 +141,7 @@
     ],
   ),
   "CurveMove::start": (
-    175,
+    23,
     babel(
       en: [
         The starting point for the new component.
@@ -149,7 +149,7 @@
     ),
   ),
   "CurveMove::relative": (
-    179,
+    4,
     babel(
       en: [
         Whether the coordinates are relative to the previous point.
@@ -157,7 +157,7 @@
     ),
   ),
   "CurveLine": (
-    184,
+    5,
     [
       #babel(
         en: [
@@ -178,7 +178,7 @@
     ],
   ),
   "CurveLine::end": (
-    198,
+    14,
     babel(
       en: [
         The point at which the line shall end.
@@ -186,7 +186,7 @@
     ),
   ),
   "CurveLine::relative": (
-    202,
+    4,
     [
       #babel(
         en: [
@@ -207,7 +207,7 @@
     ],
   ),
   "CurveQuad": (
-    218,
+    16,
     [
       #babel(
         en: [
@@ -234,7 +234,7 @@
     ],
   ),
   "CurveQuad::control": (
-    238,
+    20,
     [
       #babel(
         en: [
@@ -257,7 +257,7 @@
     ],
   ),
   "CurveQuad::end": (
-    255,
+    17,
     babel(
       en: [
         The point at which the segment shall end.
@@ -265,7 +265,7 @@
     ),
   ),
   "CurveQuad::relative": (
-    259,
+    4,
     babel(
       en: [
         Whether the `control` and `end` coordinates are relative to the previous
@@ -274,7 +274,7 @@
     ),
   ),
   "CurveCubic": (
-    265,
+    6,
     [
       #babel(
         en: [
@@ -301,7 +301,7 @@
     ],
   ),
   "CurveCubic::control_start": (
-    285,
+    20,
     [
       #babel(
         en: [
@@ -352,7 +352,7 @@
     ],
   ),
   "CurveCubic::control_end": (
-    330,
+    45,
     babel(
       en: [
         The control point going into the end point of the curve segment.
@@ -363,7 +363,7 @@
     ),
   ),
   "CurveCubic::end": (
-    337,
+    7,
     babel(
       en: [
         The point at which the curve segment shall end.
@@ -371,7 +371,7 @@
     ),
   ),
   "CurveCubic::relative": (
-    341,
+    4,
     babel(
       en: [
         Whether the `control-start`, `control-end`, and `end` coordinates are
@@ -380,7 +380,7 @@
     ),
   ),
   "CurveClose": (
-    347,
+    6,
     [
       #babel(
         en: [
@@ -407,11 +407,11 @@
     ],
   ),
   "CurveClose::mode": (
-    367,
+    20,
     babel(
       en: [
         How to close the curve.
       ],
     ),
   ),
-)
+))

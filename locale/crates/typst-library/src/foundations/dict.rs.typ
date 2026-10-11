@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Dict": (
     35,
     [
@@ -54,7 +54,7 @@
     ],
   ),
   "Dict::construct": (
-    175,
+    140,
     [
       #babel(
         en: [
@@ -73,7 +73,7 @@
     ],
   ),
   "Dict::construct::value": (
-    188,
+    13,
     babel(
       en: [
         The value that should be converted to a dictionary.
@@ -81,7 +81,7 @@
     ),
   ),
   "Dict::len": (
-    206,
+    18,
     babel(
       en: [
         The number of pairs in the dictionary.
@@ -89,7 +89,7 @@
     ),
   ),
   "Dict::at": (
-    212,
+    6,
     babel(
       en: [
         Returns the value associated with the specified key in the dictionary.
@@ -105,7 +105,7 @@
     ),
   ),
   "Dict::at::key": (
-    224,
+    12,
     babel(
       en: [
         The key at which to retrieve the item.
@@ -113,7 +113,7 @@
     ),
   ),
   "Dict::at::default": (
-    226,
+    2,
     babel(
       en: [
         A default value to return if the key is not part of the dictionary.
@@ -121,7 +121,7 @@
     ),
   ),
   "Dict::insert": (
-    237,
+    11,
     babel(
       en: [
         Inserts a new pair into the dictionary. If the dictionary already
@@ -133,7 +133,7 @@
     ),
   ),
   "Dict::insert::key": (
-    245,
+    8,
     babel(
       en: [
         The key of the pair that should be inserted.
@@ -141,7 +141,7 @@
     ),
   ),
   "Dict::insert::value": (
-    247,
+    2,
     babel(
       en: [
         The value of the pair that should be inserted.
@@ -149,7 +149,7 @@
     ),
   ),
   "Dict::remove": (
-    253,
+    6,
     babel(
       en: [
         Removes a pair from the dictionary by key and return the value.
@@ -157,7 +157,7 @@
     ),
   ),
   "Dict::remove::key": (
-    257,
+    4,
     babel(
       en: [
         The key of the pair to remove.
@@ -165,7 +165,7 @@
     ),
   ),
   "Dict::remove::default": (
-    259,
+    2,
     babel(
       en: [
         A default value to return if the key does not exist.
@@ -173,7 +173,7 @@
     ),
   ),
   "Dict::keys": (
-    269,
+    10,
     babel(
       en: [
         Returns the keys of the dictionary as an array in insertion order.
@@ -181,7 +181,7 @@
     ),
   ),
   "Dict::values": (
-    275,
+    6,
     babel(
       en: [
         Returns the values of the dictionary as an array in insertion order.
@@ -189,7 +189,7 @@
     ),
   ),
   "Dict::pairs": (
-    281,
+    6,
     babel(
       en: [
         Returns the keys and values of the dictionary as an array of pairs. Each
@@ -198,7 +198,7 @@
     ),
   ),
   "Dict::filter": (
-    291,
+    10,
     [
       #babel(
         en: [
@@ -231,7 +231,7 @@
     ],
   ),
   "Dict::filter::test": (
-    320,
+    29,
     babel(
       en: [
         The function to apply to each value. Must return a boolean.
@@ -239,7 +239,7 @@
     ),
   ),
   "Dict::map": (
-    333,
+    13,
     [
       #babel(
         en: [
@@ -254,11 +254,11 @@
     ],
   ),
   "Dict::map::mapper": (
-    344,
+    11,
     babel(
       en: [
         The function to apply to each value.
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "PadElem": (
     4,
     [
@@ -23,7 +23,7 @@
     ],
   ),
   "PadElem::left": (
-    19,
+    15,
     babel(
       en: [
         The padding at the left side.
@@ -31,7 +31,7 @@
     ),
   ),
   "PadElem::top": (
-    28,
+    9,
     babel(
       en: [
         The padding at the top side.
@@ -39,7 +39,7 @@
     ),
   ),
   "PadElem::right": (
-    32,
+    4,
     babel(
       en: [
         The padding at the right side.
@@ -47,7 +47,7 @@
     ),
   ),
   "PadElem::bottom": (
-    36,
+    4,
     babel(
       en: [
         The padding at the bottom side.
@@ -55,7 +55,7 @@
     ),
   ),
   "PadElem::x": (
-    40,
+    4,
     babel(
       en: [
         A shorthand to set `left` and `right` to the same value.
@@ -63,7 +63,7 @@
     ),
   ),
   "PadElem::y": (
-    44,
+    4,
     babel(
       en: [
         A shorthand to set `top` and `bottom` to the same value.
@@ -71,7 +71,7 @@
     ),
   ),
   "PadElem::rest": (
-    48,
+    4,
     babel(
       en: [
         A shorthand to set all four sides to the same value.
@@ -79,11 +79,11 @@
     ),
   ),
   "PadElem::body": (
-    52,
+    4,
     babel(
       en: [
         The content to pad at the sides.
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Str": (
     36,
     [
@@ -52,7 +52,7 @@
     ],
   ),
   "Str::construct": (
-    131,
+    95,
     [
       #babel(
         en: [
@@ -82,7 +82,7 @@
     ],
   ),
   "Str::construct::value": (
-    154,
+    23,
     babel(
       en: [
         The value that should be converted to a string.
@@ -90,7 +90,7 @@
     ),
   ),
   "Str::construct::base": (
-    156,
+    2,
     babel(
       en: [
         The base (radix) to display integers in, between 2 and 36.
@@ -98,7 +98,7 @@
     ),
   ),
   "Str::len": (
-    184,
+    28,
     babel(
       en: [
         The length of the string in UTF-8 encoded bytes.
@@ -106,7 +106,7 @@
     ),
   ),
   "Str::first": (
-    190,
+    6,
     babel(
       en: [
         Extracts the first grapheme cluster of the string.
@@ -117,7 +117,7 @@
     ),
   ),
   "Str::first::default": (
-    197,
+    7,
     babel(
       en: [
         A default value to return if the string is empty.
@@ -125,7 +125,7 @@
     ),
   ),
   "Str::last": (
-    209,
+    12,
     babel(
       en: [
         Extracts the last grapheme cluster of the string.
@@ -136,7 +136,7 @@
     ),
   ),
   "Str::last::default": (
-    216,
+    7,
     babel(
       en: [
         A default value to return if the string is empty.
@@ -144,7 +144,7 @@
     ),
   ),
   "Str::at": (
-    228,
+    12,
     babel(
       en: [
         Extracts the first grapheme cluster after the specified index. Returns
@@ -154,7 +154,7 @@
     ),
   ),
   "Str::at::index": (
-    234,
+    6,
     babel(
       en: [
         The byte index. If negative, indexes from the back.
@@ -162,7 +162,7 @@
     ),
   ),
   "Str::at::default": (
-    236,
+    2,
     babel(
       en: [
         A default value to return if the index is out of bounds.
@@ -170,7 +170,7 @@
     ),
   ),
   "Str::slice": (
-    247,
+    11,
     babel(
       en: [
         Extracts a substring of the string. Fails with an error if the start or
@@ -179,7 +179,7 @@
     ),
   ),
   "Str::slice::start": (
-    252,
+    5,
     babel(
       en: [
         The start byte index (inclusive). If negative, indexes from the
@@ -188,7 +188,7 @@
     ),
   ),
   "Str::slice::end": (
-    255,
+    3,
     babel(
       en: [
         The end byte index (exclusive). If omitted, the whole slice until
@@ -198,7 +198,7 @@
     ),
   ),
   "Str::slice::count": (
-    260,
+    5,
     babel(
       en: [
         The number of bytes to extract. This is equivalent to passing
@@ -208,7 +208,7 @@
     ),
   ),
   "Str::clusters": (
-    275,
+    15,
     babel(
       en: [
         Returns the grapheme clusters of the string as an array of substrings.
@@ -216,7 +216,7 @@
     ),
   ),
   "Str::codepoints": (
-    281,
+    6,
     babel(
       en: [
         Returns the Unicode codepoints of the string as an array of substrings.
@@ -224,7 +224,7 @@
     ),
   ),
   "Str::to_unicode": (
-    287,
+    6,
     [
       #babel(
         en: [
@@ -241,7 +241,7 @@
     ],
   ),
   "Str::to_unicode::character": (
-    297,
+    10,
     babel(
       en: [
         The character that should be converted.
@@ -249,7 +249,7 @@
     ),
   ),
   "Str::from_unicode": (
-    303,
+    6,
     [
       #babel(
         en: [
@@ -263,7 +263,7 @@
     ],
   ),
   "Str::from_unicode::value": (
-    310,
+    7,
     babel(
       en: [
         The code point that should be converted.
@@ -271,7 +271,7 @@
     ),
   ),
   "Str::normalize": (
-    319,
+    9,
     [
       #babel(
         en: [
@@ -289,7 +289,7 @@
     ],
   ),
   "Str::normalize::form": (
-    331,
+    12,
     babel(
       en: [
 
@@ -297,7 +297,7 @@
     ),
   ),
   "Str::contains": (
-    343,
+    12,
     babel(
       en: [
         Whether the string contains the specified pattern.
@@ -308,7 +308,7 @@
     ),
   ),
   "Str::contains::pattern": (
-    350,
+    7,
     babel(
       en: [
         The pattern to search for.
@@ -316,7 +316,7 @@
     ),
   ),
   "Str::starts_with": (
-    359,
+    9,
     babel(
       en: [
         Whether the string starts with the specified pattern.
@@ -324,7 +324,7 @@
     ),
   ),
   "Str::starts_with::pattern": (
-    363,
+    4,
     babel(
       en: [
         The pattern the string might start with.
@@ -332,7 +332,7 @@
     ),
   ),
   "Str::ends_with": (
-    372,
+    9,
     babel(
       en: [
         Whether the string ends with the specified pattern.
@@ -340,7 +340,7 @@
     ),
   ),
   "Str::ends_with::pattern": (
-    376,
+    4,
     babel(
       en: [
         The pattern the string might end with.
@@ -348,7 +348,7 @@
     ),
   ),
   "Str::find": (
-    398,
+    22,
     babel(
       en: [
         Searches for the specified pattern in the string and returns the first
@@ -357,7 +357,7 @@
     ),
   ),
   "Str::find::pattern": (
-    403,
+    5,
     babel(
       en: [
         The pattern to search for.
@@ -365,7 +365,7 @@
     ),
   ),
   "Str::position": (
-    412,
+    9,
     babel(
       en: [
         Searches for the specified pattern in the string and returns the index
@@ -374,7 +374,7 @@
     ),
   ),
   "Str::position::pattern": (
-    417,
+    5,
     babel(
       en: [
         The pattern to search for.
@@ -382,7 +382,7 @@
     ),
   ),
   "Str::match_": (
-    426,
+    9,
     [
       #babel(
         en: [
@@ -420,7 +420,7 @@
     ],
   ),
   "Str::match_::pattern": (
-    458,
+    32,
     babel(
       en: [
         The pattern to search for.
@@ -428,7 +428,7 @@
     ),
   ),
   "Str::matches": (
-    469,
+    11,
     [
       #babel(
         en: [
@@ -444,7 +444,7 @@
     ],
   ),
   "Str::matches::pattern": (
-    479,
+    10,
     babel(
       en: [
         The pattern to search for.
@@ -452,7 +452,7 @@
     ),
   ),
   "Str::replace": (
-    497,
+    18,
     babel(
       en: [
         Replace at most `count` occurrences of the given pattern with a
@@ -462,7 +462,7 @@
     ),
   ),
   "Str::replace::pattern": (
-    505,
+    8,
     babel(
       en: [
         The pattern to search for.
@@ -470,7 +470,7 @@
     ),
   ),
   "Str::replace::replacement": (
-    507,
+    2,
     babel(
       en: [
         The string to replace the matches with or a function that gets a
@@ -483,7 +483,7 @@
     ),
   ),
   "Str::replace::count": (
-    514,
+    7,
     babel(
       en: [
         If given, only the first `count` matches of the pattern are
@@ -492,7 +492,7 @@
     ),
   ),
   "Str::trim": (
-    568,
+    54,
     babel(
       en: [
         Removes matches of a pattern from one or both sides of the string, once
@@ -501,7 +501,7 @@
     ),
   ),
   "Str::trim::pattern": (
-    573,
+    5,
     babel(
       en: [
         The pattern to search for. If `{none}`, trims white spaces.
@@ -509,7 +509,7 @@
     ),
   ),
   "Str::trim::at": (
-    576,
+    3,
     babel(
       en: [
         Can be `{start}` or `{end}` to only trim the start or end of the
@@ -518,7 +518,7 @@
     ),
   ),
   "Str::trim::repeat": (
-    580,
+    4,
     babel(
       en: [
         Whether to repeatedly removes matches of the pattern or just once.
@@ -527,7 +527,7 @@
     ),
   ),
   "Str::split": (
-    653,
+    73,
     babel(
       en: [
         Splits a string at matches of a specified pattern and returns an array
@@ -542,7 +542,7 @@
     ),
   ),
   "Str::split::pattern": (
-    664,
+    11,
     babel(
       en: [
         The pattern to split at. Defaults to whitespace.
@@ -550,7 +550,7 @@
     ),
   ),
   "Str::rev": (
-    680,
+    16,
     [
       #babel(
         en: [
@@ -567,7 +567,7 @@
     ],
   ),
   "Regex": (
-    970,
+    290,
     [
       #babel(
         en: [
@@ -633,7 +633,7 @@
     ],
   ),
   "Regex::construct": (
-    1028,
+    58,
     babel(
       en: [
         Create a regular expression from a string.
@@ -641,7 +641,7 @@
     ),
   ),
   "Regex::construct::regex": (
-    1031,
+    3,
     babel(
       en: [
         The regular expression as a string.
@@ -661,4 +661,4 @@
       ],
     ),
   ),
-)
+))

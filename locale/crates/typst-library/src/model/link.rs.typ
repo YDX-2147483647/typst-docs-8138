@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "LinkElem": (
     24,
     [
@@ -176,7 +176,7 @@
     ],
   ),
   "LinkElem::dest": (
-    168,
+    144,
     [
       #babel(
         en: [
@@ -212,7 +212,7 @@
     ],
   ),
   "LinkElem::body": (
-    202,
+    34,
     babel(
       en: [
         The content that should become a link.
@@ -222,4 +222,4 @@
       ],
     ),
   ),
-)
+))

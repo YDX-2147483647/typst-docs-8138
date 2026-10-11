@@ -57,23 +57,25 @@
         ```.text
         "\n"
 
-        "#let live-item-data = ("
+        "#let live-item-data = resolve-lines(("
+        let last-line = 0
         for (key, (line, markup)) in live.pairs().sorted(key: ((key, (line, markup))) => line) {
           assert(("{key}", "{line}", "{markup}").all(magic => magic not in markup))
           // `key` must be quoted, because some `key`s contain colons.
           // `markup` must be babelized, because the leading section might be complex. Note that we don't have to consider the indentations, because typstyle will handle it properly.
           ```typst
           "{key}": (
-            {line},
+            {line-delta},
             {markup},
           ),
           ```
             .text
             .replace("{key}", key)
-            .replace("{line}", str(line))
+            .replace("{line-delta}", str(line - last-line))
             .replace("{markup}", babelize(markup))
+          last-line = line
         }
-        ")"
+        "))"
       },
     )
   }

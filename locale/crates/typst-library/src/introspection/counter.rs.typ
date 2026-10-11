@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Counter": (
     27,
     [
@@ -240,7 +240,7 @@
     ],
   ),
   "Counter::construct": (
-    338,
+    311,
     babel(
       en: [
         Create a new counter identified by a key.
@@ -248,7 +248,7 @@
     ),
   ),
   "Counter::construct::key": (
-    341,
+    3,
     babel(
       en: [
         The key that identifies this counter globally.
@@ -269,7 +269,7 @@
     ),
   ),
   "Counter::get": (
-    360,
+    19,
     babel(
       en: [
         Retrieves the value of the counter at the current location. Always
@@ -280,7 +280,7 @@
     ),
   ),
   "Counter::display": (
-    375,
+    15,
     babel(
       en: [
         Displays the value of the counter.
@@ -294,7 +294,7 @@
     ),
   ),
   "Counter::display::numbering": (
-    388,
+    13,
     babel(
       en: [
         A @numbering[numbering pattern or a function], which specifies how
@@ -310,7 +310,7 @@
     ),
   ),
   "Counter::display::at": (
-    399,
+    11,
     babel(
       en: [
         The place at which the counter should be displayed.
@@ -329,7 +329,7 @@
     ),
   ),
   "Counter::display::both": (
-    414,
+    15,
     babel(
       en: [
         If enabled, displays the current and final top-level count together.
@@ -340,7 +340,7 @@
     ),
   ),
   "Counter::at": (
-    449,
+    35,
     babel(
       en: [
         Retrieves the value of the counter at the given location. Always returns
@@ -353,7 +353,7 @@
     ),
   ),
   "Counter::at::selector": (
-    461,
+    12,
     babel(
       en: [
         The place at which the counter's value should be retrieved.
@@ -361,7 +361,7 @@
     ),
   ),
   "Counter::final_": (
-    468,
+    7,
     babel(
       en: [
         Retrieves the value of the counter at the end of the document. Always
@@ -370,7 +370,7 @@
     ),
   ),
   "Counter::step": (
-    481,
+    13,
     babel(
       en: [
         Increases the value of the counter by one.
@@ -385,7 +385,7 @@
     ),
   ),
   "Counter::step::level": (
-    493,
+    12,
     babel(
       en: [
         The depth at which to step the counter. Defaults to `{1}`.
@@ -393,7 +393,7 @@
     ),
   ),
   "Counter::update": (
-    501,
+    8,
     babel(
       en: [
         Updates the value of the counter.
@@ -404,7 +404,7 @@
     ),
   ),
   "Counter::update::update": (
-    509,
+    8,
     babel(
       en: [
         If given an integer or array of integers, sets the counter to that
@@ -414,4 +414,4 @@
       ],
     ),
   ),
-)
+))

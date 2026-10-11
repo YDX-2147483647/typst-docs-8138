@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Version": (
     11,
     babel(
@@ -22,7 +22,7 @@
     ),
   ),
   "Version::construct": (
-    63,
+    52,
     [
       #babel(
         en: [
@@ -61,7 +61,7 @@
     ],
   ),
   "Version::construct::components": (
-    91,
+    28,
     babel(
       en: [
         The components of the version (array arguments are flattened)
@@ -69,7 +69,7 @@
     ),
   ),
   "Version::at": (
-    109,
+    18,
     babel(
       en: [
         Retrieves a component of a version.
@@ -80,7 +80,7 @@
     ),
   ),
   "Version::at::index": (
-    116,
+    7,
     babel(
       en: [
         The index at which to retrieve the component. If negative, indexes
@@ -88,4 +88,4 @@
       ],
     ),
   ),
-)
+))

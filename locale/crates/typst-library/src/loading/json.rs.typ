@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "json": (
     9,
     [
@@ -105,7 +105,7 @@
     ],
   ),
   "json::source": (
-    103,
+    94,
     babel(
       en: [
         A path to a JSON file or raw JSON bytes.
@@ -113,7 +113,7 @@
     ),
   ),
   "json::encode": (
-    132,
+    29,
     babel(
       en: [
         Encodes structured data into a JSON string.
@@ -121,7 +121,7 @@
     ),
   ),
   "json::encode::value": (
-    135,
+    3,
     babel(
       en: [
         Value to be encoded.
@@ -129,11 +129,11 @@
     ),
   ),
   "json::encode::pretty": (
-    137,
+    2,
     babel(
       en: [
         Whether to pretty print the JSON with newlines and indentation.
       ],
     ),
   ),
-)
+))

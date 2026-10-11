@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Func": (
     21,
     [
@@ -155,7 +155,7 @@
     ],
   ),
   "Func::with": (
-    403,
+    382,
     babel(
       en: [
         Returns a new function that has the given arguments pre-applied.
@@ -163,7 +163,7 @@
     ),
   ),
   "Func::with::arguments": (
-    408,
+    5,
     babel(
       en: [
         The arguments to apply to the function.
@@ -171,7 +171,7 @@
     ),
   ),
   "Func::where_": (
-    420,
+    12,
     [
       #babel(
         en: [
@@ -189,11 +189,11 @@
     ],
   ),
   "Func::where_::fields": (
-    433,
+    13,
     babel(
       en: [
         The fields to filter for.
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "RawElem": (
     32,
     [
@@ -257,7 +257,7 @@
     ],
   ),
   "RawElem::text": (
-    265,
+    233,
     [
       #babel(
         en: [
@@ -289,7 +289,7 @@
     ],
   ),
   "RawElem::block": (
-    291,
+    26,
     [
       #babel(
         en: [
@@ -330,7 +330,7 @@
     ],
   ),
   "RawElem::lang": (
-    326,
+    35,
     [
       #babel(
         en: [
@@ -377,7 +377,7 @@
     ],
   ),
   "RawElem::align": (
-    363,
+    37,
     [
       #babel(
         en: [
@@ -403,7 +403,7 @@
     ],
   ),
   "RawElem::syntaxes": (
-    383,
+    20,
     [
       #babel(
         en: [
@@ -437,7 +437,7 @@
     ],
   ),
   "RawElem::theme": (
-    415,
+    32,
     [
       #babel(
         en: [
@@ -477,7 +477,7 @@
     ],
   ),
   "RawElem::tab_size": (
-    456,
+    41,
     [
       #babel(
         en: [
@@ -498,7 +498,7 @@
     ],
   ),
   "RawLine": (
-    836,
+    380,
     babel(
       en: [
         A highlighted line of raw text.
@@ -512,7 +512,7 @@
     ),
   ),
   "RawLine::number": (
-    845,
+    9,
     babel(
       en: [
         The line number of the raw line inside of the raw block, starts at 1.
@@ -520,7 +520,7 @@
     ),
   ),
   "RawLine::count": (
-    849,
+    4,
     babel(
       en: [
         The total number of lines in the raw block.
@@ -528,7 +528,7 @@
     ),
   ),
   "RawLine::text": (
-    853,
+    4,
     babel(
       en: [
         The line of raw text.
@@ -536,11 +536,11 @@
     ),
   ),
   "RawLine::body": (
-    857,
+    4,
     babel(
       en: [
         The highlighted raw text.
       ],
     ),
   ),
-)
+))

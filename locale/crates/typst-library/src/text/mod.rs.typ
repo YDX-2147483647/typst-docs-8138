@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "TextElem": (
     75,
     [
@@ -25,7 +25,7 @@
     ],
   ),
   "TextElem::font": (
-    92,
+    17,
     [
       #babel(
         en: [
@@ -115,7 +115,7 @@
     ],
   ),
   "TextElem::fallback": (
-    184,
+    92,
     [
       #babel(
         en: [
@@ -141,7 +141,7 @@
     ],
   ),
   "TextElem::style": (
-    205,
+    21,
     [
       #babel(
         en: [
@@ -171,7 +171,7 @@
     ],
   ),
   "TextElem::weight": (
-    229,
+    24,
     [
       #babel(
         en: [
@@ -203,7 +203,7 @@
     ],
   ),
   "TextElem::stretch": (
-    255,
+    26,
     [
       #babel(
         en: [
@@ -230,7 +230,7 @@
     ],
   ),
   "TextElem::size": (
-    276,
+    21,
     [
       #babel(
         en: [
@@ -253,7 +253,7 @@
     ],
   ),
   "TextElem::fill": (
-    296,
+    20,
     [
       #babel(
         en: [
@@ -268,7 +268,7 @@
     ],
   ),
   "TextElem::stroke": (
-    318,
+    22,
     [
       #babel(
         en: [
@@ -282,7 +282,7 @@
     ],
   ),
   "TextElem::tracking": (
-    326,
+    8,
     [
       #babel(
         en: [
@@ -297,7 +297,7 @@
     ],
   ),
   "TextElem::spacing": (
-    335,
+    9,
     [
       #babel(
         en: [
@@ -318,7 +318,7 @@
     ],
   ),
   "TextElem::cjk_latin_spacing": (
-    351,
+    16,
     [
       #babel(
         en: [
@@ -337,7 +337,7 @@
     ],
   ),
   "TextElem::baseline": (
-    364,
+    13,
     [
       #babel(
         en: [
@@ -352,7 +352,7 @@
     ],
   ),
   "TextElem::overhang": (
-    373,
+    9,
     [
       #babel(
         en: [
@@ -379,7 +379,7 @@
     ],
   ),
   "TextElem::top_edge": (
-    395,
+    22,
     [
       #babel(
         en: [
@@ -401,7 +401,7 @@
     ],
   ),
   "TextElem::bottom_edge": (
-    412,
+    17,
     [
       #babel(
         en: [
@@ -423,7 +423,7 @@
     ],
   ),
   "TextElem::lang": (
-    429,
+    17,
     [
       #babel(
         en: [
@@ -480,7 +480,7 @@
     ],
   ),
   "TextElem::region": (
-    477,
+    48,
     [
       #babel(
         en: [
@@ -500,7 +500,7 @@
     ],
   ),
   "TextElem::script": (
-    487,
+    10,
     [
       #babel(
         en: [
@@ -536,7 +536,7 @@
     ],
   ),
   "TextElem::dir": (
-    517,
+    30,
     [
       #babel(
         en: [
@@ -570,7 +570,7 @@
     ],
   ),
   "TextElem::hyphenate": (
-    545,
+    28,
     [
       #babel(
         en: [
@@ -598,7 +598,7 @@
     ],
   ),
   "TextElem::costs": (
-    567,
+    22,
     [
       #babel(
         en: [
@@ -648,7 +648,7 @@
     ],
   ),
   "TextElem::kerning": (
-    612,
+    45,
     [
       #babel(
         en: [
@@ -672,7 +672,7 @@
     ],
   ),
   "TextElem::alternates": (
-    631,
+    19,
     [
       #babel(
         en: [
@@ -699,7 +699,7 @@
     ],
   ),
   "TextElem::stylistic_set": (
-    652,
+    21,
     [
       #babel(
         en: [
@@ -722,7 +722,7 @@
     ],
   ),
   "TextElem::ligatures": (
-    669,
+    17,
     [
       #babel(
         en: [
@@ -754,7 +754,7 @@
     ],
   ),
   "TextElem::discretionary_ligatures": (
-    692,
+    23,
     babel(
       en: [
         Whether ligatures that should be used sparingly are active. Setting this
@@ -763,7 +763,7 @@
     ),
   ),
   "TextElem::historical_ligatures": (
-    698,
+    6,
     babel(
       en: [
         Whether historical ligatures are active. Setting this to `{true}`
@@ -772,7 +772,7 @@
     ),
   ),
   "TextElem::number_type": (
-    704,
+    6,
     [
       #babel(
         en: [
@@ -792,7 +792,7 @@
     ],
   ),
   "TextElem::number_width": (
-    718,
+    14,
     [
       #babel(
         en: [
@@ -814,7 +814,7 @@
     ],
   ),
   "TextElem::slashed_zero": (
-    734,
+    16,
     [
       #babel(
         en: [
@@ -829,7 +829,7 @@
     ],
   ),
   "TextElem::fractions": (
-    744,
+    10,
     [
       #babel(
         en: [
@@ -849,7 +849,7 @@
     ],
   ),
   "TextElem::features": (
-    759,
+    15,
     [
       #babel(
         en: [
@@ -885,7 +885,7 @@
     ],
   ),
   "TextElem::variations": (
-    790,
+    31,
     [
       #babel(
         en: [
@@ -952,7 +952,7 @@
     ],
   ),
   "TextElem::body": (
-    852,
+    62,
     babel(
       en: [
         Content in which all text is styled according to the other arguments.
@@ -960,11 +960,11 @@
     ),
   ),
   "TextElem::text": (
-    857,
+    5,
     babel(
       en: [
         The text.
       ],
     ),
   ),
-)
+))

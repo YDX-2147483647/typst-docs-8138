@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "numbering": (
     13,
     [
@@ -55,7 +55,7 @@
     ],
   ),
   "numbering::numbering": (
-    59,
+    46,
     babel(
       en: [
         Defines how the numbering works.
@@ -86,7 +86,7 @@
     ),
   ),
   "numbering::numbers": (
-    84,
+    25,
     babel(
       en: [
         The numbers to apply the numbering to. Must be non-negative.
@@ -99,4 +99,4 @@
       ],
     ),
   ),
-)
+))

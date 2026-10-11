@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Location": (
     19,
     [
@@ -48,7 +48,7 @@
     ],
   ),
   "Location::page": (
-    80,
+    61,
     [
       #babel(
         en: [
@@ -76,7 +76,7 @@
     ],
   ),
   "Location::page_numbering": (
-    104,
+    24,
     babel(
       en: [
         Returns the page numbering pattern of the page at this location. This
@@ -90,7 +90,7 @@
     ),
   ),
   "Location::position": (
-    116,
+    12,
     babel(
       en: [
         Returns a dictionary with the page number and the x, y position for this
@@ -108,4 +108,4 @@
       ],
     ),
   ),
-)
+))

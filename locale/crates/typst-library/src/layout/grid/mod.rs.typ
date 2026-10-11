@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "GridElem": (
     23,
     [
@@ -195,7 +195,7 @@
     ],
   ),
   "GridElem::columns": (
-    182,
+    159,
     babel(
       en: [
         The column sizes.
@@ -210,7 +210,7 @@
     ),
   ),
   "GridElem::rows": (
-    192,
+    10,
     babel(
       en: [
         The row sizes.
@@ -223,7 +223,7 @@
     ),
   ),
   "GridElem::gutter": (
-    200,
+    8,
     babel(
       en: [
         The gaps between rows and columns. This is a shorthand to set
@@ -238,7 +238,7 @@
     ),
   ),
   "GridElem::column_gutter": (
-    211,
+    11,
     babel(
       en: [
         The gaps between columns.
@@ -246,7 +246,7 @@
     ),
   ),
   "GridElem::row_gutter": (
-    218,
+    7,
     babel(
       en: [
         The gaps between rows.
@@ -254,7 +254,7 @@
     ),
   ),
   "GridElem::inset": (
-    222,
+    4,
     babel(
       en: [
         How much to pad the cells' content.
@@ -275,7 +275,7 @@
     ),
   ),
   "GridElem::align": (
-    239,
+    17,
     babel(
       en: [
         How to align the cells' content.
@@ -294,7 +294,7 @@
     ),
   ),
   "GridElem::fill": (
-    253,
+    14,
     [
       #babel(
         en: [
@@ -327,7 +327,7 @@
     ],
   ),
   "GridElem::stroke": (
-    279,
+    26,
     [
       #babel(
         en: [
@@ -464,7 +464,7 @@
     ],
   ),
   "GridElem::children": (
-    414,
+    135,
     babel(
       en: [
         The contents of the grid cells, plus any extra grid lines specified with
@@ -475,7 +475,7 @@
     ),
   ),
   "GridHeader": (
-    574,
+    160,
     babel(
       en: [
         A repeatable grid header.
@@ -487,7 +487,7 @@
     ),
   ),
   "GridHeader::repeat": (
-    581,
+    7,
     babel(
       en: [
         Whether this header should be repeated across pages.
@@ -495,7 +495,7 @@
     ),
   ),
   "GridHeader::level": (
-    585,
+    4,
     babel(
       en: [
         The level of the header. Must not be zero.
@@ -510,7 +510,7 @@
     ),
   ),
   "GridHeader::children": (
-    596,
+    11,
     babel(
       en: [
         The cells and lines within the header.
@@ -518,7 +518,7 @@
     ),
   ),
   "GridFooter": (
-    601,
+    5,
     babel(
       en: [
         A repeatable grid footer.
@@ -531,7 +531,7 @@
     ),
   ),
   "GridFooter::repeat": (
-    609,
+    8,
     babel(
       en: [
         Whether this footer should be repeated across pages.
@@ -539,7 +539,7 @@
     ),
   ),
   "GridFooter::children": (
-    613,
+    4,
     babel(
       en: [
         The cells and lines within the footer.
@@ -547,7 +547,7 @@
     ),
   ),
   "GridHLine": (
-    618,
+    5,
     babel(
       en: [
         A horizontal line in the grid.
@@ -561,7 +561,7 @@
     ),
   ),
   "GridHLine::y": (
-    627,
+    9,
     babel(
       en: [
         The row above which the horizontal line is placed (zero-indexed). If the
@@ -579,7 +579,7 @@
     ),
   ),
   "GridHLine::start": (
-    640,
+    13,
     babel(
       en: [
         The column at which the horizontal line starts (zero-indexed,
@@ -588,7 +588,7 @@
     ),
   ),
   "GridHLine::end": (
-    644,
+    4,
     babel(
       en: [
         The column before which the horizontal line ends (zero-indexed,
@@ -601,7 +601,7 @@
     ),
   ),
   "GridHLine::stroke": (
-    652,
+    8,
     babel(
       en: [
         The line's stroke.
@@ -612,7 +612,7 @@
     ),
   ),
   "GridHLine::position": (
-    660,
+    8,
     babel(
       en: [
         The position at which the line is placed, given its row (`y`) - either
@@ -626,7 +626,7 @@
     ),
   ),
   "GridVLine": (
-    671,
+    11,
     babel(
       en: [
         A vertical line in the grid.
@@ -638,7 +638,7 @@
     ),
   ),
   "GridVLine::x": (
-    678,
+    7,
     babel(
       en: [
         The column before which the vertical line is placed (zero-indexed). If
@@ -658,7 +658,7 @@
     ),
   ),
   "GridVLine::start": (
-    693,
+    15,
     babel(
       en: [
         The row at which the vertical line starts (zero-indexed, inclusive).
@@ -666,7 +666,7 @@
     ),
   ),
   "GridVLine::end": (
-    696,
+    3,
     babel(
       en: [
         The row on top of which the vertical line ends (zero-indexed,
@@ -679,7 +679,7 @@
     ),
   ),
   "GridVLine::stroke": (
-    704,
+    8,
     babel(
       en: [
         The line's stroke.
@@ -690,7 +690,7 @@
     ),
   ),
   "GridVLine::position": (
-    712,
+    8,
     babel(
       en: [
         The position at which the line is placed, given its column (`x`) --
@@ -709,7 +709,7 @@
     ),
   ),
   "GridCell": (
-    728,
+    16,
     [
       #babel(
         en: [
@@ -761,7 +761,7 @@
     ],
   ),
   "GridCell::body": (
-    769,
+    41,
     babel(
       en: [
         The cell's body.
@@ -769,7 +769,7 @@
     ),
   ),
   "GridCell::x": (
-    773,
+    4,
     [
       #babel(
         en: [
@@ -808,7 +808,7 @@
     ],
   ),
   "GridCell::y": (
-    805,
+    32,
     [
       #babel(
         en: [
@@ -843,7 +843,7 @@
     ],
   ),
   "GridCell::colspan": (
-    833,
+    28,
     babel(
       en: [
         The amount of columns spanned by this cell.
@@ -851,7 +851,7 @@
     ),
   ),
   "GridCell::rowspan": (
-    837,
+    4,
     babel(
       en: [
         The amount of rows spanned by this cell.
@@ -859,7 +859,7 @@
     ),
   ),
   "GridCell::inset": (
-    841,
+    4,
     babel(
       en: [
         The cell's @grid.inset[inset] override.
@@ -867,7 +867,7 @@
     ),
   ),
   "GridCell::align": (
-    844,
+    3,
     babel(
       en: [
         The cell's @grid.align[alignment] override.
@@ -875,7 +875,7 @@
     ),
   ),
   "GridCell::fill": (
-    847,
+    3,
     babel(
       en: [
         The cell's @grid.fill[fill] override.
@@ -883,7 +883,7 @@
     ),
   ),
   "GridCell::stroke": (
-    850,
+    3,
     babel(
       en: [
         The cell's @grid.stroke[stroke] override.
@@ -891,7 +891,7 @@
     ),
   ),
   "GridCell::breakable": (
-    858,
+    8,
     babel(
       en: [
         Whether rows spanned by this cell can be placed in different pages. When
@@ -900,4 +900,4 @@
       ],
     ),
   ),
-)
+))

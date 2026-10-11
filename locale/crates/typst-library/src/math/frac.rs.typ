@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "FracElem": (
     11,
     [
@@ -27,7 +27,7 @@
     ],
   ),
   "FracElem::num": (
-    26,
+    15,
     babel(
       en: [
         The fraction's numerator.
@@ -35,7 +35,7 @@
     ),
   ),
   "FracElem::denom": (
-    30,
+    4,
     babel(
       en: [
         The fraction's denominator.
@@ -43,7 +43,7 @@
     ),
   ),
   "FracElem::style": (
-    34,
+    4,
     [
       #babel(
         en: [
@@ -113,7 +113,7 @@
     ],
   ),
   "BinomElem": (
-    126,
+    92,
     [
       #babel(
         en: [
@@ -129,7 +129,7 @@
     ],
   ),
   "BinomElem::upper": (
-    135,
+    9,
     babel(
       en: [
         The binomial's upper index.
@@ -137,11 +137,11 @@
     ),
   ),
   "BinomElem::lower": (
-    139,
+    4,
     babel(
       en: [
         The binomial's lower index.
       ],
     ),
   ),
-)
+))

@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "QuoteElem": (
     11,
     [
@@ -47,7 +47,7 @@
     ],
   ),
   "QuoteElem::block": (
-    46,
+    35,
     [
       #babel(
         en: [
@@ -72,7 +72,7 @@
     ],
   ),
   "QuoteElem::quotes": (
-    64,
+    18,
     [
       #babel(
         en: [
@@ -106,7 +106,7 @@
     ],
   ),
   "QuoteElem::attribution": (
-    91,
+    27,
     [
       #babel(
         en: [
@@ -148,11 +148,11 @@
     ],
   ),
   "QuoteElem::body": (
-    126,
+    35,
     babel(
       en: [
         The quote.
       ],
     ),
   ),
-)
+))

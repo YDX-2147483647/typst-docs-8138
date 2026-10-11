@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "SvgFormat": (
     11,
     [
@@ -72,7 +72,7 @@
     ],
   ),
   "SvgFormat::pretty": (
-    67,
+    56,
     babel(
       en: [
         Whether to pretty-print the produced SVG file.
@@ -82,4 +82,4 @@
       ],
     ),
   ),
-)
+))

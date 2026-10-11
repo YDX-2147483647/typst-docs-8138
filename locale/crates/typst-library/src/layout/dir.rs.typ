@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Dir": (
     6,
     [
@@ -22,7 +22,7 @@
     ],
   ),
   "Dir::LTR": (
-    45,
+    39,
     [
       #babel(
         en: [
@@ -42,7 +42,7 @@
     ],
   ),
   "Dir::RTL": (
-    59,
+    14,
     [
       #babel(
         en: [
@@ -62,7 +62,7 @@
     ],
   ),
   "Dir::TTB": (
-    73,
+    14,
     [
       #babel(
         en: [
@@ -82,7 +82,7 @@
     ],
   ),
   "Dir::BTT": (
-    87,
+    14,
     [
       #babel(
         en: [
@@ -102,7 +102,7 @@
     ],
   ),
   "Dir::from": (
-    101,
+    14,
     [
       #babel(
         en: [
@@ -121,7 +121,7 @@
     ],
   ),
   "Dir::from::side": (
-    113,
+    12,
     babel(
       en: [
         The starting point for the direction.
@@ -131,7 +131,7 @@
     ),
   ),
   "Dir::to": (
-    126,
+    13,
     [
       #babel(
         en: [
@@ -150,7 +150,7 @@
     ],
   ),
   "Dir::to::side": (
-    138,
+    12,
     babel(
       en: [
         The end point for the direction.
@@ -160,7 +160,7 @@
     ),
   ),
   "Dir::axis": (
-    151,
+    13,
     [
       #babel(
         en: [
@@ -176,7 +176,7 @@
     ],
   ),
   "Dir::sign": (
-    166,
+    15,
     [
       #babel(
         en: [
@@ -196,7 +196,7 @@
     ],
   ),
   "Dir::start": (
-    185,
+    19,
     [
       #babel(
         en: [
@@ -215,7 +215,7 @@
     ],
   ),
   "Dir::end": (
-    205,
+    20,
     [
       #babel(
         en: [
@@ -234,7 +234,7 @@
     ],
   ),
   "Dir::inv": (
-    225,
+    20,
     [
       #babel(
         en: [
@@ -250,4 +250,4 @@
       ```
     ],
   ),
-)
+))

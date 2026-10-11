@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Symbol": (
     19,
     [
@@ -44,7 +44,7 @@
     ],
   ),
   "Symbol::construct": (
-    201,
+    182,
     [
       #babel(
         en: [
@@ -70,7 +70,7 @@
     ],
   ),
   "Symbol::construct::variants": (
-    221,
+    20,
     babel(
       en: [
         The variants of the symbol.
@@ -84,4 +84,4 @@
       ],
     ),
   ),
-)
+))

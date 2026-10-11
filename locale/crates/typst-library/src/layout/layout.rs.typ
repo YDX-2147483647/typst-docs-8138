@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "layout": (
     5,
     [
@@ -81,7 +81,7 @@
     ],
   ),
   "layout::func": (
-    67,
+    62,
     babel(
       en: [
         A function to call with the outer container's size. Its return value is
@@ -96,4 +96,4 @@
       ],
     ),
   ),
-)
+))

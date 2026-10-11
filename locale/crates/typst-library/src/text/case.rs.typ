@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "lower": (
     4,
     [
@@ -18,7 +18,7 @@
     ],
   ),
   "lower::text": (
-    14,
+    10,
     babel(
       en: [
         The text to convert to lowercase.
@@ -26,7 +26,7 @@
     ),
   ),
   "upper": (
-    20,
+    6,
     [
       #babel(
         en: [
@@ -43,11 +43,11 @@
     ],
   ),
   "upper::text": (
-    30,
+    10,
     babel(
       en: [
         The text to convert to uppercase.
       ],
     ),
   ),
-)
+))

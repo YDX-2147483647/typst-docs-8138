@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "StackElem": (
     6,
     [
@@ -33,7 +33,7 @@
     ],
   ),
   "StackElem::dir": (
-    27,
+    21,
     babel(
       en: [
         The direction along which the items are stacked. Possible values are:
@@ -55,7 +55,7 @@
     ),
   ),
   "StackElem::spacing": (
-    45,
+    18,
     babel(
       en: [
         Spacing to insert between items where no explicit spacing was provided.
@@ -63,11 +63,11 @@
     ),
   ),
   "StackElem::children": (
-    48,
+    3,
     babel(
       en: [
         The children to stack along the axis.
       ],
     ),
   ),
-)
+))

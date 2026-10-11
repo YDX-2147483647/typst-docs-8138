@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "TermsElem": (
     7,
     [
@@ -30,7 +30,7 @@
     ],
   ),
   "TermsElem::tight": (
-    25,
+    18,
     [
       #babel(
         en: [
@@ -61,7 +61,7 @@
     ],
   ),
   "TermsElem::separator": (
-    50,
+    25,
     [
       #babel(
         en: [
@@ -81,7 +81,7 @@
     ],
   ),
   "TermsElem::indent": (
-    64,
+    14,
     babel(
       en: [
         The indentation of each item.
@@ -89,7 +89,7 @@
     ),
   ),
   "TermsElem::hanging_indent": (
-    67,
+    3,
     [
       #babel(
         en: [
@@ -107,7 +107,7 @@
     ],
   ),
   "TermsElem::spacing": (
-    79,
+    12,
     babel(
       en: [
         The spacing between the items of the term list.
@@ -119,7 +119,7 @@
     ),
   ),
   "TermsElem::children": (
-    86,
+    7,
     [
       #babel(
         en: [
@@ -140,7 +140,7 @@
     ],
   ),
   "TermItem": (
-    113,
+    27,
     babel(
       en: [
         A term list item.
@@ -148,7 +148,7 @@
     ),
   ),
   "TermItem::term": (
-    116,
+    3,
     babel(
       en: [
         The term described by the list item.
@@ -156,11 +156,11 @@
     ),
   ),
   "TermItem::description": (
-    120,
+    4,
     babel(
       en: [
         The description of the term.
       ],
     ),
   ),
-)
+))

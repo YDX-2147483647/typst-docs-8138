@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "LrElem": (
     19,
     babel(
@@ -12,7 +12,7 @@
     ),
   ),
   "LrElem::size": (
-    25,
+    6,
     babel(
       en: [
         The size of the brackets, relative to the height of the wrapped content.
@@ -20,7 +20,7 @@
     ),
   ),
   "LrElem::body": (
-    29,
+    4,
     babel(
       en: [
         The delimited content, including the delimiters.
@@ -28,7 +28,7 @@
     ),
   ),
   "MidElem": (
-    40,
+    11,
     [
       #babel(
         en: [
@@ -42,7 +42,7 @@
     ],
   ),
   "MidElem::body": (
-    47,
+    7,
     babel(
       en: [
         The content to be scaled.
@@ -50,7 +50,7 @@
     ),
   ),
   "floor": (
-    52,
+    5,
     [
       #babel(
         en: [
@@ -64,7 +64,7 @@
     ],
   ),
   "floor::size": (
-    59,
+    7,
     babel(
       en: [
         The size of the brackets, relative to the height of the wrapped content.
@@ -74,7 +74,7 @@
     ),
   ),
   "floor::body": (
-    64,
+    5,
     babel(
       en: [
         The expression to floor.
@@ -82,7 +82,7 @@
     ),
   ),
   "ceil": (
-    70,
+    6,
     [
       #babel(
         en: [
@@ -96,7 +96,7 @@
     ],
   ),
   "ceil::size": (
-    77,
+    7,
     babel(
       en: [
         The size of the brackets, relative to the height of the wrapped content.
@@ -106,7 +106,7 @@
     ),
   ),
   "ceil::body": (
-    82,
+    5,
     babel(
       en: [
         The expression to ceil.
@@ -114,7 +114,7 @@
     ),
   ),
   "round": (
-    88,
+    6,
     [
       #babel(
         en: [
@@ -128,7 +128,7 @@
     ],
   ),
   "round::size": (
-    95,
+    7,
     babel(
       en: [
         The size of the brackets, relative to the height of the wrapped content.
@@ -138,7 +138,7 @@
     ),
   ),
   "round::body": (
-    100,
+    5,
     babel(
       en: [
         The expression to round.
@@ -146,7 +146,7 @@
     ),
   ),
   "abs": (
-    106,
+    6,
     [
       #babel(
         en: [
@@ -160,7 +160,7 @@
     ],
   ),
   "abs::size": (
-    113,
+    7,
     babel(
       en: [
         The size of the brackets, relative to the height of the wrapped content.
@@ -170,7 +170,7 @@
     ),
   ),
   "abs::body": (
-    118,
+    5,
     babel(
       en: [
         The expression to take the absolute value of.
@@ -178,7 +178,7 @@
     ),
   ),
   "norm": (
-    124,
+    6,
     [
       #babel(
         en: [
@@ -192,7 +192,7 @@
     ],
   ),
   "norm::size": (
-    131,
+    7,
     babel(
       en: [
         The size of the brackets, relative to the height of the wrapped content.
@@ -202,11 +202,11 @@
     ),
   ),
   "norm::body": (
-    136,
+    5,
     babel(
       en: [
         The expression to take the norm of.
       ],
     ),
   ),
-)
+))

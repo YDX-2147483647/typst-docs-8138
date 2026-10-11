@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "Label": (
     7,
     [
@@ -60,7 +60,7 @@
     ],
   ),
   "Label::construct": (
-    75,
+    68,
     babel(
       en: [
         Creates a label from a string.
@@ -68,7 +68,7 @@
     ),
   ),
   "Label::construct::name": (
-    78,
+    3,
     babel(
       en: [
         The name of the label.
@@ -78,4 +78,4 @@
       ],
     ),
   ),
-)
+))

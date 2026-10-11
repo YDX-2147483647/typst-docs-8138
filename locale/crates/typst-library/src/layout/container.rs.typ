@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "BoxElem": (
     14,
     [
@@ -31,7 +31,7 @@
     ],
   ),
   "BoxElem::width": (
-    37,
+    23,
     [
       #babel(
         en: [
@@ -52,7 +52,7 @@
     ],
   ),
   "BoxElem::height": (
-    51,
+    14,
     babel(
       en: [
         The height of the box.
@@ -60,7 +60,7 @@
     ),
   ),
   "BoxElem::baseline": (
-    54,
+    3,
     [
       #babel(
         en: [
@@ -95,7 +95,7 @@
     ],
   ),
   "BoxElem::fill": (
-    82,
+    28,
     babel(
       en: [
         The box's background color. See the
@@ -104,7 +104,7 @@
     ),
   ),
   "BoxElem::stroke": (
-    86,
+    4,
     babel(
       en: [
         The box's border color. See the @rect.stroke[rectangle's documentation]
@@ -113,7 +113,7 @@
     ),
   ),
   "BoxElem::radius": (
-    91,
+    5,
     babel(
       en: [
         How much to round the box's corners. See the
@@ -122,7 +122,7 @@
     ),
   ),
   "BoxElem::inset": (
-    96,
+    5,
     [
       #babel(
         en: [
@@ -152,7 +152,7 @@
     ],
   ),
   "BoxElem::outset": (
-    120,
+    24,
     [
       #babel(
         en: [
@@ -181,7 +181,7 @@
     ],
   ),
   "BoxElem::clip": (
-    143,
+    23,
     [
       #babel(
         en: [
@@ -203,7 +203,7 @@
     ],
   ),
   "BoxElem::body": (
-    159,
+    16,
     babel(
       en: [
         The contents of the box.
@@ -211,7 +211,7 @@
     ),
   ),
   "BlockElem": (
-    220,
+    61,
     [
       #babel(
         en: [
@@ -264,7 +264,7 @@
     ],
   ),
   "BlockElem::width": (
-    258,
+    38,
     [
       #babel(
         en: [
@@ -284,7 +284,7 @@
     ],
   ),
   "BlockElem::height": (
-    271,
+    13,
     [
       #babel(
         en: [
@@ -306,7 +306,7 @@
     ],
   ),
   "BlockElem::breakable": (
-    286,
+    15,
     [
       #babel(
         en: [
@@ -326,7 +326,7 @@
     ],
   ),
   "BlockElem::fill": (
-    300,
+    14,
     babel(
       en: [
         The block's background color. See the
@@ -335,7 +335,7 @@
     ),
   ),
   "BlockElem::stroke": (
-    304,
+    4,
     babel(
       en: [
         The block's border color. See the
@@ -344,7 +344,7 @@
     ),
   ),
   "BlockElem::radius": (
-    309,
+    5,
     babel(
       en: [
         How much to round the block's corners. See the
@@ -353,7 +353,7 @@
     ),
   ),
   "BlockElem::inset": (
-    314,
+    5,
     babel(
       en: [
         How much to pad the block's content. See the
@@ -362,7 +362,7 @@
     ),
   ),
   "BlockElem::outset": (
-    319,
+    5,
     babel(
       en: [
         How much to expand the block's size without affecting the layout. See
@@ -371,7 +371,7 @@
     ),
   ),
   "BlockElem::spacing": (
-    324,
+    5,
     [
       #babel(
         en: [
@@ -403,7 +403,7 @@
     ],
   ),
   "BlockElem::above": (
-    351,
+    27,
     babel(
       en: [
         The spacing between this block and its predecessor.
@@ -411,7 +411,7 @@
     ),
   ),
   "BlockElem::below": (
-    358,
+    7,
     babel(
       en: [
         The spacing between this block and its successor.
@@ -419,7 +419,7 @@
     ),
   ),
   "BlockElem::clip": (
-    362,
+    4,
     [
       #babel(
         en: [
@@ -441,7 +441,7 @@
     ],
   ),
   "BlockElem::sticky": (
-    378,
+    16,
     [
       #babel(
         en: [
@@ -465,11 +465,11 @@
     ],
   ),
   "BlockElem::body": (
-    396,
+    18,
     babel(
       en: [
         The contents of the block.
       ],
     ),
   ),
-)
+))

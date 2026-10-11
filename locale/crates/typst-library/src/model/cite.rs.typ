@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "CiteElem": (
     12,
     [
@@ -49,7 +49,7 @@
     ],
   ),
   "CiteElem::key": (
-    45,
+    33,
     [
       #babel(
         en: [
@@ -69,7 +69,7 @@
     ],
   ),
   "CiteElem::supplement": (
-    59,
+    14,
     [
       #babel(
         en: [
@@ -87,7 +87,7 @@
     ],
   ),
   "CiteElem::form": (
-    70,
+    11,
     [
       #babel(
         en: [
@@ -111,7 +111,7 @@
     ],
   ),
   "CiteElem::style": (
-    88,
+    18,
     babel(
       en: [
         The citation style.
@@ -128,4 +128,4 @@
       ],
     ),
   ),
-)
+))

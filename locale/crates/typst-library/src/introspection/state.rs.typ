@@ -1,5 +1,5 @@
 #import "/i18n-scope.typ": *
-#let live-item-data = (
+#let live-item-data = resolve-lines((
   "State": (
     15,
     [
@@ -216,7 +216,7 @@
     ],
   ),
   "State::construct": (
-    217,
+    202,
     babel(
       en: [
         Create a new state identified by a key.
@@ -224,7 +224,7 @@
     ),
   ),
   "State::construct::key": (
-    220,
+    3,
     babel(
       en: [
         The key that identifies this state.
@@ -236,7 +236,7 @@
     ),
   ),
   "State::construct::init": (
-    226,
+    6,
     [
       #babel(
         en: [
@@ -265,7 +265,7 @@
     ],
   ),
   "State::get": (
-    252,
+    26,
     babel(
       en: [
         Retrieves the value of the state at the current location.
@@ -275,7 +275,7 @@
     ),
   ),
   "State::at": (
-    267,
+    15,
     babel(
       en: [
         Retrieves the value of the state at the given selector's unique match.
@@ -287,7 +287,7 @@
     ),
   ),
   "State::at::selector": (
-    279,
+    12,
     babel(
       en: [
         The place at which the state's value should be retrieved.
@@ -295,7 +295,7 @@
     ),
   ),
   "State::final_": (
-    286,
+    7,
     babel(
       en: [
         Retrieves the value of the state at the end of the document.
@@ -303,7 +303,7 @@
     ),
   ),
   "State::update": (
-    298,
+    12,
     babel(
       en: [
         Updates the value of the state.
@@ -341,7 +341,7 @@
     ),
   ),
   "State::update::update": (
-    333,
+    35,
     [
       #babel(
         en: [
@@ -380,4 +380,4 @@
       ```
     ],
   ),
-)
+))
