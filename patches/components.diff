@@ -29,7 +29,7 @@ index c1252dac94..9d211aa423 100644
  
  // Displays an informational callout.
 diff --git a/docs/components/category.typ b/docs/components/category.typ
-index 000ea44b83..885fdc2afe 100644
+index 33d5890b81..e7cfa4d9e3 100644
 --- a/docs/components/category.typ
 +++ b/docs/components/category.typ
 @@ -1,3 +1,4 @@
@@ -128,7 +128,7 @@ index 000ea44b83..885fdc2afe 100644
    }
  }
  
-@@ -368,15 +360,11 @@
+@@ -368,21 +360,15 @@
    set text(0.75em)
    if info.element {
      gap
@@ -136,6 +136,13 @@ index 000ea44b83..885fdc2afe 100644
 -      Element functions can be customized with `set` and `show` rules.
 -    ])
 +    small(with-tooltip(Translation.elementFunction, Translation.elementFunctionDescription))
+   }
+   if info.locatable {
+     gap
+-    small(with-tooltip[Locatable][
+-      Locatable elements can be found with queries.
+-    ])
++    small(with-tooltip(Translation.locatableElement, Translation.locatableElementDescription))
    }
    if info.contextual != none and info.contextual {
      gap
@@ -146,7 +153,7 @@ index 000ea44b83..885fdc2afe 100644
    }
    if binding-info != none {
      definition-info(binding-info)
-@@ -444,7 +432,7 @@
+@@ -450,7 +436,7 @@
  
    show raw.where(lang: "example"): example.with(folding: true, open: true)
    prose-styling(
@@ -155,7 +162,7 @@ index 000ea44b83..885fdc2afe 100644
      base-target: value,
    )
  }
-@@ -497,7 +485,7 @@
+@@ -503,7 +489,7 @@
  
    {
      show raw.where(lang: "example"): example.with(folding: true, open: true)
@@ -164,7 +171,7 @@ index 000ea44b83..885fdc2afe 100644
    }
  
    let params = info.params
-@@ -535,11 +523,8 @@
+@@ -541,11 +527,8 @@
    let base-label = <constructor>
  
    let title = short-or-long(
@@ -178,7 +185,7 @@ index 000ea44b83..885fdc2afe 100644
    )
  
    {
-@@ -647,12 +632,11 @@
+@@ -653,12 +636,11 @@
  
    let section(label, heading-kinds, sentence-kinds, sentence-kind) = {
      let body = short-or-long(
@@ -196,7 +203,7 @@ index 000ea44b83..885fdc2afe 100644
      )
      labelled(heading(body), label)
    }
-@@ -730,19 +714,27 @@
+@@ -736,19 +718,27 @@
      description: "Documentation for the `" + name + "` function.",
    )
  
@@ -226,7 +233,7 @@ index 000ea44b83..885fdc2afe 100644
      )
    }
  
-@@ -832,7 +824,7 @@
+@@ -838,7 +828,7 @@
    let functions = info.definitions.filter(is-function)
    if functions.len() > 0 {
      let base-label = <functions>
@@ -235,7 +242,7 @@ index 000ea44b83..885fdc2afe 100644
      for (key, value) in functions {
        func-member(
          value,
-@@ -918,12 +910,12 @@
+@@ -924,12 +914,12 @@
      }
  
      outline(
@@ -250,7 +257,7 @@ index 000ea44b83..885fdc2afe 100644
      html.ul(class: "subgridded catgrid", lis.join())
    }
  }
-@@ -974,7 +966,11 @@
+@@ -980,7 +970,11 @@
      sub-categories.pairs().map(((k, v)) => ("category", k, v, stdx.describe(v)))
    }
  
@@ -263,7 +270,7 @@ index 000ea44b83..885fdc2afe 100644
  }
  
  // Show a list of category definitions built by `build-category-definitions()`.
-@@ -1053,7 +1049,10 @@
+@@ -1059,7 +1053,10 @@
  
        {
          let base-label = <parameters>
