@@ -18,7 +18,9 @@
       #babel(
         en: [
           Elements that are automatically assigned a location are called _locatable_
-          and can be found with @query[queries]:
+          and can be found with @query[queries]. Locatable elements are marked as such
+          on their respective documentation pages, but you can also find an exhaustive
+          list below.
 
           - In the @reference:model[Model category], the following elements are
             locatable: @asset, @bibliography, @cite, @document, @emph, @enum, @figure,
@@ -48,7 +50,7 @@
     ],
   ),
   "Location::page": (
-    61,
+    63,
     [
       #babel(
         en: [
@@ -63,49 +65,66 @@
           this function returns `{none}`.
 
           This method can be used in combination with @here to retrieve the
-          physical page position of the current context:
+          physical page position of the current context.
         ],
       )
 
       ```example
-      #context [
-        I am located on
-        page #here().page()
-      ]
+      I am located on page
+      #context here().page()
       ```
     ],
   ),
   "Location::page_numbering": (
-    24,
-    babel(
-      en: [
-        Returns the page numbering pattern of the page at this location. This
-        can be used when displaying the page counter in order to obtain the
-        local numbering. This is useful if you are building custom indices or
-        outlines.
+    22,
+    [
+      #babel(
+        en: [
+          Returns the page numbering pattern of the page at this location. This
+          can be used when displaying the page counter in order to obtain the
+          local numbering. This is useful if you are building custom indices or
+          outlines.
 
-        If the page numbering is set to `{none}` at that location, this function
-        returns `{none}`.
-      ],
-    ),
+          If the page numbering is set to `{none}` at that location, this function
+          returns `{none}`.
+        ],
+      )
+
+      ```example
+      >>> #set page(margin: (bottom: 25pt))
+      #set page(numbering: "1")
+      #context {
+        locate(<h>).page-numbering()
+      }
+
+      #set page(numbering: "i")
+      = Heading <h>
+      ```
+    ],
   ),
   "Location::position": (
-    12,
-    babel(
-      en: [
-        Returns a dictionary with the page number and the x, y position for this
-        location. The page number starts at one and the coordinates are measured
-        from the top-left of the page.
+    23,
+    [
+      #babel(
+        en: [
+          Returns a dictionary with the page number and the x, y position for this
+          location. The page number starts at one and the coordinates are measured
+          from the top-left of the page.
 
-        If you only need the page number, use @location.page[`page()`] instead
-        as it allows Typst to skip unnecessary work.
+          If you only need the page number, use @location.page[`page()`] instead
+          as it allows Typst to skip unnecessary work.
 
-        In an HTML document, Typst cannot know where content will end up, so
-        this function returns `{none}`. The contents of an @html.frame form an
-        exception as these are laid out using Typst's layout engine. For
-        locations within such frames, this function returns a dictionary with
-        just the `x` and `y` coordinates within the frame, but no `page` key.
-      ],
-    ),
+          In an HTML document, Typst cannot know where content will end up, so
+          this function returns `{none}`. The contents of an @html.frame form an
+          exception as these are laid out using Typst's layout engine. For
+          locations within such frames, this function returns a dictionary with
+          just the `x` and `y` coordinates within the frame, but no `page` key.
+        ],
+      )
+
+      ```example
+      #context here().position()
+      ```
+    ],
   ),
 ))

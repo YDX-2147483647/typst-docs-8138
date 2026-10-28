@@ -31,6 +31,7 @@
       = #babel(en: [Example]) <example>
       ```example
       #rect(fill: aqua)
+      #text(rgb("#265f02"))[Green]
       ```
 
       = #babel(en: [Predefined colors]) <predefined-colors>
@@ -102,7 +103,7 @@
         en: [
           The predefined colors and the most important color constructors are
           available globally and also in the color type's scope, so you can write
-          either `color.red` or just `red`.
+          either `{color.red}` or just `{red}`.
         ],
       )
 
@@ -133,7 +134,7 @@
     ],
   ),
   "Color::MAP": (
-    178,
+    179,
     [
       #babel(
         en: [
@@ -255,25 +256,24 @@
     [
       #babel(
         en: [
-          Create a grayscale color.
+          Creates a grayscale color.
 
-          A grayscale color is represented by `lightness` (@ratio) and `alpha`
-          (@ratio) components.
+          A grayscale color is represented by a lightness and an alpha component.
 
-          These components are also available using the
-          @color.components[`components`] method.
+          The value of these components can be obtained for an existing luma color
+          using the @color.components[`components`] method.
         ],
       )
 
       ```example
-      #for x in range(250, step: 50) {
+      #for x in range(256, step: 50) {
         box(square(fill: luma(x)))
       }
       ```
     ],
   ),
   "Color::luma::lightness": (
-    16,
+    15,
     babel(
       en: [
         The lightness component.
@@ -289,21 +289,35 @@
     ),
   ),
   "Color::luma::color": (
-    3,
-    babel(
-      en: [
-        Alternatively: The color to convert to grayscale.
-
-        If this is given, the individual components should not be given.
-      ],
-    ),
-  ),
-  "Color::oklab": (
-    28,
+    4,
     [
       #babel(
         en: [
-          Create an #link("https://bottosson.github.io/posts/oklab/")[Oklab]
+          Alternatively: The color to convert to grayscale.
+
+          If this is given, the individual components should not be given.
+        ],
+      )
+
+      ```example
+      #let colors = (red, green, blue)
+
+      #for c in colors {
+        box(square(fill: c))
+      }
+
+      #for c in colors {
+        box(square(fill: luma(c)))
+      }
+      ```
+    ],
+  ),
+  "Color::oklab": (
+    40,
+    [
+      #babel(
+        en: [
+          Creates an #link("https://bottosson.github.io/posts/oklab/")[Oklab]
           color.
 
           This color space is well suited for the following use cases:
@@ -311,17 +325,11 @@
           - Creating grayscale images with uniform perceived lightness
           - Creating smooth and uniform color transition and gradients
 
-          A linear Oklab color is represented internally by an array of four
-          components:
-          - lightness (@ratio)
-          - a (@float or @ratio. Ratios are relative to `{0.4}`; meaning `{50%}`
-            is equal to `{0.2}`)
-          - b (@float or @ratio. Ratios are relative to `{0.4}`; meaning `{50%}`
-            is equal to `{0.2}`)
-          - alpha (@ratio)
+          A linear Oklab color is represented by four components: lightness ($L$),
+          $a$, $b$, and alpha.
 
-          These components are also available using the
-          @color.components[`components`] method.
+          The value of these components can be obtained for an existing Oklab
+          color using the @color.components[`components`] method.
         ],
       )
 
@@ -333,31 +341,70 @@
     ],
   ),
   "Color::oklab::lightness": (
-    28,
-    babel(
-      en: [
-        The lightness component.
-      ],
-    ),
+    22,
+    [
+      #babel(
+        en: [
+          The lightness component ($L$).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: oklab,
+        oklab(0%, -27%, -32%),
+        oklab(100%, -27%, -32%),
+      ))
+      ```
+    ],
   ),
   "Color::oklab::a": (
-    3,
-    babel(
-      en: [
-        The a ("green/red") component.
-      ],
-    ),
+    12,
+    [
+      #babel(
+        en: [
+          The $a$ ("green/red") component.
+
+          Ratios are relative to `{0.4}`, meaning `{50%}` corresponds to
+          `{0.2}` and `{-100%}` to `{-0.4}`.
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: oklab,
+        oklab(50%, -100%, 0%),
+        oklab(50%, 100%, 0%),
+      ))
+      ```
+    ],
   ),
   "Color::oklab::b": (
-    3,
-    babel(
-      en: [
-        The b ("blue/yellow") component.
-      ],
-    ),
+    15,
+    [
+      #babel(
+        en: [
+          The $b$ ("blue/yellow") component.
+
+          Ratios are relative to `{0.4}`, meaning `{50%}` corresponds to
+          `{0.2}` and `{-100%}` to `{-0.4}`.
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: oklab,
+        oklab(80%, 0%, -100%),
+        oklab(80%, 0%, 100%),
+      ))
+      ```
+    ],
   ),
   "Color::oklab::alpha": (
-    3,
+    15,
     babel(
       en: [
         The alpha component.
@@ -365,7 +412,7 @@
     ),
   ),
   "Color::oklab::color": (
-    3,
+    4,
     babel(
       en: [
         Alternatively: The color to convert to Oklab.
@@ -379,7 +426,7 @@
     [
       #babel(
         en: [
-          Create an #link("https://bottosson.github.io/posts/oklab/")[Oklch]
+          Creates an #link("https://bottosson.github.io/posts/oklab/")[Oklch]
           color.
 
           This color space is well suited for the following use cases:
@@ -387,16 +434,11 @@
           - Creating grayscale images with uniform perceived lightness
           - Creating smooth and uniform color transition and gradients
 
-          A linear Oklch color is represented internally by an array of four
-          components:
-          - lightness (@ratio)
-          - chroma (@float or @ratio. Ratios are relative to `{0.4}`; meaning
-            `{50%}` is equal to `{0.2}`)
-          - hue (@angle)
-          - alpha (@ratio)
+          A linear Oklch color is represented by four components: lightness ($L$),
+          chroma ($C$), hue ($h$), and alpha.
 
-          These components are also available using the
-          @color.components[`components`] method.
+          The value of these components can be obtained for an existing Oklch
+          color using the @color.components[`components`] method.
         ],
       )
 
@@ -408,31 +450,70 @@
     ],
   ),
   "Color::oklch::lightness": (
-    27,
-    babel(
-      en: [
-        The lightness component.
-      ],
-    ),
+    22,
+    [
+      #babel(
+        en: [
+          The lightness component ($L$).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: oklch,
+        oklch(0%, 50%, 40deg),
+        oklch(100%, 50%, 40deg),
+      ))
+      ```
+    ],
   ),
   "Color::oklch::chroma": (
-    3,
-    babel(
-      en: [
-        The chroma component.
-      ],
-    ),
+    12,
+    [
+      #babel(
+        en: [
+          The chroma component ($C$).
+
+          Ratios are relative to `{0.4}`, meaning `{50%}` corresponds to
+          `{0.2}` and `{-100%}` to `{-0.4}`.
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: oklch,
+        oklch(50%, -100%, 150deg),
+        oklch(50%, 100%, 150deg),
+      ))
+      ```
+    ],
   ),
   "Color::oklch::hue": (
-    3,
-    babel(
-      en: [
-        The hue component.
-      ],
-    ),
+    15,
+    [
+      #babel(
+        en: [
+          The hue component ($h$).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: oklch,
+        oklch(50%, 70%, 0deg),
+        oklch(50%, 70%, 90deg),
+        oklch(50%, 70%, 180deg),
+        oklch(50%, 70%, 270deg),
+        oklch(50%, 70%, 360deg),
+      ))
+      ```
+    ],
   ),
   "Color::oklch::alpha": (
-    3,
+    15,
     babel(
       en: [
         The alpha component.
@@ -440,7 +521,7 @@
     ),
   ),
   "Color::oklch::color": (
-    3,
+    4,
     babel(
       en: [
         Alternatively: The color to convert to Oklch.
@@ -454,66 +535,131 @@
     [
       #babel(
         en: [
-          Create an RGB(A) color with linear luma.
+          Creates an RGB(A) color with linear luma.
 
           This color space is similar to sRGB, but with the distinction that the
           color component are not gamma corrected. This makes it easier to perform
           color operations such as blending and interpolation. Although, you
           should prefer to use the @color.oklab[`oklab` function] for these.
 
-          A linear RGB(A) color is represented internally by an array of four
-          components:
-          - red (@ratio)
-          - green (@ratio)
-          - blue (@ratio)
-          - alpha (@ratio)
+          A linear RGB(A) color is represented by four components: red, green,
+          blue, and alpha.
 
-          These components are also available using the
-          @color.components[`components`] method.
+          The value of these components can be obtained for an existing linear
+          RGB(A) color using the @color.components[`components`] method.
         ],
       )
 
       ```example
-      #square(fill: color.linear-rgb(
+      #box(square(fill: color.linear-rgb(
         30%, 50%, 10%,
-      ))
+      )))
+      #box(square(fill: color.linear-rgb(
+        77, 128, 26,
+      )))
       ```
     ],
   ),
   "Color::linear_rgb::red": (
-    25,
-    babel(
-      en: [
-        The red component.
-      ],
-    ),
+    24,
+    [
+      #babel(
+        en: [
+          The red component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: color.linear-rgb,
+        color.linear-rgb(0%, 0%, 0%),
+        color.linear-rgb(100%, 0%, 0%),
+      ))
+
+      For comparison:
+      #rect(fill: gradient.linear(
+        space: rgb,
+        rgb(0%, 0%, 0%),
+        rgb(100%, 0%, 0%),
+      ))
+      ```
+    ],
   ),
   "Color::linear_rgb::green": (
-    3,
-    babel(
-      en: [
-        The green component.
-      ],
-    ),
+    22,
+    [
+      #babel(
+        en: [
+          The green component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: color.linear-rgb,
+        color.linear-rgb(0%, 0%, 0%),
+        color.linear-rgb(0%, 100%, 0%),
+      ))
+
+      For comparison:
+      #rect(fill: gradient.linear(
+        space: rgb,
+        rgb(0%, 0%, 0%),
+        rgb(0%, 100%, 0%),
+      ))
+      ```
+    ],
   ),
   "Color::linear_rgb::blue": (
-    3,
-    babel(
-      en: [
-        The blue component.
-      ],
-    ),
+    22,
+    [
+      #babel(
+        en: [
+          The blue component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: color.linear-rgb,
+        color.linear-rgb(0%, 0%, 0%),
+        color.linear-rgb(0%, 0%, 100%),
+      ))
+
+      For comparison:
+      #rect(fill: gradient.linear(
+        space: rgb,
+        rgb(0%, 0%, 0%),
+        rgb(0%, 0%, 100%),
+      ))
+      ```
+    ],
   ),
   "Color::linear_rgb::alpha": (
-    3,
+    22,
     babel(
       en: [
         The alpha component.
+
+        This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+        `{255}`).
       ],
     ),
   ),
   "Color::linear_rgb::color": (
-    3,
+    7,
     babel(
       en: [
         Alternatively: The color to convert to linear RGB(A).
@@ -527,63 +673,104 @@
     [
       #babel(
         en: [
-          Create an RGB(A) color.
+          Creates an RGB(A) color.
 
           The color is specified in the sRGB color space.
 
-          An RGB(A) color is represented internally by an array of four
-          components:
-          - red (@ratio)
-          - green (@ratio)
-          - blue (@ratio)
-          - alpha (@ratio)
+          An RGB(A) color is represented by four components: red, green,
+          blue, and alpha.
 
-          These components are also available using the
-          @color.components[`components`] method.
+          The value of these components can be obtained for an existing RGB(A)
+          color using the @color.components[`components`] method.
         ],
       )
 
       ```example
-      #square(fill: rgb("#b1f2eb"))
-      #square(fill: rgb(87, 127, 230))
-      #square(fill: rgb(25%, 13%, 65%))
+      #box(square(fill: rgb("#b1f2eb")))
+      #box(square(fill: rgb(87, 127, 230)))
+      #box(square(fill: rgb(25%, 13%, 65%)))
       ```
     ],
   ),
   "Color::rgb::red": (
-    22,
-    babel(
-      en: [
-        The red component.
-      ],
-    ),
+    18,
+    [
+      #babel(
+        en: [
+          The red component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: rgb,
+        rgb(0%, 0%, 0%),
+        rgb(100%, 0%, 0%),
+      ))
+      ```
+    ],
   ),
   "Color::rgb::green": (
-    3,
-    babel(
-      en: [
-        The green component.
-      ],
-    ),
+    15,
+    [
+      #babel(
+        en: [
+          The green component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: rgb,
+        rgb(0%, 0%, 0%),
+        rgb(0%, 100%, 0%),
+      ))
+      ```
+    ],
   ),
   "Color::rgb::blue": (
-    3,
-    babel(
-      en: [
-        The blue component.
-      ],
-    ),
+    15,
+    [
+      #babel(
+        en: [
+          The blue component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: rgb,
+        rgb(0%, 0%, 0%),
+        rgb(0%, 0%, 100%),
+      ))
+      ```
+    ],
   ),
   "Color::rgb::alpha": (
-    3,
+    15,
     babel(
       en: [
         The alpha component.
+
+        This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+        `{255}`).
       ],
     ),
   ),
   "Color::rgb::hex": (
-    3,
+    7,
     [
       #babel(
         en: [
@@ -593,6 +780,9 @@
           a leading hash.
 
           If this is given, the individual components should not be given.
+
+          Note that the hex code for an existing color can be obtained with
+          the @color.to-hex[`to-hex`] method.
         ],
       )
 
@@ -604,7 +794,7 @@
     ],
   ),
   "Color::rgb::color": (
-    14,
+    17,
     babel(
       en: [
         Alternatively: The color to convert to RGB(a).
@@ -618,20 +808,17 @@
     [
       #babel(
         en: [
-          Create a CMYK color.
+          Creates a CMYK color.
 
           This is useful if you want to target a specific printer. The conversion
           to RGB for display preview might differ from how your printer reproduces
           the color.
 
-          A CMYK color is represented internally by an array of four components:
-          - cyan (@ratio)
-          - magenta (@ratio)
-          - yellow (@ratio)
-          - key (@ratio)
+          A CMYK color is represented by four components: cyan, magenta, yellow,
+          and key.
 
-          These components are also available using the
-          @color.components[`components`] method.
+          The value of these components can be obtained for an existing CMYK
+          color using the @color.components[`components`] method.
 
           Note that CMYK colors are not currently supported when PDF/A output is
           enabled.
@@ -646,39 +833,83 @@
     ],
   ),
   "Color::cmyk::cyan": (
-    26,
-    babel(
-      en: [
-        The cyan component.
-      ],
-    ),
+    23,
+    [
+      #babel(
+        en: [
+          The cyan component.
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: cmyk,
+        cmyk(0%, 0%, 0%, 20%),
+        cmyk(100%, 0%, 0%, 20%),
+      ))
+      ```
+    ],
   ),
   "Color::cmyk::magenta": (
-    3,
-    babel(
-      en: [
-        The magenta component.
-      ],
-    ),
+    12,
+    [
+      #babel(
+        en: [
+          The magenta component.
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: cmyk,
+        cmyk(0%, 0%, 0%, 20%),
+        cmyk(0%, 100%, 0%, 20%),
+      ))
+      ```
+    ],
   ),
   "Color::cmyk::yellow": (
-    3,
-    babel(
-      en: [
-        The yellow component.
-      ],
-    ),
+    12,
+    [
+      #babel(
+        en: [
+          The yellow component.
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: cmyk,
+        cmyk(0%, 0%, 0%, 20%),
+        cmyk(0%, 0%, 100%, 20%),
+      ))
+      ```
+    ],
   ),
   "Color::cmyk::key": (
-    3,
-    babel(
-      en: [
-        The key component.
-      ],
-    ),
+    12,
+    [
+      #babel(
+        en: [
+          The key component.
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: cmyk,
+        cmyk(65%, 24%, 43%, 0%),
+        cmyk(65%, 24%, 43%, 100%),
+      ))
+      ```
+    ],
   ),
   "Color::cmyk::color": (
-    3,
+    12,
     babel(
       en: [
         Alternatively: The color to convert to CMYK.
@@ -692,56 +923,98 @@
     [
       #babel(
         en: [
-          Create an HSL color.
+          Creates an HSL color.
 
           This color space is useful for specifying colors by hue, saturation and
           lightness. It is also useful for color manipulation, such as saturating
           while keeping perceived hue.
 
-          An HSL color is represented internally by an array of four components:
-          - hue (@angle)
-          - saturation (@ratio)
-          - lightness (@ratio)
-          - alpha (@ratio)
+          An HSL color is represented by four components: hue, saturation,
+          lightness, and alpha.
 
-          These components are also available using the
-          @color.components[`components`] method.
+          The value of these components can be obtained for an existing CMYK
+          color using the @color.components[`components`] method.
         ],
       )
 
       ```example
-      #square(
+      #box(square(
         fill: color.hsl(30deg, 50%, 60%)
-      )
+      ))
+      #box(square(
+        fill: color.hsl(30deg, 128, 153)
+      ))
       ```
     ],
   ),
   "Color::hsl::hue": (
     23,
-    babel(
-      en: [
-        The hue angle.
-      ],
-    ),
+    [
+      #babel(
+        en: [
+          The hue component.
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: color.hsl,
+        color.hsl(0deg, 100%, 50%),
+        color.hsl(90deg, 100%, 50%),
+        color.hsl(180deg, 100%, 50%),
+        color.hsl(270deg, 100%, 50%),
+        color.hsl(360deg, 100%, 50%),
+      ))
+      ```
+    ],
   ),
   "Color::hsl::saturation": (
-    3,
-    babel(
-      en: [
-        The saturation component.
-      ],
-    ),
+    15,
+    [
+      #babel(
+        en: [
+          The saturation component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: color.hsl,
+        color.hsl(50deg, 0%, 50%),
+        color.hsl(50deg, 100%, 50%),
+      ))
+      ```
+    ],
   ),
   "Color::hsl::lightness": (
-    3,
-    babel(
-      en: [
-        The lightness component.
-      ],
-    ),
+    15,
+    [
+      #babel(
+        en: [
+          The lightness component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: color.hsl,
+        color.hsl(-30deg, 100%, 0%),
+        color.hsl(-30deg, 100%, 100%),
+      ))
+      ```
+    ],
   ),
   "Color::hsl::alpha": (
-    3,
+    15,
     babel(
       en: [
         The alpha component.
@@ -749,7 +1022,7 @@
     ),
   ),
   "Color::hsl::color": (
-    3,
+    4,
     babel(
       en: [
         Alternatively: The color to convert to HSL.
@@ -763,56 +1036,105 @@
     [
       #babel(
         en: [
-          Create an HSV color.
+          Creates an HSV color.
 
           This color space is useful for specifying colors by hue, saturation and
           value. It is also useful for color manipulation, such as saturating
           while keeping perceived hue.
 
-          An HSV color is represented internally by an array of four components:
-          - hue (@angle)
-          - saturation (@ratio)
-          - value (@ratio)
-          - alpha (@ratio)
+          An HSV color is represented by four components: hue, saturation, value,
+          and alpha.
 
-          These components are also available using the
-          @color.components[`components`] method.
+          The value of these components can be obtained for an existing CMYK
+          color using the @color.components[`components`] method.
         ],
       )
 
       ```example
-      #square(
+      #box(square(
         fill: color.hsv(30deg, 50%, 60%)
-      )
+      ))
+      #box(square(
+        fill: color.hsv(30deg, 128, 153)
+      ))
       ```
     ],
   ),
   "Color::hsv::hue": (
     23,
-    babel(
-      en: [
-        The hue angle.
-      ],
-    ),
+    [
+      #babel(
+        en: [
+          The hue component.
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: color.hsv,
+        color.hsv(0deg, 100%, 100%),
+        color.hsv(90deg, 100%, 100%),
+        color.hsv(180deg, 100%, 100%),
+        color.hsv(270deg, 100%, 100%),
+        color.hsv(360deg, 100%, 100%),
+      ))
+      ```
+    ],
   ),
   "Color::hsv::saturation": (
-    3,
-    babel(
-      en: [
-        The saturation component.
-      ],
-    ),
+    15,
+    [
+      #babel(
+        en: [
+          The saturation component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: color.hsv,
+        color.hsv(50deg, 0%, 100%),
+        color.hsv(50deg, 100%, 100%),
+      ))
+      ```
+    ],
   ),
   "Color::hsv::value": (
-    3,
-    babel(
-      en: [
-        The value component.
-      ],
-    ),
+    15,
+    [
+      #babel(
+        en: [
+          The value component.
+
+          This should be a value between `{0%}` (or `{0}`) and `{100%}` (or
+          `{255}`).
+        ],
+      )
+
+      ```example
+      #set rect(width: 100%)
+      #rect(fill: gradient.linear(
+        space: color.hsv,
+        color.hsv(-30deg, 100%, 0%),
+        color.hsv(-30deg, 100%, 100%),
+      ))
+
+      In HSL for comparison:
+      #rect(fill: gradient.linear(
+        space: color.hsl,
+        color.hsl(-30deg, 100%, 0%),
+        color.hsl(-30deg, 100%, 100%),
+      ))
+      ```
+    ],
   ),
   "Color::hsv::alpha": (
-    3,
+    22,
     babel(
       en: [
         The alpha component.
@@ -820,7 +1142,7 @@
     ),
   ),
   "Color::hsv::color": (
-    3,
+    4,
     babel(
       en: [
         Alternatively: The color to convert to HSL.
@@ -834,33 +1156,33 @@
     [
       #babel(
         en: [
-          Extracts the components of this color.
+          Extracts the components of the color.
 
           The size and values of this array depends on the color space. You can
-          obtain the color space using @color.space[`space`]. Below is a table of
-          the color spaces and their components:
+          obtain the color space using the @color.space[`space`] method. Below is
+          a table of the color spaces and their components.
         ],
       )
 
       #docs-table(
-        table.header[Color space][C1][C2][C3][C4],
+        table.header[Color space][C0][C1][C2][C3],
 
         [@color.luma[`luma`]],
         [Lightness],
-        [],
+        [Alpha],
         [],
         [],
 
         [@color.oklab[`oklab`]],
-        [Lightness],
-        [`a`],
-        [`b`],
+        [Lightness ($L$)],
+        [$a$],
+        [$b$],
         [Alpha],
 
         [@color.oklch[`oklch`]],
-        [Lightness],
-        [Chroma],
-        [Hue],
+        [Lightness ($L$)],
+        [Chroma ($C$)],
+        [Hue ($h$)],
         [Alpha],
 
         [@color.linear-rgb[`linear-rgb`]],
@@ -904,20 +1226,19 @@
         en: [
           For the meaning and type of each individual value, see the documentation
           of the corresponding color space. The alpha component is optional and
-          only included if the `alpha` argument is `true`. The length of the
-          returned array depends on the number of components and whether the alpha
-          component is included.
+          only included if the `alpha` argument is `{true}` (the default). The
+          length of the returned array depends on the number of components and
+          whether the alpha component is included.
         ],
       )
 
       ```example
-      // note that the alpha component is included by default
       #rgb(40%, 60%, 80%).components()
       ```
     ],
   ),
   "Color::components::alpha": (
-    77,
+    76,
     babel(
       en: [
         Whether to include the alpha component.
@@ -929,46 +1250,60 @@
     [
       #babel(
         en: [
-          Returns the constructor function for this color's space.
+          Returns the color space this color is defined in.
 
-          Returns one of:
-          - @color.luma[`luma`]
-          - @color.oklab[`oklab`]
-          - @color.oklch[`oklch`]
-          - @color.linear-rgb[`linear-rgb`]
-          - @color.rgb[`rgb`]
-          - @color.cmyk[`cmyk`]
-          - @color.hsl[`hsl`]
-          - @color.hsv[`hsv`]
+          The color space is expressed either as one of the color
+          constructor functions (@color.luma[`luma`], @color.oklab[`oklab`],
+          @color.oklch[`oklch`], @color.linear-rgb[`linear-rgb`],
+          @color.rgb[`rgb`], @color.cmyk[`cmyk`], @color.hsl[`hsl`], or
+          @color.hsv[`hsv`]) or a @color.spot[spot colorant].
         ],
       )
 
       ```example
-      #let color = cmyk(1%, 2%, 3%, 4%)
-      #(color.space() == cmyk)
+      #let c = cmyk(1%, 2%, 3%, 4%)
+      #(c.space() == cmyk)
       ```
     ],
   ),
   "Color::to_hex": (
-    24,
-    babel(
-      en: [
-        Returns the color's RGB(A) hex representation (such as `#ffaa32` or
-        `#020304fe`). The alpha component (last two digits in `#020304fe`) is
-        omitted if it is equal to `ff` (255 / 100%).
-      ],
-    ),
+    20,
+    [
+      #babel(
+        en: [
+          Returns the color's RGB(A) hex code.
+
+          The alpha component (last two digits) is omitted if it is equal to
+          `{100%}`.
+        ],
+      )
+
+      ```example
+      #rgb("FFAA32").to-hex() \
+      #rgb("020304fe").to-hex()
+      ```
+    ],
   ),
   "Color::lighten": (
-    11,
-    babel(
-      en: [
-        Lightens a color by a given factor.
-      ],
-    ),
+    17,
+    [
+      #babel(
+        en: [
+          Lightens a color by a given factor.
+        ],
+      )
+
+      ```example
+      #let c = rgb("#4ebf19")
+      #box(square(fill: c))
+      #box(square(fill: c.lighten(30%)))
+      #box(square(fill: c.lighten(60%)))
+      #box(square(fill: c.lighten(90%)))
+      ```
+    ],
   ),
   "Color::lighten::factor": (
-    4,
+    12,
     babel(
       en: [
         The factor to lighten the color by.
@@ -977,14 +1312,24 @@
   ),
   "Color::darken": (
     9,
-    babel(
-      en: [
-        Darkens a color by a given factor.
-      ],
-    ),
+    [
+      #babel(
+        en: [
+          Darkens a color by a given factor.
+        ],
+      )
+
+      ```example
+      #let c = rgb("#fded0a")
+      #box(square(fill: c))
+      #box(square(fill: c.darken(30%)))
+      #box(square(fill: c.darken(60%)))
+      #box(square(fill: c.darken(90%)))
+      ```
+    ],
   ),
   "Color::darken::factor": (
-    4,
+    12,
     babel(
       en: [
         The factor to darken the color by.
@@ -993,17 +1338,27 @@
   ),
   "Color::saturate": (
     9,
-    babel(
-      en: [
-        Increases the saturation of a color by a given factor.
+    [
+      #babel(
+        en: [
+          Increases the saturation of a color by a given factor.
 
-        Only process colors can be saturated. If you want to saturate a spot
-        color, convert it into a process color first.
-      ],
-    ),
+          Only process colors can be saturated. If you want to saturate a spot
+          color, convert it into a process color first.
+        ],
+      )
+
+      ```example
+      #let c = rgb("#ac9eb4")
+      #box(square(fill: c))
+      #box(square(fill: c.saturate(30%)))
+      #box(square(fill: c.saturate(60%)))
+      #box(square(fill: c.saturate(90%)))
+      ```
+    ],
   ),
   "Color::saturate::factor": (
-    8,
+    16,
     babel(
       en: [
         The factor to saturate the color by.
@@ -1012,17 +1367,27 @@
   ),
   "Color::desaturate": (
     13,
-    babel(
-      en: [
-        Decreases the saturation of a color by a given factor.
+    [
+      #babel(
+        en: [
+          Decreases the saturation of a color by a given factor.
 
-        Only process colors can be desaturated. If you want to desaturate a spot
-        color, convert it into a process color first.
-      ],
-    ),
+          Only process colors can be desaturated. If you want to desaturate a spot
+          color, convert it into a process color first.
+        ],
+      )
+
+      ```example
+      #let c = rgb("#17cbd8")
+      #box(square(fill: c))
+      #box(square(fill: c.desaturate(30%)))
+      #box(square(fill: c.desaturate(60%)))
+      #box(square(fill: c.desaturate(90%)))
+      ```
+    ],
   ),
   "Color::desaturate::factor": (
-    8,
+    16,
     babel(
       en: [
         The factor to desaturate the color by.
@@ -1034,40 +1399,56 @@
     [
       #babel(
         en: [
-          Produces the complementary color using a provided color space. You can
-          think of it as the opposite side on a color wheel.
+          Produces the complementary color using a provided color space.
+
+          You can think of it as the opposite side on a color wheel.
         ],
       )
 
       ```example
-      #square(fill: yellow)
-      #square(fill: yellow.negate())
-      #square(fill: yellow.negate(space: rgb))
+      #box(square(fill: yellow))
+      #box(square(fill: yellow.negate()))
       ```
     ],
   ),
   "Color::negate::space": (
     11,
-    babel(
-      en: [
-        The color space used for the transformation. By default, a
-        perceptual color space is used.
-      ],
-    ),
+    [
+      #babel(
+        en: [
+          The color space used for the transformation. By default, a
+          perceptual color space is used.
+        ],
+      )
+
+      ```example
+      #let sample(c) = box(square(fill: c))
+      #sample(red)
+      #sample(red.negate())
+      #sample(red.negate(space: rgb))
+      ```
+    ],
   ),
   "Color::rotate": (
-    18,
-    babel(
-      en: [
-        Rotates the hue of the color by a given angle.
+    25,
+    [
+      #babel(
+        en: [
+          Rotates the hue of the color by a given angle.
+        ],
+      )
 
-        This function only works on color models with a well-defined hue
-        component, i.e. Oklch, HSL, and HSV.
-      ],
-    ),
+      ```example
+      #let c = rgb("#15e24f")
+      #box(square(fill: c))
+      #box(square(fill: c.rotate(20deg)))
+      #box(square(fill: c.rotate(40deg)))
+      #box(square(fill: c.rotate(60deg)))
+      ```
+    ],
   ),
   "Color::rotate::angle": (
-    8,
+    13,
     babel(
       en: [
         The angle to rotate the hue by.
@@ -1076,76 +1457,52 @@
   ),
   "Color::rotate::space": (
     2,
-    babel(
-      en: [
-        The color space used to rotate. By default, this happens in a
-        perceptual color space (@color.oklch[`oklch`]).
-      ],
-    ),
-  ),
-  "Color::mix": (
-    32,
     [
       #babel(
         en: [
-          Create a color by mixing two or more colors.
+          The color space used to rotate. By default, this happens in a
+          perceptual color space (@color.oklch[`oklch`]).
 
-          In color spaces with a hue component (HSL, HSV, Oklch), only two colors
-          can be mixed at once. Mixing more than two colors in such a space will
-          result in an error!
+          This must be a color space with a well-defined hue component: either
+          @color.oklch[`oklch`], @color.hsl, or @color.hsv.
         ],
       )
 
       ```example
-      #set block(height: 20pt, width: 100%)
-      #block(fill: red.mix(blue))
-      #block(fill: red.mix(blue, space: rgb))
-      #block(fill: color.mix(red, blue, white))
-      #block(fill: color.mix((red, 70%), (blue, 30%)))
+      #set rect(width: 100%)
+      #let c = rgb("#117be6")
+      Oklch:
+      #rect(fill: gradient.linear(
+        space: oklch,
+        c,
+        c.rotate(90deg),
+      ))
+      HSL:
+      #rect(fill: gradient.linear(
+        space: color.hsl,
+        c,
+        c.rotate(90deg, space: color.hsl),
+      ))
       ```
     ],
   ),
-  "Color::mix::colors": (
-    15,
-    babel(
-      en: [
-        The colors, optionally with weights, specified as a pair (array of
-        length two) of color and weight (float or ratio).
-
-        The weights do not need to add to `{100%}`, they are relative to the
-        sum of all weights.
-      ],
-    ),
-  ),
-  "Color::mix::space": (
-    7,
-    babel(
-      en: [
-        The color space to mix in. By default, this happens in a perceptual
-        color space (@color.oklab[`oklab`]) or, if all colors use the same
-        spot colorant, using that colorant.
-
-        All colors will be converted into this color space.
-      ],
-    ),
-  ),
   "Color::transparentize": (
-    12,
+    51,
     [
       #babel(
         en: [
           Makes a color more transparent by a given factor.
-
-          This method is relative to the existing alpha value. If the scale is
-          positive, calculates `alpha - alpha * scale`. Negative scales behave
-          like `color.opacify(-scale)`.
         ],
       )
 
       ```example
-      #block(fill: red)[opaque]
-      #block(fill: red.transparentize(50%))[half red]
-      #block(fill: red.transparentize(75%))[quarter red]
+      #let sample(c) = box(square(fill: c))
+      #set page(fill: tiling(line(),
+        size: (1cm, 0.2cm), angle: -45deg,
+      ))
+      #sample(red)
+      #sample(red.transparentize(50%))
+      #sample(red.transparentize(75%))
       ```
     ],
   ),
@@ -1154,19 +1511,18 @@
     babel(
       en: [
         The factor to change the alpha value by.
+
+        If positive, calculates `{alpha - alpha * scale}`. Negative scales
+        behave like `{color.opacify(-scale)}`.
       ],
     ),
   ),
   "Color::opacify": (
-    6,
+    9,
     [
       #babel(
         en: [
           Makes a color more opaque by a given scale.
-
-          This method is relative to the existing alpha value. If the scale is
-          positive, calculates `alpha + scale - alpha * scale`. Negative scales
-          behave like `color.transparentize(-scale)`.
         ],
       )
 
@@ -1179,15 +1535,81 @@
     ],
   ),
   "Color::opacify::scale": (
-    15,
+    11,
     babel(
       en: [
         The scale to change the alpha value by.
+
+        If positive, calculates `{alpha + (1 - alpha) * scale}`. Negative
+        scales behave like `{color.transparentize(-scale)}`.
       ],
     ),
   ),
+  "Color::mix": (
+    9,
+    [
+      #babel(
+        en: [
+          Creates a color by mixing two or more colors.
+        ],
+      )
+
+      ```example
+      #box(square(fill: red))
+      #box(square(fill: red.mix(blue)))
+      #box(square(fill: blue))
+      ```
+    ],
+  ),
+  "Color::mix::colors": (
+    9,
+    [
+      #babel(
+        en: [
+          The colors to mix, optionally with weights, specified as a pair
+          (array of length two) of color and weight (@float or @ratio).
+
+          The weights do not need to add to `{100%}`, they are relative to the
+          sum of all weights.
+        ],
+      )
+
+      ```example
+      #let sample(c) = box(square(fill: c))
+      #sample(color.mix(red, blue))
+      #sample(color.mix(red, blue, white))
+      #sample(color.mix(
+        (red, 70%), (blue, 30%),
+      ))
+      ```
+    ],
+  ),
+  "Color::mix::space": (
+    16,
+    [
+      #babel(
+        en: [
+          The color space to mix in. By default, this happens in a perceptual
+          color space (@color.oklab[`oklab`]) or, if all colors use the same
+          spot colorant, using that colorant.
+
+          All colors will be converted into this color space.
+
+          Note that, in color spaces with a hue component (Oklch, HSL, HSV),
+          only two colors can be mixed at once. Mixing more than two colors in
+          such a space will result in an error!
+        ],
+      )
+
+      ```example
+      #let sample(c) = box(square(fill: c))
+      #sample(red.mix(blue, space: oklab))
+      #sample(red.mix(blue, space: rgb))
+      ```
+    ],
+  ),
   "SpotColorant": (
-    1170,
+    1186,
     babel(
       en: [
         A spot colorant from which spot colors can be created.
@@ -1202,7 +1624,7 @@
     22,
     babel(
       en: [
-        Create a new spot colorant.
+        Creates a new spot colorant.
       ],
     ),
   ),
@@ -1255,7 +1677,7 @@
     [
       #babel(
         en: [
-          Create a spot color at a specific tint of this colorant.
+          Creates a spot color at a specific tint of this colorant.
 
           The tint represents what percentage of the colorant is applied. A tint
           of `{100%}` means the colorant is applied at full strength, while `{0%}`
