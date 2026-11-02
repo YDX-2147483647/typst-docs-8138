@@ -271,7 +271,7 @@
     ],
   ),
   "OutlineEntry": (
-    261,
+    245,
     babel(
       en: [
         Represents an entry line in an outline.

@@ -23,12 +23,12 @@
           list below.
 
           - In the @reference:model[Model category], the following elements are
-            locatable: @asset, @bibliography, @cite, @document, @emph, @enum, @figure,
-            @figure.caption, @footnote, @footnote.entry, @heading, @link, @list,
-            @outline, @outline.entry, @par, @quote, @ref, @strong, @table, @terms, and
-            @title. Most of the elements in the _Model_ category are locatable because
-            semantic elements like headings and figures are often
-            used with introspection.
+            locatable: @asset, @bibliography, @cite, @divider, @document, @emph,
+            @enum, @figure, @figure.caption, @footnote, @footnote.entry, @heading,
+            @link, @list, @outline, @outline.entry, @par, @quote, @ref, @strong,
+            @table, @terms, and @title. Most of the elements in the _Model_ category
+            are locatable because semantic elements like headings and figures are
+            often used with introspection.
 
           - In the @reference:text[Text category], the @raw element and the
             decoration elements @underline, @overline, @strike, and @highlight are
@@ -109,7 +109,7 @@
         en: [
           Returns a dictionary with the page number and the x, y position for this
           location. The page number starts at one and the coordinates are measured
-          from the top-left of the page.
+          from the top-left of the page (without its @page.bleed[bleed area]).
 
           If you only need the page number, use @location.page[`page()`] instead
           as it allows Typst to skip unnecessary work.

@@ -526,10 +526,15 @@
           This content will be placed behind the page's body. It can be used to
           place a background image or a watermark.
 
-          For convenience, @relative[relative lengths] are resolved against the
-          page size including the @page.bleed[page `bleed`] when used in
-          background content. For example, on a page that is `{100mm}` wide with a
-          `{5mm}` bleed, a width of `{100%}` is computed as `{5mm + 100mm + 5mm}`.
+          For convenience, background content is positioned relative to the page
+          expanded by its @page.bleed[bleed]. For example, `{top + left}`
+          alignment places content at the bleed area's top-left corner rather than
+          the page's.
+
+          Likewise, @relative[relative lengths] are resolved against the page size
+          plus bleed when used in background content. For example, on a page that
+          is `{100mm}` wide with an extra `{5mm}` bleed per side, a width of
+          `{100%}` is computed as `{5mm + 100mm + 5mm}`.
         ],
       )
 
@@ -547,7 +552,7 @@
     ],
   ),
   "PageElem::foreground": (
-    24,
+    29,
     [
       #babel(
         en: [
@@ -555,9 +560,10 @@
 
           This content will overlay the page's body.
 
-          Relative lengths are resolved against the page size including
-          @page.bleed[`bleed`], following the same behavior as
-          @page.background[`background`].
+          Following the behavior of @page.background[`background`], foreground
+          content is positioned relative to the page expanded by its
+          @page.bleed[bleed] and relative lengths are resolved against the page
+          size plus bleed.
         ],
       )
 
@@ -571,7 +577,7 @@
     ],
   ),
   "PageElem::body": (
-    18,
+    19,
     babel(
       en: [
         The contents of the page(s).
