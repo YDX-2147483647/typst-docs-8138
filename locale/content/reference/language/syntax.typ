@@ -80,7 +80,7 @@ Once you have entered code mode with `#`, you don't need to use further hashes u
   [`[_emphasis_]`],
   [@emph],
 
-  babel(en: [Raw text], zh-status: "need proofread", zh: [代码段]),
+  babel(en: [Raw text], zh-status: "proofread", zh: [代码段]),
   [``` [`print(1)`]```],
   [@raw],
 

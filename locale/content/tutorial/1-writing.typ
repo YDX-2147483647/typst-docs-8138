@@ -70,7 +70,8 @@ behaviour of these natural structures.
   zh-status: "proofread",
   zh: [
     下一步是添加章节标题并强调某些文本。Typst使用简单标记设置最常见的格式。要添加章节标题，请输入`=`字符；要用斜体强调，请在文本两侧添加`[_下划线_]`。
-    // TODO: 【译注】中文基本没有斜体的习惯，一般用`[*星号*]`加粗强调。教程后续章节也会介绍怎样把`[_下划线_]`的效果改成切换字体或添加下划线。
+
+    【译注】中文基本没有斜体的习惯，一般用`[*星号*]`加粗强调。您也可参考中文社区导航站把`[_下划线_]`的效果#link("https://typst-doc-cn.github.io/guide/FAQ/chinese-skew.html")[改成切换字体或添加下划线]，不过相关知识等到@tutorial:advanced-styling:title-and-abstract[教程第三章]才会讲到。
   ],
 )
 
@@ -423,7 +424,7 @@ $ a arrow.squiggly b $
   ],
   zh-status: "proofread",
   zh: [
-    现在您已经了解了如何在Typst中编写基本文档，包括如何强调文本、编写列表、插入图片、对齐内容和排版数学公式。您还了解了Typst的函数机制。其实Typst还允许您往文档插入许多种内容，例如@table[表格]、@reference:visualize[图形]和@raw[代码块]。您可查阅@reference[参考手册]进一步了解各种功能。
+    现在您已经了解了如何在Typst中编写基本文档，包括如何强调文本、编写列表、插入图片、对齐内容和排版数学公式。您还了解了Typst的函数机制。其实Typst还允许您往文档插入许多种内容，例如@table[表格]、@reference:visualize[图形]和@raw[代码段]。您可查阅@reference[参考手册]进一步了解各种功能。
 
     目前您已写完报告，并单击右上角的下载按钮保存了PDF。不过，您可能认为报告看起来不该那么朴素。下一章我们将学习如何定制文档的外观格式。
   ],

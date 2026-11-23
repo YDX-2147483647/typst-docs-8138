@@ -51,6 +51,10 @@
   [show规则],
   [详见@reference:styling:show-rules],
 
+  [show-set rule],
+  [show-set规则],
+  [详见@reference:styling:show-rules],
+
   gap,
 
   [markup (mode)],
@@ -109,11 +113,11 @@
 
   [title],
   [全文标题],
-  [详见@title，应与heading、caption、header区分],
+  [详见@title，应与heading、caption、header区分；在@tutorial\中可按语境译为「报告标题」「论文标题」等],
 
   [heading],
   [章节标题],
-  [详见@heading，应与title等区分],
+  [详见@heading，应与title等区分；不会引发歧义时，「章节」二字可省略，例如可称「一级标题」],
 
   [caption],
   [题注#footnote[以图为例，图题通常包含图序（图的序号）和图名（图的名称），有时除了图题还有图注（图的注解）。这些说明文字一般都填在`caption`字段里，统称题注。#clreq("#major_differences_between_horizontal_and_vertical_writing_modes")[§2.1.2 横排与直排的主要差异点]称作「说明文字」，但易与图内文字混淆。]],
@@ -154,6 +158,30 @@
   [optional],
   [可选参数],
   [],
+
+  gap,
+
+  [selector],
+  [选择器],
+  [详见@selector],
+
+  gap,
+
+  [length],
+  [长度],
+  [详见@length],
+
+  [relative length],
+  [相对长度],
+  [详见@relative],
+
+  [fraction],
+  [分数 / 分数占比],
+  [详见@fraction，应与ratio区分，但不必特意与@math.frac\区分],
+
+  [ratio],
+  [百分比],
+  [详见@ratio，应与fraction区分],
 )
 
 = 一般术语 <general-terms>
@@ -163,6 +191,14 @@
   [command line, CLI],
   [命令行],
   [出现于@overview、@tutorial\等；「命令行工具」可简称为「命令行」],
+
+  [Assistive Technology],
+  [辅助技术],
+  [出现于@tutorial:advanced-styling:title-and-abstract\等；参考#link("https://www.who.int/zh/news-room/fact-sheets/detail/assistive-technology")[世卫组织]],
+
+  [accessibility, accessible],
+  [无障碍#footnote[不必机械翻译，可采用意译而不出现「无障碍」三个字。]],
+  [出现于@tutorial:advanced-styling\等；参考#link("https://www.w3.org/WAI/standards-guidelines/zh-hans")[W3C]],
 
   gap,
 
@@ -188,12 +224,24 @@
   [页面版式],
   [出现于@tutorial；参考#clreq("#h_page")[§7 页面与书籍版式]],
 
+  [single-column],
+  [通栏 / 单栏],
+  [出现于@tutorial:advanced-styling:columns-and-headings；参考#clreq("#page_design")[§7.1.1 中文排版的页面设计]],
+
+  [cross-column],
+  [跨栏],
+  [概念出现于@tutorial:advanced-styling:columns-and-headings；参考#clreq("#types_of_headings")[§7.1.3.1 标题的种类]],
+
+  [top margin (of a page)],
+  [天头#footnote[注意top margin既可指区域，又可指区域的高度；但「天头」只能指区域。]],
+  [出现于@tutorial:advanced-styling:set-rules],
+
   [run-in heading],
   [同行标题#footnote[有人译作「接排标题」，但接排一词有歧义：它有时与「另面起排」相对，表示章节标题与前一段在同一面，和run-in不是一个意思。]],
   [出现于@tutorial；参考#clreq("#types_of_headings")[§7.1.3.1 标题的种类]],
 
   [font size],
-  [字号],
+  [字号#footnote[表示大小概念时，用「字号」；表示线度、长度时，可变通使用「字号尺寸」「字号的尺寸」等说法。]],
   [出现于@tutorial:formatting:page-setup；即使不采用号数制，也称「字号」],
 
   [OpenType feature],
