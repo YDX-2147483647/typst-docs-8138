@@ -27,14 +27,17 @@ index 0eaef81362..d3b943627b 100644
  
  .breadcrumbs a:link {
 diff --git a/docs/assets/index.typ b/docs/assets/index.typ
-index 79d0964d87..9d392951aa 100644
+index 79d0964d87..bff794bfcb 100644
 --- a/docs/assets/index.typ
 +++ b/docs/assets/index.typ
-@@ -1,4 +1,7 @@
+@@ -1,4 +1,10 @@
 -#context asset(stdx.config.asset-base + "docs.css", read("docs.css"))
 +#context asset(stdx.config.asset-base + "docs.css", {
 +  read("docs.css")
-+  read("docs.i18n.css")
++  read("docs.i18n.css").replace(
++    "url(\"/assets/fonts",
++    "url(\"" + stdx.config.asset-base + "fonts",
++  )
 +})
  
  #context asset(

@@ -3,6 +3,14 @@
   --c-theme: #f06292;
 }
 
+@font-face {
+  font-family: "Zhuque Fangsong";
+  font-display: swap;
+  src:
+    local("ZhuqueFangsong-Regular"),
+    url("/assets/fonts/ZhuqueFangsong-Regular.ttf") format("truetype");
+}
+
 [lang="zh-Hans"] {
   body {
     text-autospace: normal;
@@ -39,6 +47,20 @@
     code:not(pre code):not(td > a:first-child > code:first-child):not(.symbol-grid code):not(pre code) {
       /* Increase spacing around Han characters, but not in code examples, @reference:syntax's tables, or @sym's grid */
       margin-inline: 0.125em;
+    }
+
+    aside.i18n--note {
+      font-family: "Zhuque Fangsong", fangsong, system-ui, serif;
+
+      border-inline-start: var(--c-theme) 0.1em solid;
+      margin-inline-start: -1em;
+      padding-inline-start: 1em;
+
+      /* Double the vertical spacing for `p` */
+      margin-block: 0.5rem;
+
+      /* Copied from `.info-box` in `base.css` */
+      border-radius: 6px;
     }
   }
 }
