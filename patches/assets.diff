@@ -1,5 +1,5 @@
 diff --git a/docs/assets/docs.css b/docs/assets/docs.css
-index 0eaef81362..96127e4427 100644
+index 0eaef81362..c412c66395 100644
 --- a/docs/assets/docs.css
 +++ b/docs/assets/docs.css
 @@ -7,6 +7,51 @@
@@ -44,8 +44,8 @@ index 0eaef81362..96127e4427 100644
 +      text-underline-offset: 0.25em;
 +    }
 +
-+    code:not(td > a:first-child > code:first-child):not(.symbol-grid code) {
-+      /* Increase spacing around Han characters, but not in @reference:syntax's tables or @sym's grid */
++    code:not(pre code):not(td > a:first-child > code:first-child):not(.symbol-grid code):not(pre code) {
++      /* Increase spacing around Han characters, but not in code examples, @reference:syntax's tables, or @sym's grid */
 +      margin-inline: 0.125em;
 +    }
 +  }
