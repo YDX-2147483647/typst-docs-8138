@@ -1,4 +1,4 @@
-name: Preview a pull request
+name: Build for deployments
 on:
   push:
     branches:
@@ -7,9 +7,9 @@ on:
   pull_request:
   workflow_dispatch:
 
-permissions:
-  contents: read
-  deployments: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   docit:
@@ -18,6 +18,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: docit
+    name: Build for ${{ matrix.profile }}
+    strategy:
+      matrix:
+        include:
+          - profile: github-pages
+            base: "" # The base will be inferred from context to support forks
+          - profile: cloudflare
+            base: /
     steps:
       - uses: actions/checkout@v7
       - uses: taiki-e/install-action@v2
@@ -52,14 +60,43 @@ jobs:
           path: target/typst-docs
           fail-on-cache-miss: true
 
-      - run: just ci-build "/"
-      - uses: actions/upload-artifact@v7
+      - run: just ci-build "${{ matrix.base || '/${GITHUB_REPOSITORY#*/}/' }}"
+        
+      - if: matrix.profile == 'github-pages'
+        uses: actions/upload-pages-artifact@v5
         with:
-          name: dist-cloudflare
           path: target/dist/
+      - if: matrix.profile != 'github-pages'
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist-${{ matrix.profile }}
+          path: target/dist/
+
+  deploy:
+    name: Deploy to GitHub Pages
+    # Run only for the default `locale` branch, not in the `base` branch or pull requests
+    if: github.ref_name == 'locale'
+    needs: build
+    runs-on: ubuntu-latest
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
 
   deploy-cloudflare:
     name: Deploy to Cloudflare
+    # Run only in the main repo, not in forks
+    if: github.repository == 'typst-doc-cn/docs-8138'
     needs: build
     runs-on: ubuntu-latest
     permissions:
