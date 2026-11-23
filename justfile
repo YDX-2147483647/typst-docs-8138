@@ -45,12 +45,15 @@ resetup:
         {{ quote(clean("../../../patches/i18n-translation.typ")) }} \
         {{ quote(clean("../../../locale")) }} \
         .
+    ln --symbolic \
+        {{ quote(clean("../../../../patches/docs.i18n.css")) }} \
+        ./assets/
 
 # Save patches from target/typst/docs/
 [group("for maintainers")]
 [working-directory("target/typst/")]
 save-patches:
-    git diff --no-ext-diff --abbrev=10 docs/assets/ > ../../patches/assets.diff
+    git diff --no-ext-diff --abbrev=10 docs/assets/{index.typ,docs.css} > ../../patches/assets.diff
     git diff --no-ext-diff --abbrev=10 docs/components/ > ../../patches/components.diff
     git diff --no-ext-diff --abbrev=10 docs/content/index.typ > ../../patches/content-index.diff
 

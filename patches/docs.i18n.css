@@ -1,0 +1,44 @@
+:root {
+  /* The main color of typst-docs-cn/guide's light theme */
+  --c-theme: #f06292;
+}
+
+[lang="zh-Hans"] {
+  body {
+    text-autospace: normal;
+  }
+
+  main {
+    p, li {
+      line-height: 1.8;
+    }
+
+    small, em {
+      /* Do not make Han characters oblique */
+      font-synthesis: none;
+    }
+    em {
+      background: linear-gradient(transparent 70%, color-mix(
+        in srgb,
+        var(--c-theme) 30%,
+        transparent 100%
+      ) 90%);
+
+      code & {
+        /* Keep the Typst _example_ in @reference:syntax untouched */
+        font-synthesis: unset;
+        background: unset;
+      }
+    }
+
+    a {
+      /* Increase offset for Han characters */
+      text-underline-offset: 0.25em;
+    }
+
+    code:not(pre code):not(td > a:first-child > code:first-child):not(.symbol-grid code):not(pre code) {
+      /* Increase spacing around Han characters, but not in code examples, @reference:syntax's tables, or @sym's grid */
+      margin-inline: 0.125em;
+    }
+  }
+}

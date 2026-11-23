@@ -1,60 +1,8 @@
 diff --git a/docs/assets/docs.css b/docs/assets/docs.css
-index 0eaef81362..c412c66395 100644
+index 0eaef81362..d3b943627b 100644
 --- a/docs/assets/docs.css
 +++ b/docs/assets/docs.css
-@@ -7,6 +7,51 @@
-   scrollbar-gutter: stable;
- }
- 
-+:root {
-+  /* The main color of typst-docs-cn/guide's light theme */
-+  --c-theme: #f06292;
-+}
-+
-+[lang="zh-Hans"] {
-+  body {
-+    text-autospace: normal;
-+  }
-+
-+  main {
-+    p, li {
-+      line-height: 1.8;
-+    }
-+
-+    small, em {
-+      /* Do not make Han characters oblique */
-+      font-synthesis: none;
-+    }
-+    em {
-+      background: linear-gradient(transparent 70%,color-mix(
-+        in srgb,
-+        var(--c-theme) 30%,
-+        transparent 100%
-+      ) 90%);
-+
-+      code & {
-+        /* Keep the Typst _example_ in @reference:syntax untouched */
-+        font-synthesis: unset;
-+        background: unset
-+      }
-+    }
-+
-+    a {
-+      /* Increase offset for Han characters */
-+      text-underline-offset: 0.25em;
-+    }
-+
-+    code:not(pre code):not(td > a:first-child > code:first-child):not(.symbol-grid code):not(pre code) {
-+      /* Increase spacing around Han characters, but not in code examples, @reference:syntax's tables, or @sym's grid */
-+      margin-inline: 0.125em;
-+    }
-+  }
-+}
-+
- body.docs {
-   font-size: 16px;
- }
-@@ -577,6 +622,11 @@ figure img {
+@@ -577,6 +577,11 @@ figure img {
  
  .tooltip-context {
    position: relative;
@@ -66,7 +14,7 @@ index 0eaef81362..c412c66395 100644
  }
  
  div[role="tooltip"] {
-@@ -812,6 +862,11 @@ a.pill {
+@@ -812,6 +817,11 @@ a.pill {
    box-sizing: border-box;
    display: flex;
    border-radius: 6px;
@@ -78,3 +26,16 @@ index 0eaef81362..c412c66395 100644
  }
  
  .breadcrumbs a:link {
+diff --git a/docs/assets/index.typ b/docs/assets/index.typ
+index 79d0964d87..9d392951aa 100644
+--- a/docs/assets/index.typ
++++ b/docs/assets/index.typ
+@@ -1,4 +1,7 @@
+-#context asset(stdx.config.asset-base + "docs.css", read("docs.css"))
++#context asset(stdx.config.asset-base + "docs.css", {
++  read("docs.css")
++  read("docs.i18n.css")
++})
+ 
+ #context asset(
+   stdx.config.asset-base + "base.css",
