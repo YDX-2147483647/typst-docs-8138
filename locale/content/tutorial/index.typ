@@ -1,4 +1,4 @@
-#import "/i18n-scope.typ": babel
+#import "/i18n-scope.typ": babel, note
 #import "/components/index.typ": docs-chapter, paged-heading-offset, short-or-long
 
 #docs-chapter(
@@ -27,7 +27,9 @@
 
       最佳开始方法是免费注册Typst在线应用，然后跟着后续步骤操作。在线应用会提供实时预览、语法着色和自动补全。或者您也可在本地使用文本编辑器和#link("https://github.com/typst/typst")[开源Typst命令行]操作。
 
-      【译注】中文社区导航站「#link("https://typst-doc-cn.github.io/guide/quick-start.html#在线使用")[快速开始]」有在线使用、本地使用的具体指导。其实在线应用不注册亦可尝试，而本地VS Code安装插件后不必再安装命令行。
+      #note[
+        【译注】中文社区导航站「#link("https://typst-doc-cn.github.io/guide/quick-start.html#在线使用")[快速开始]」有在线使用、本地使用的具体指导。其实在线应用不注册亦可尝试，而本地VS Code安装插件后不必再安装命令行。
+      ]
     ],
   )
 

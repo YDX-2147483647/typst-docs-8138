@@ -1,4 +1,4 @@
-#import "/i18n-scope.typ": babel
+#import "/i18n-scope.typ": babel, note
 #import "/components/index.typ": checked-list, docs-chapter, docs-figure, example, folding-details, info, short-or-long
 
 #show: docs-chapter.with(
@@ -47,7 +47,9 @@
 
     现在，您的导师也能编辑项目了，并且您和导师都能实时看到更改。您可以加入我们的#link("https://discord.gg/2uDybryKPe")[Discord服务器]，找其他用户一起尝试团队功能！
 
-    【译注】访问Discord服务器需要科学上网。
+    #note[
+      【译注】访问Discord服务器需要科学上网。
+    ]
   ],
 )
 
@@ -86,7 +88,9 @@
 
     大部分要求我们已经知道应该如何实现了，但还有几条要求我们学习一些新技巧。
 
-    【译注】以上有些概念是西文特色，中文读者或许会感到陌生。这些概念在后文用到时译注会逐一介绍，读者亦可自行查阅 #link("https://wiki.wordsoftype.com/?language=zh")[Words of Type]（多语言）、#link("https://practicaltypography.com/")[Practical Typography]（英语，需科学上网）等其它资料。
+    #note[
+      【译注】以上有些概念是西文特色，中文读者或许会感到陌生。这些概念在后文用到时译注会逐一介绍，读者亦可自行查阅 #link("https://wiki.wordsoftype.com/?language=zh")[Words of Type]（多语言）、#link("https://practicaltypography.com/")[Practical Typography]（英语，需科学上网）等其它资料。
+    ]
   ],
 )
 
@@ -140,7 +144,9 @@
 
     最后还有`numbering`参数。我们可在此填写@numbering[编号模式]，定义如何对页面编号。设为`{"1"}`，则Typst就单纯显示页码；设为`{"(1/1)"}`，则显示当前页码和总页数，并用圆括号括起来。我们甚至还能完全定制一个函数填到这里，实现我们想要的任何编号规则。
 
-    【译注】#link("https://wiki.wordsoftype.com/zh/entry/chenxian")[衬线]即serif，是字母笔画的一种风格特征，类似于宋体汉字横画末端的装饰；前文要求的衬线字体是一类字体，这里设的Libertinus Serif就是其一。US letter是一种纸张尺寸，与A4十分接近，主要在美国、加拿大和菲律宾常用。
+    #note[
+      【译注】#link("https://wiki.wordsoftype.com/zh/entry/chenxian")[衬线]即serif，是字母笔画的一种风格特征，类似于宋体汉字横画末端的装饰；前文要求的衬线字体是一类字体，这里设的Libertinus Serif就是其一。US letter是一种纸张尺寸，与A4十分接近，主要在美国、加拿大和菲律宾常用。
+    ]
   ],
 )
 
@@ -332,7 +338,9 @@
   zh: [
     这条show-set规则覆盖了标题下方间距的默认值。这里的长度单位`em`表示字号尺寸的倍数，我们用它把标题和作者名单的间距设为1.2×字号尺寸。现在来添加摘要。回忆一下，会议要求摘要居中，且不必两端对齐。
 
-    【译注】中文原则上始终#link("https://wiki.wordsoftype.com/zh/entry/duiqi")[两端对齐]，但西文有时会让每行长度随单词组合自然浮动，而不两端对齐。
+    #note[
+      【译注】中文原则上始终#link("https://wiki.wordsoftype.com/zh/entry/duiqi")[两端对齐]，但西文有时会让每行长度随单词组合自然浮动，而不两端对齐。
+    ]
   ],
 )
 
@@ -415,7 +423,9 @@
   zh: [
     导出PDF时，此处设置的全文标题会显示到PDF阅读器的标题栏，操作系统也能用这个标题搜索到文件。设置标题还会让阅读文档的障碍更少。如果你需要符合PDF/UA这种PDF无障碍标准，那么必须设置标题。
 
-    【译注】欧盟有相关标准明确要求PDF这类数字资源无障碍，因此Typst比较重视；不过中国在信息无障碍方面，目前相对来说更重视#link("https://www.gov.cn/yaowen/liebiao/202306/content_6888910.htm#UCAP-CONTENT:~:text=语音、大字、盲文、手语")[语音、大字、盲文、手语]。（截至2026年）
+    #note[
+      【译注】欧盟有相关标准明确要求PDF这类数字资源无障碍，因此Typst比较重视；不过中国在信息无障碍方面，目前相对来说更重视#link("https://www.gov.cn/yaowen/liebiao/202306/content_6888910.htm#UCAP-CONTENT:~:text=语音、大字、盲文、手语")[语音、大字、盲文、手语]。（截至2026年）
+    ]
 
     现在要在大标题和页眉获取我们设置的值。`title`函数设计上就是与`document`元素搭配，所以不带参数调用即可输出标题。页眉则需专门处理：Typst无法预知我们会在页眉放置标题，因此我们要手动告知Typst。
 
@@ -652,7 +662,9 @@
     - 用另一条show-set规则将标题的字号设为13pt，字重设为regular
     - 用show规则将标题套在`smallcaps`函数中
 
-    【译注】#link("https://wiki.wordsoftype.com/zh/entry/xiaoxing-daxie-zimu")[小型大写字母]是拉丁字母的一种写法，字形结构按照大写字母，但尺寸更小。具体可参考下图。
+    #note[
+      【译注】#link("https://wiki.wordsoftype.com/zh/entry/xiaoxing-daxie-zimu")[小型大写字母]是拉丁字母的一种写法，字形结构按照大写字母，但尺寸更小。具体可参考下图。
+    ]
   ],
 )
 

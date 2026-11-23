@@ -1,4 +1,4 @@
-#import "/i18n-scope.typ": babel
+#import "/i18n-scope.typ": babel, note
 #import "/components/index.typ": docs-chapter, docs-figure, info, kbd, short-or-long
 
 #show: docs-chapter.with(
@@ -62,13 +62,15 @@
   zh: [
     等等，函数的参数不应该都填在圆括号中吗？为何圆括号_后面_又有一对方括号包裹的内容块？答案是，由于Typst中经常要将内容块传给函数，因此它有特殊语法：方括号包裹的内容块，可直接放在普通参数后传给函数。与将内容块放在参数列表中相比，这样能少写几个标点符号。
 
-    【译注】这其实只是一个语法糖，即 `{fn(…, [X], [Y], [Z])}` 可简写为 `{fn(…)[X][Y][Z]}`，其中`fn`是任意函数，`{[X], [Y], [Z]}`是内容块参数，其余参数按普通填法填在`…`处。
+    #note[
+      【译注】这其实只是一个语法糖，即 `{fn(…, [X], [Y], [Z])}` 可简写为 `{fn(…)[X][Y][Z]}`，其中`fn`是任意函数，`{[X], [Y], [Z]}`是内容块参数，其余参数按普通填法填在`…`处。
+    ]
 
     如上所示，这种写法确实有效，@text\函数成功修改了里面所有文本的字体。不过这种方法要将文档套在无数函数中，到处重复选用的样式，十分麻烦。
 
     好在Typst有更优雅的解决方案。利用_set规则_，您可以将样式设置应用于某类内容的所有实例。编写set规则的方法是先输入`{set}`关键字，再跟上要设置的函数的名称，然后在圆括号中填写要设置的参数。
 
-    #info[
+    #note[
       【译注】用Typst写中文一般需要设置中文字体，否则随机选出的中文字体可能非常魔幻，因为Typst内置字体不含汉字。对于简单需求，可如下设置，这会启用中文排版规则并设置字体为思源宋体。
 
       ```typ
@@ -235,13 +237,23 @@ behaviour of these natural structures.
 
     最后，我们让图片对齐到底部，方法是把竖直方向的对齐加到水平方向的居中对齐上。竖直和水平对齐可用`{+}`运算符结合使用，表示二维对齐。
 
-    【译注】以上前三点都涉及中文特色，下面倒着补充一下。
+    #note[
+      【译注】以上前三点都涉及中文特色，下面倒着补充一下。
 
-    - *行距与`em`：*Typst的行距模型默认按照西文习惯，用于中文会显得较挤；如想更接近中文习惯，可设置 `[#set text(top-edge: "ascender", bottom-edge: "descender")]`。详见中文社区导航「#link("https://typst-doc-cn.github.io/guide/FAQ/par-leading.html")[行距 leading 是什么距离？文字外框的计算方式？]」。此外，`{1em}`相当于一个汉字的宽度。
+      - *行距与`em`：*Typst的行距模型默认按照西文习惯，用于中文会显得较挤；如想更接近中文习惯，可设置如下设置。详见中文社区导航「#link("https://typst-doc-cn.github.io/guide/FAQ/par-leading.html")[行距 leading 是什么距离？文字外框的计算方式？]」。此外，`{1em}`相当于一个汉字的宽度。
 
-    - *字号的号数制：*中文习惯用号数制，最常用的五号一般对应`{10.5pt}`，次常用的小四一般对应`{12pt}`。不过各家号数制并不统一，Typst也不支持；需要时请参考#link("https://typst.app/universe/package/pointless-size")[pointless-size]中的表格按`pt`点数指定。
+        ```typ
+        #set text(top-edge: "ascender", bottom-edge: "descender")
+        ```
 
-    - *版心宽度与页边距：*#link("https://www.thetype.com/2017/07/12513/")[中文一般要求每行能排下整数个汉字]，所以更习惯设置版心宽度，而间接余出版心左右的边距。这种需求可变通实现，例如 `[#set page(margin: (x: (100% - 42em) / 2))]` 表示每行42字，左右边距等宽#footnote[`{100%}`表示纸张全宽，`{42em}`表示42个汉字的宽度，二者之差的一半即为`page`函数所需水平边距。]。
+      - *字号的号数制：*中文习惯用号数制，最常用的五号一般对应`{10.5pt}`，次常用的小四一般对应`{12pt}`。不过各家号数制并不统一，Typst也不支持；需要时请参考#link("https://typst.app/universe/package/pointless-size")[pointless-size]中的表格按`pt`点数指定。
+
+      - *版心宽度与页边距：*#link("https://www.thetype.com/2017/07/12513/")[中文一般要求每行能排下整数个汉字]，所以更习惯设置版心宽度，而间接余出版心左右的边距。这种需求可变通实现，例如以下设置表示每行42字，左右边距等宽。（`{100%}`表示纸张全宽，`{42em}`表示42个汉字的宽度，二者之差的一半即为`page`函数所需水平边距。）
+
+        ```typ
+        #set page(margin: (x: (100% - 42em) / 2))
+        ```
+    ]
   ],
 )
 
@@ -282,7 +294,9 @@ behaviour of these natural structures.
   zh: [
     我们向numbering参数填了字符串`{"1."}`，这会让Typst用阿拉伯数字对章节标题编号，并用句点分隔各级编号。我们还可以使用@numbering[字母、罗马数字和符号]作为编号：
 
-    【译注】若用`{"一、"}`编号，可能要参考中文社区导航「#link("https://typst-doc-cn.github.io/guide/FAQ/heading-numbering-space.html")[如何去掉标题的编号后面的空格]」。
+    #note[
+      【译注】若用`{"一、"}`编号，可能要参考中文社区导航「#link("https://typst-doc-cn.github.io/guide/FAQ/heading-numbering-space.html")[如何去掉标题的编号后面的空格]」。
+    ]
   ],
 )
 

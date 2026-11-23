@@ -1,4 +1,4 @@
-#import "/i18n-scope.typ": babel
+#import "/i18n-scope.typ": babel, note
 #import "/components/index.typ": docs-chapter, docs-figure, info, kbd, short-or-long
 
 #show: docs-chapter.with(
@@ -23,7 +23,9 @@
   zh: [
     让我们开始吧！假设您要为大学写一份技术报告，包含正文、数学公式、标题和图表。如果您选择使用Typst在线应用，那么请创建一个新项目。创建后会转到编辑器，您会看到两个面板：左边是撰写文档用的编辑面板，右边是查看渲染所得文档的预览面板。
 
-    【译注】如果您选择本地使用，那么请参考中文社区导航站「#link("https://typst-doc-cn.github.io/guide/quick-start.html#本地使用")[快速开始]」，安装VS Code和Tinymist Typst插件，创建后缀为`.typ`的文件，再单击右上角预览按钮。VS Code整体界面与Typst在线应用类似。
+    #note[
+      【译注】如果您选择本地使用，那么请参考中文社区导航站「#link("https://typst-doc-cn.github.io/guide/quick-start.html#本地使用")[快速开始]」，安装VS Code和Tinymist Typst插件，创建后缀为`.typ`的文件，再单击右上角预览按钮。VS Code整体界面与Typst在线应用类似。
+    ]
   ],
 )
 
@@ -41,7 +43,9 @@
   zh: [
     您在心中已对报告有了不错想法，那么从报告的引言写起吧。在编辑面板中输入一些文本，您会发现它们立即显示到预览的页面上。
 
-    【译注】建议您本章先尝试英文。Typst支持中文，但需要设置字体，而设置方法到下一章才会讲到；设置字体后，本章的内容也适用于中文。
+    #note[
+      【译注】建议您本章先尝试英文。Typst支持中文，但需要设置字体，而设置方法到下一章才会讲到；设置字体后，本章的内容也适用于中文。
+    ]
   ],
 )
 
@@ -71,7 +75,9 @@ behaviour of these natural structures.
   zh: [
     下一步是添加章节标题并强调某些文本。Typst使用简单标记设置最常见的格式。要添加章节标题，请输入`=`字符；要用斜体强调，请在文本两侧添加`[_下划线_]`。
 
-    【译注】中文基本没有斜体的习惯，一般用`[*星号*]`加粗强调。您也可参考中文社区导航站把`[_下划线_]`的效果#link("https://typst-doc-cn.github.io/guide/FAQ/chinese-skew.html")[改成切换字体或添加下划线]，不过相关知识等到@tutorial:advanced-styling:title-and-abstract[教程第三章]才会讲到。
+    #note[
+      【译注】中文基本没有斜体的习惯，一般用`[*星号*]`加粗强调。您也可参考中文社区导航站把`[_下划线_]`的效果#link("https://typst-doc-cn.github.io/guide/FAQ/chinese-skew.html")[改成切换字体或添加下划线]，不过相关知识等到@tutorial:advanced-styling:title-and-abstract[教程第三章]才会讲到。
+    ]
   ],
 )
 
@@ -92,7 +98,7 @@ behaviour of these natural structures.
   ],
   zh-status: "proofread",
   zh: [
-    这很简单！要添加新段落，只需在两行文本间加一个空行。如果该段落需要子标题，请输入`==`而非`=`。`=`字符的数量代表标题的嵌套级别。
+    这很简单！要添加新段落，只需在两行文本间加一个空行。如果该段落需要子标题，请输入`==`而非`=`。`=`#sym.wj;字符的数量代表标题的嵌套级别。
 
     现在我们想列出一些影响冰川动力学的因素。为此，我们使用编号列表。我们在列表每项的行首输入`+`字符，让Typst对项目自动编号。
   ],
@@ -266,7 +272,9 @@ we don't take action soon!
 
     Typst原生的文献数据格式是#link("https://typst-community.github.io/extra-docs/hayagriva/file-format.html")[Hayagriva]，不过考虑到兼容性，也支持BibLaTeX文件。由于您的同学已经调研过文献并向您发送了`.bib`文件，您就直接用它了。请在文件面板中上传该文件，以在Typst应用中访问它。
 
-    【译注】此处所用`works.bib`可#link("https://github.com/typst/typst-dev-assets/blob/main/files/bib/works.bib")[从GitHub下载]，尽管这个文件并不重要。
+    #note[
+      【译注】此处所用`works.bib`可#link("https://github.com/typst/typst-dev-assets/blob/main/files/bib/works.bib")[从GitHub下载]，尽管这个文件并不重要。
+    ]
 
     向文档添加文献数据后，您就可以从中引用了。引用文献的语法与引用标签相同。首次引用某文献后，该文献就会出现在您文档的文献列表中。Typst支持各种引用和文献列表样式，详情请查阅@bibliography.style[参考手册]。
   ],

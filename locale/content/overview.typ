@@ -1,4 +1,4 @@
-#import "/i18n-scope.typ": babel
+#import "/i18n-scope.typ": babel, note
 #import "/components/index.typ": big-nav-button, def-dest, docs-chapter, icon, insertion
 
 #show: docs-chapter.with(
@@ -62,8 +62,10 @@
   zh: [
     欢迎阅读Typst文档！Typst是一种采用标记语法的排版系统，自动处理能力强，字体排印效果好，而且使用起来快捷简单。Typst适用于各种复杂程度的文档，是各种文字处理软件与LaTeX的理想替代方案。
 
-    // 此段应与`Translation.siteNoticeBannerDescription`同步更新
-    【译注】本站提供#link("https://typst.app/docs/")[官方英文文档]的非官方中文翻译，由#link("https://github.com/typst-doc-cn")[中文社区]维护。目前翻译很不完全，存疑部分会标注⚠️，过时部分会标注⚠️💀。遇到这种情况，可单击页面上方或下方「转到官方文档」参照阅读。如有意改进翻译内容或网站本身，可在#link("https://github.com/typst-doc-cn/docs-8138")[GitHub]上提出 issue、发起 pull request。
+    #note[
+      // 此段应与`Translation.siteNoticeBannerDescription`同步更新
+      【译注】本站提供#link("https://typst.app/docs/")[官方英文文档]的非官方中文翻译，由#link("https://github.com/typst-doc-cn")[中文社区]维护。目前翻译很不完全，存疑部分会标注⚠️，过时部分会标注⚠️💀。遇到这种情况，可单击页面上方或下方「转到官方文档」参照阅读。如有意改进翻译内容或网站本身，可在#link("https://github.com/typst-doc-cn/docs-8138")[GitHub]上提出 issue、发起 pull request。
+    ]
 
     #divider()
   ],
@@ -89,7 +91,9 @@
 
     - 对于特定功能、场景、受众的操作方法，请深入各篇@guides[指南]。指南会提供直接复制可用的代码片段，并让您熟练掌握相应功能领域。另外如果您用过LaTeX，可阅读@guides:for-latex-users，借助您已经清楚的概念了解Typst。
 
-      【译注】中文社区导航站另有#link("https://typst-doc-cn.github.io/guide/FAQ.html")[常见问题集合]和#link("https://typst-doc-cn.github.io/guide/word.html")[面向Word用户的快速入门向导]，可作为文档站指南的补充。
+      #note[
+        【译注】中文社区导航站另有#link("https://typst-doc-cn.github.io/guide/FAQ.html")[常见问题集合]和#link("https://typst-doc-cn.github.io/guide/word.html")[面向Word用户的快速入门向导]，可作为文档站指南的补充。
+      ]
 
     #divider()
   ],
@@ -119,7 +123,9 @@
       fallback: [文档站的#link("https://typst.app/docs/")[官方英文版本]还有专门页面介绍在线应用、用户社区和发展路线。],
     )如想安装Typst编译器命令行，请参考官网#link("https://typst.app/open-source")[Open Source页面]，该页面还进一步解释了Typst编译器与在线应用的关系。安装好Typst编译器命令行后，可运行 `typst help` 获取使用说明。
 
-    【译注】因技术限制，目前本站不介绍在线应用、用户社区和发展路线，不过用户社区可参考#link("https://typst-doc-cn.github.io/guide/#用户社区")[中文社区导航站首页]的链接，有QQ群、论坛等。
+    #note[
+      【译注】因技术限制，目前本站不介绍在线应用、用户社区和发展路线，不过用户社区可参考#link("https://typst-doc-cn.github.io/guide/#用户社区")[中文社区导航站首页]的链接，有QQ群、论坛等。
+    ]
   ],
 )
 
@@ -135,6 +141,8 @@
 
     本文档还包含@changelog[更新记录]。您可在这部分追踪Typst的演进历程，了解Typst语言变化后您应如何更新既有项目。本文档适用于 Typst #sys.version。
 
-    【译注】因技术限制，本站当前文档基本适用于 Typst #sys.version，但还包含后续尚未正式发布的开发版特性。如果遇到问题，请「转到官方文档」参照阅读。
+    #note[
+      【译注】因技术限制，本站当前文档基本适用于 Typst #sys.version，但还包含后续尚未正式发布的开发版特性。如果遇到问题，请「转到官方文档」参照阅读。
+    ]
   ],
 )
