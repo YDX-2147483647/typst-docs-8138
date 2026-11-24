@@ -96,7 +96,7 @@
 
 3. 🟢[Typst v0.11.0](https://typst.app/docs/changelog/0.11.0/)于2024-03-15发布，[Typst v0.11.1](https://typst.app/docs/changelog/0.11.1/)于2024-05-17发布
 
-4. 🗻日文社区[2024-06-11 `e84c3e4`](https://github.com/typst-jp/docs/commit/e84c3e40cee6b44c96c1f571366df74913aa860c)：克隆中文社区仓库，**创建「**Typst**ドキュメント」**（Typst文档）；后来明确为「Typstドキュメント日本語版」
+4. 🗻日文社区[2024-06-11 `e84c3e4`](https://github.com/typst-jp/docs/commit/e84c3e40cee6b44c96c1f571366df74913aa860c)：克隆中文社区仓库，创建「Typstドキュメント」（Typst文档）；后来明确为「Typstドキュメント日本語版」
 
 5. 🗻日文社区[2024-08-19 `deb3c25` (#40)](https://github.com/typst-jp/docs/commit/deb3c25fbed41969af3a6dd6db89b51e2cf11998)：合并上游，更新到Typst v0.11.0
 
@@ -118,7 +118,7 @@
 
 2. 🗻日文社区[2025-03-29 `027451a` (#109)](https://github.com/typst-jp/docs/commit/027451a05cb2d99f45411a28d3939d629114f9e6)：合并上游，更新到Typst v0.13.0
 
-3. 🐼中文社区[2025-03-02 `6eb7325`](https://github.com/typst-doc-cn/typst-doc-cn.github.io/commit/6eb732587f4faf35291973cac798ef52ff81565d)：最后一次更新，删除《中文用户指南》中已迁移到[中文社区导航](https://typst-doc-cn.github.io/guide/)的内容。
+3. 🐼中文社区[2025-03-02 `6eb7325`](https://github.com/typst-doc-cn/typst-doc-cn.github.io/commit/6eb732587f4faf35291973cac798ef52ff81565d)：该仓库最后一次更新，删除《中文用户指南》中已迁移到[中文社区导航](https://typst-doc-cn.github.io/guide/)的内容。
 
 4. 🟢[Typst v0.13.1](https://typst.app/docs/changelog/0.13.1/)于2025-03-07发布
 
@@ -134,7 +134,7 @@
 
 </details>
 
-<details><summary>2026年：日文翻译稳步进行，但Typst版本略有落后；Typst官方迁移文档构建流程至Typst</summary>
+<details><summary>2026年：日文翻译稳步进行，但Typst版本略有落后；Typst官方迁移文档构建流程至Typst，西语翻译随之启动</summary>
 
 1. 🗻日文社区[2026-02-15 `741ce18` (#340)](https://github.com/typst-jp/docs/commit/741ce18762a16b1c1e0cfc927107bde12d680abe)：合并上游，更新到Typst v0.14.0
 
@@ -143,5 +143,9 @@
 3. 🟢[Typst v0.15.0](https://typst.app/docs/changelog/0.15.0/)于2026-06-15发布，[Typst v0.15.1](https://typst.app/docs/changelog/0.15.1/)于2026-07-17发布
 
 4. 🗻日文社区[2026-09-06 `0395a20` (#415)](https://github.com/typst-jp/docs/commit/0395a2046252b9ad431a9471a864fede4b8500bb)：合并上游，更新到Typst v0.14.1
+
+5. 🧉Jassiel [2026-09-30 `796b080`](https://github.com/typst/typst/commit/796b0804acc79df959bf363138e32cbae95003c9)：以Typst构建流程为基础，创建 Documentación de Typst en español rioplatense（拉普拉塔河西班牙语Typst文档）
+
+6. 🗻日文社区[2026-10-02 `3cab60e` (#437)](https://github.com/typst-jp/docs/commit/3cab60eb3b76db0472258fe8e24ef92e249ae440)：合并上游，更新到Typst v0.14.2
 
 </details>

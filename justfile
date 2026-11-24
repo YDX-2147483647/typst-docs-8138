@@ -45,12 +45,15 @@ resetup:
         {{ quote(clean("../../../patches/i18n-translation.typ")) }} \
         {{ quote(clean("../../../locale")) }} \
         .
+    ln --symbolic \
+        {{ quote(clean("../../../../patches/docs.i18n.css")) }} \
+        ./assets/
 
 # Save patches from target/typst/docs/
 [group("for maintainers")]
 [working-directory("target/typst/")]
 save-patches:
-    git diff --no-ext-diff --abbrev=10 docs/assets/ > ../../patches/assets.diff
+    git diff --no-ext-diff --abbrev=10 docs/assets/{index.typ,docs.css} > ../../patches/assets.diff
     git diff --no-ext-diff --abbrev=10 docs/components/ > ../../patches/components.diff
     git diff --no-ext-diff --abbrev=10 docs/content/index.typ > ../../patches/content-index.diff
 
@@ -99,15 +102,30 @@ build *SYS_INPUTS: (docit "compile" "--format=pdf" "--deny-warnings" SYS_INPUTS)
 # Build the project to target/dist/ for CI
 [arg("BASE", pattern='/|(/.+/)')]
 [group("for maintainers")]
-ci-build BASE="/base/":
+ci-build BASE="/base/": setup-fonts
     just build --input "i18n--base={{ BASE }}" --input i18n--link-pdf-docs=true --input i18n--enable-pagefind=true
     mv target/dist/site{{ BASE }}* target/dist/
+    cp target/fonts/ZhuqueFangsong-Regular.ttf target/dist/assets/fonts/
     mv target/dist/docs.pdf target/dist/typst-documentation.pdf
     pdfcpu optimize target/dist/typst-documentation.pdf
     pagefind_extended --site target/dist/
 # Cloudflare Workers supports assets with sizes of up to 25 MiB, but the raw PDF is about 27 MiB.
 # 7-Zip reduces it to 11 MiB, while pdfcpu reduces it to 15 MiB.
 # Both are acceptable, but *.pdf is easier to access than *.pdf.zip, so we choose pdfcpu.
+
+# Download fonts to target/fonts/
+[private]
+[working-directory("target/")]
+setup-fonts:
+    #!/usr/bin/env bash
+    set -euxo pipefail
+
+    mkdir -p fonts && cd fonts
+    if [ ! -f "ZhuqueFangsong-Regular.ttf" ]; then
+        curl -LO https://github.com/TrionesType/zhuque/releases/download/v0.212/ZhuqueFangsong-v0.212.zip
+        unzip ZhuqueFangsong-v0.212.zip
+        rm ZhuqueFangsong-v0.212.zip
+    fi
 
 # Build and setup the babelize Wasm plugin
 [group("for maintainers")]
