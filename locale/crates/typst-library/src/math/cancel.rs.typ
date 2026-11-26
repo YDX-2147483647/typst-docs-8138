@@ -1,7 +1,7 @@
 #import "/i18n-scope.typ": *
 #let live-item-data = resolve-lines((
   "CancelElem": (
-    6,
+    8,
     [
       #babel(
         en: [

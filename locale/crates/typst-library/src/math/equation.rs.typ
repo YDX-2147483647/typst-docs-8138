@@ -1,7 +1,7 @@
 #import "/i18n-scope.typ": *
 #let live-item-data = resolve-lines((
   "EquationElem": (
-    20,
+    21,
     [
       #babel(
         en: [

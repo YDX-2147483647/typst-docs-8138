@@ -1,7 +1,7 @@
 #import "/i18n-scope.typ": *
 #let live-item-data = resolve-lines((
   "FigureElem": (
-    23,
+    24,
     [
       #babel(
         en: [
@@ -378,7 +378,7 @@
     ),
   ),
   "FigureCaption": (
-    188,
+    195,
     [
       #babel(
         en: [

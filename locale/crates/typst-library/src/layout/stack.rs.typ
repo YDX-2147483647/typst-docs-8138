@@ -34,40 +34,60 @@
   ),
   "StackElem::dir": (
     21,
-    babel(
-      en: [
-        The direction along which the items are stacked. Possible values are:
+    [
+      #babel(
+        en: [
+          The direction along which the items are stacked.
+        ],
+      )
 
-        - `{ltr}`: Left to right.
-        - `{rtl}`: Right to left.
-        - `{ttb}`: Top to bottom.
-        - `{btt}`: Bottom to top.
+      ```example
+      #stack(dir: ltr, "A", "B", "C")
 
-        You can use the `start` and `end` methods to obtain the initial and
-        final points (respectively) of a direction, as `alignment`. You can also
-        use the `axis` method to determine whether a direction is
-        `{"horizontal"}` or `{"vertical"}`. The `inv` method returns a
-        direction's inverse direction.
-
-        For example, `{ttb.start()}` is `top`, `{ttb.end()}` is `bottom`,
-        `{ttb.axis()}` is `{"vertical"}` and `{ttb.inv()}` is equal to `btt`.
-      ],
-    ),
+      #stack(dir: btt, "A", "B", "C")
+      ```
+    ],
   ),
   "StackElem::spacing": (
-    18,
-    babel(
-      en: [
-        Spacing to insert between items where no explicit spacing was provided.
-      ],
-    ),
+    10,
+    [
+      #babel(
+        en: [
+          Spacing to insert between items where no explicit spacing was provided.
+        ],
+      )
+
+      ```example
+      #stack(
+        dir: ltr,
+        spacing: 1fr,
+        [A], [B], [C],
+      )
+      ```
+    ],
   ),
   "StackElem::children": (
-    3,
-    babel(
-      en: [
-        The children to stack along the axis.
-      ],
-    ),
+    11,
+    [
+      #babel(
+        en: [
+          The children to stack along the axis.
+
+          Each child can either be content or explicit spacing that replaces the
+          spacing from the `spacing` parameter.
+
+          Note that explicit spacing can also be specified as a @h or @v element
+          depending on the stack direction.
+        ],
+      )
+
+      ```example
+      #stack(
+        dir: ltr,
+        spacing: 10pt,
+        [A], [B], 0pt, [C],
+      )
+      ```
+    ],
   ),
 ))

@@ -1,7 +1,7 @@
 #import "/i18n-scope.typ": *
 #let live-item-data = resolve-lines((
   "HeadingElem": (
-    16,
+    17,
     [
       #babel(
         en: [

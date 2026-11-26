@@ -1,7 +1,7 @@
 #import "/i18n-scope.typ": *
 #let live-item-data = resolve-lines((
   "Func": (
-    21,
+    24,
     [
       #babel(
         en: [
@@ -155,7 +155,7 @@
     ],
   ),
   "Func::with": (
-    382,
+    436,
     babel(
       en: [
         Returns a new function that has the given arguments pre-applied.
@@ -171,7 +171,7 @@
     ),
   ),
   "Func::where_": (
-    12,
+    15,
     [
       #babel(
         en: [

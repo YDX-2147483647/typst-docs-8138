@@ -1,7 +1,7 @@
 #import "/i18n-scope.typ": *
 #let live-item-data = resolve-lines((
   "Array": (
-    42,
+    43,
     [
       #babel(
         en: [
@@ -291,7 +291,7 @@
     ),
   ),
   "Array::position": (
-    15,
+    11,
     babel(
       en: [
         Searches for an item for which the given function returns `{true}` and
@@ -317,7 +317,7 @@
     ],
   ),
   "Array::range": (
-    23,
+    19,
     [
       #babel(
         en: [
@@ -400,7 +400,7 @@
     ),
   ),
   "Array::map": (
-    16,
+    12,
     babel(
       en: [
         Produces a new array in which all items from the original one were

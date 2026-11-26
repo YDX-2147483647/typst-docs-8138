@@ -61,7 +61,7 @@
     ],
   ),
   "Content::func": (
-    489,
+    486,
     babel(
       en: [
         The content's element function. This function can be used to create the

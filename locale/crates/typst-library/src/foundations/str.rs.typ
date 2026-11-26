@@ -492,7 +492,7 @@
     ),
   ),
   "Str::trim": (
-    54,
+    52,
     babel(
       en: [
         Removes matches of a pattern from one or both sides of the string, once

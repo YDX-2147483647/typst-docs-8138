@@ -1,7 +1,7 @@
 #import "/i18n-scope.typ": *
 #let live-item-data = resolve-lines((
   "LinkElem": (
-    24,
+    25,
     [
       #babel(
         en: [
