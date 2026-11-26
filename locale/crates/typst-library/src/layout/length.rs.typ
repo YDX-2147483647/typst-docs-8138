@@ -48,14 +48,21 @@
         Converts this length to points.
 
         Fails with an error if this length has non-zero `em` units (such as
-        `5em + 2pt` instead of just `2pt`). Use the `abs` field (such as in
-        `(5em + 2pt).abs.pt()`) to ignore the `em` component of the length (thus
-        converting only its absolute component).
+        `{5em + 2pt}` instead of just `{2pt}`).
+
+        To get a length with a null `em` component from a length with a non-null
+        `em` component, you can:
+        - Use the `abs` field (such as in `{(5em + 2pt).abs.pt()}`) to ignore
+          the `em` component of the length (thus converting only its absolute
+          component)
+        - Use the contextual @length.to-absolute[`to-absolute`] method (e.g.,
+          `{(5em + 2pt).to-absolute().pt()}`) to first convert the `em`
+          component to an absolute value
       ],
     ),
   ),
   "Length::to_mm": (
-    12,
+    19,
     babel(
       en: [
         Converts this length to millimeters.

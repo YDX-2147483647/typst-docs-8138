@@ -9,7 +9,7 @@ on:
         description: |
           The branch, tag or SHA in https://github.com/typst/typst.
           It does not need to match `TYPST_REF` in justfile exactly.
-        default: 9f2b6e8715237cb086899a42873660fe744622e8
+        default: fe537181def05ba2760e305befd4fe8d245f06ce
         type: string
     outputs:
       key:

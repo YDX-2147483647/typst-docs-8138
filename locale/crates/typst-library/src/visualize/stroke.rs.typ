@@ -32,17 +32,16 @@
           combination of the two. Specifically, wherever a stroke is expected you can
           pass any of the following values:
 
-          - A length specifying the stroke's thickness. The color is inherited,
+          - A @length specifying the stroke's thickness. The color is inherited,
             defaulting to black.
-          - A color to use for the stroke. The thickness is inherited, defaulting to
+          - A @color to use for the stroke. The thickness is inherited, defaulting to
             `{1pt}`.
           - A stroke combined from color and thickness using the `+` operator as in
             `{2pt + red}`.
 
-          For full control, you can also provide a @dictionary[dictionary] or a
-          `{stroke}` object to any function that expects a stroke. The dictionary's
-          keys may include any of the parameters for the constructor function, shown
-          below.
+          For full control, you can also provide a @dictionary or a `{stroke}` object
+          to any function that expects a stroke. The dictionary's keys may include any
+          of the parameters for the constructor function, shown below.
         ],
       )
 
@@ -58,7 +57,7 @@
     ],
   ),
   "Stroke::construct": (
-    70,
+    69,
     [
       #babel(
         en: [
@@ -74,17 +73,21 @@
 
       ```example
       #let my-func(x) = {
-          x = stroke(x) // Convert to a stroke
-          [Stroke has thickness #x.thickness.]
+        // Convert `x` to a stroke.
+        x = stroke(x)
+        [Thickness is #x.thickness.]
       }
       #my-func(3pt) \
       #my-func(red) \
-      #my-func(stroke(cap: "round", thickness: 1pt))
+      #my-func(stroke(
+        cap: "round",
+        thickness: 1pt,
+      ))
       ```
     ],
   ),
   "Stroke::construct::paint": (
-    21,
+    25,
     babel(
       en: [
         The color or gradient to use for the stroke.
@@ -94,7 +97,7 @@
     ),
   ),
   "Stroke::construct::thickness": (
-    6,
+    8,
     babel(
       en: [
         The stroke's thickness.
@@ -104,29 +107,67 @@
     ),
   ),
   "Stroke::construct::cap": (
-    6,
-    babel(
-      en: [
-        How the ends of the stroke are rendered.
+    8,
+    [
+      #babel(
+        en: [
+          How the ends of the stroke are rendered.
 
-        If set to `{auto}`, the value is inherited, defaulting to
-        `{"butt"}`.
-      ],
-    ),
+          If set to `{auto}`, the value is inherited, defaulting to
+          `{"butt"}`.
+        ],
+      )
+
+      ```example
+      #set line(length: 100%, stroke: 10pt)
+      #stack(
+        spacing: 20pt,
+        line(stroke: (cap: "butt")),
+        line(stroke: (cap: "round")),
+        line(stroke: (cap: "square")),
+      )
+      ```
+    ],
   ),
   "Stroke::construct::join": (
-    7,
-    babel(
-      en: [
-        How sharp turns are rendered.
+    19,
+    [
+      #babel(
+        en: [
+          How sharp turns are rendered.
 
-        If set to `{auto}`, the value is inherited, defaulting to
-        `{"miter"}`.
-      ],
-    ),
+          If set to `{auto}`, the value is inherited, defaulting to
+          `{"miter"}`.
+        ],
+      )
+
+      ```example
+      #set align(center)
+      #set curve(stroke: (
+        paint: blue,
+        thickness: 8pt,
+        miter-limit: 10,
+      ))
+
+      #let example(s) = curve(
+        stroke: s,
+        curve.move((30pt, 0pt)),
+        curve.line((0pt, 60pt)),
+        curve.line((60pt, 60pt)),
+        curve.line((20pt, 40pt)),
+      )
+
+      #stack(
+        spacing: 10pt,
+        example((join: "miter")),
+        example((join: "round")),
+        example((join: "bevel")),
+      )
+      ```
+    ],
   ),
   "Stroke::construct::dash": (
-    7,
+    33,
     [
       #babel(
         en: [
@@ -201,7 +242,7 @@
     ],
   ),
   "Stroke::construct::miter_limit": (
-    69,
+    71,
     [
       #babel(
         en: [
@@ -218,20 +259,22 @@
       )
 
       ```example
-      #let items = (
-        curve.move((15pt, 0pt)),
-        curve.line((0pt, 30pt)),
-        curve.line((30pt, 30pt)),
-        curve.line((10pt, 20pt)),
+      #set align(center)
+      #set curve(stroke: 8pt + blue)
+
+      #let example(s) = curve(
+        stroke: s,
+        curve.move((30pt, 0pt)),
+        curve.line((0pt, 60pt)),
+        curve.line((60pt, 60pt)),
+        curve.line((20pt, 40pt)),
       )
 
-      #set curve(stroke: 6pt + blue)
       #stack(
-        dir: ltr,
-        spacing: 1cm,
-        curve(stroke: (miter-limit: 1), ..items),
-        curve(stroke: (miter-limit: 4), ..items),
-        curve(stroke: (miter-limit: 5), ..items),
+        spacing: 10pt,
+        example((miter-limit: 1)),
+        example((miter-limit: 4)),
+        example((miter-limit: 5)),
       )
       ```
     ],

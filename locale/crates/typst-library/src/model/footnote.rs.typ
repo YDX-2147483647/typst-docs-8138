@@ -1,7 +1,7 @@
 #import "/i18n-scope.typ": *
 #let live-item-data = resolve-lines((
   "FootnoteElem": (
-    21,
+    22,
     [
       #babel(
         en: [
@@ -96,7 +96,7 @@
     ),
   ),
   "FootnoteEntry": (
-    116,
+    117,
     [
       #babel(
         en: [

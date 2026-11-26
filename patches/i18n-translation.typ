@@ -180,6 +180,16 @@
     zh-status: "validated",
     zh: [元素函数可用`set`和`show`规则自定义样式。],
   ),
+  locatableElement: babel(
+    en: [Locatable],
+    zh-status: "proofread",
+    zh: [可定位],
+  ),
+  locatableElementDescription: babel(
+    en: [Locatable elements can be found with queries.],
+    zh-status: "proofread",
+    zh: [可定位元素能用query等方法查询到。],
+  ),
   contextFunction: babel(
     en: [Contextual],
     ja-status: "need update", // When it was translated, en uses _context_ instead of _contextual_.
