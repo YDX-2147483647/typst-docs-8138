@@ -22,6 +22,12 @@
           the initial backticks will be treated as a @raw.lang[language tag] used for
           syntax highlighting, and the raw text begins after the first whitespace.
         ],
+        zh-status: "need proofread",
+        zh: [
+          原始文本，可选语法高亮。
+
+          以等宽字体显示文本。通常用于将计算机代码嵌入到文档中。
+        ],
       )
 
       = #babel(en: [Example]) <example>
@@ -48,6 +54,10 @@
         en: [
           You can also construct a @raw element programmatically from a string (and
           provide the language tag via the optional @raw.lang[`lang`] parameter).
+        ],
+        zh-status: "need proofread",
+        zh: [
+          您还可以从字符串构造一个@raw\元素（并提供语言标签，通过可选的@raw.lang[`lang`]参数）。
         ],
       )
 
@@ -109,7 +119,7 @@
         ],
       )
 
-      = #babel(en: [Syntax]) <syntax>
+      = #babel(en: [Syntax], zh-status: "proofread", zh: [语法]) <syntax>
       #babel(
         en: [
           This function has dedicated syntax that produces a raw element in both
@@ -266,6 +276,12 @@
           You can also use raw blocks creatively to create custom syntaxes for
           your automations.
         ],
+        zh-status: "need proofread",
+        zh: [
+          原始文本。
+
+          您还可以创意地使用原始块来为您的自动化创建自定义语法。
+        ],
       )
 
       #example(
@@ -298,6 +314,12 @@
           In markup mode, using one-backtick notation makes this `{false}`. Using
           three-backtick notation makes it `{true}` if the enclosed content
           contains at least one line break.
+        ],
+        zh-status: "need proofread",
+        zh: [
+          原始文本是否作为单独的块显示。
+
+          在标记模式中，使用一个反斜杠表示法会使其`{false}`。使用三个反斜杠表示法，如果封闭内容包含至少一个换行符，则使其`{true}`。
         ],
       )
 
@@ -345,6 +367,12 @@
           @reference:syntax:code[Typst code], and
           @reference:syntax:math[Typst math], respectively.
         ],
+        zh-status: "need proofread",
+        zh: [
+          要进行语法高亮的语言。
+
+          除了典型的Markdown语言标签外，还支持`{"typ"}`、`{"typc"}`和`{"typm"}` 标签，分别用于@reference:syntax:markup[Typst标记]、@reference:syntax:code[Typst脚本]和@reference:syntax:math[Typst数学公式]。
+        ],
       )
 
       #folding-details(
@@ -390,6 +418,12 @@
           regardless of the current context's alignment (allowing you to center
           the raw block itself without centering the text inside it, for example).
         ],
+        zh-status: "need proofread",
+        zh: [
+          每个原始块中每行应具有的水平对齐方式。如果这不是原始块（如果指定 `block: false` 或标记模式中使用了单个反斜杠），则忽略此选项。
+
+          默认情况下，这设置为`{start}`，表示原始文本默认情况下沿块内文本方向对齐，而不管当前上下文的对其方式（例如，允许您在不居中块内文本的情况下居中原始块本身）。
+        ],
       )
 
       ````example
@@ -420,6 +454,15 @@
 
           For a list of built-in syntaxes, see the documentation of the
           @raw.lang[`lang` parameter].
+        ],
+        zh-status: "need update",
+        zh: [
+          要加载的其他语法定义。语法定义应采用#link("https://www.sublimetext.com/docs/syntax.html")[`sublime-syntax`文件格式]。
+
+          您可以传递以下任何值：
+          - 一个路径字符串，从给定路径加载一个语法文件。有关路径的更多详细信息，请参阅@path[路径部分]。
+          - 原始字节，从中解码语法。
+          - 一个数组，其中每个项目是上述之一。
         ],
       )
 
@@ -458,6 +501,18 @@
           background with a @block.fill[filled block]. You could also use the @xml
           function to extract these properties from the theme.
         ],
+        zh-status: "need proofread",
+        zh: [
+          用于语法高亮的主题。主题应采用#link("https://www.sublimetext.com/docs/color_schemes_tmtheme.html")[`tmTheme`文件格式]。
+
+          您可以传递以下任何值：
+          - `{none}`: 禁用语法高亮。
+          - `{auto}`: 使用Typst的默认主题。
+          - 一个路径字符串，从给定路径加载一个主题文件。有关路径的更多详细信息，请参阅@path[路径部分]。
+          - 原始字节，从中解码主题。
+
+          应用主题只会影响特定高亮文本的颜色。它不考虑主题的前景色和背景色属性，因此您可以控制原始文本的颜色。您可以使用@text\函数自己应用前景色，并使用@block.fill[填充块]应用背景色。您还可以使用@xml\函数从主题中提取这些属性。
+        ],
       )
 
       ````example
@@ -484,6 +539,10 @@
           The size for a tab stop in spaces. A tab is replaced with enough spaces
           to align with the next multiple of the size.
         ],
+        zh-status: "need proofread",
+        zh: [
+          制表符停止的大小（以空格为单位）。制表符被替换为足够的空格，以与下一个倍数对齐。
+        ],
       )
 
       ````example
@@ -509,6 +568,14 @@
         number, the raw non-highlighted text, the highlighted text, and whether it
         is the first or last line of the raw block.
       ],
+      zh-status: "need proofread",
+      zh: [
+        高亮的原始文本。
+
+        这是一个由@raw\元素合成的辅助元素。
+
+        它允许您访问行的各种属性，例如行号、原始未高亮的文本、高亮的文本，以及它是否是原始块的第一行或最后一行。
+      ],
     ),
   ),
   "RawLine::number": (
@@ -516,6 +583,10 @@
     babel(
       en: [
         The line number of the raw line inside of the raw block, starts at 1.
+      ],
+      zh-status: "need proofread",
+      zh: [
+        原始块中原始行的行号，从1开始。
       ],
     ),
   ),
@@ -525,6 +596,10 @@
       en: [
         The total number of lines in the raw block.
       ],
+      zh-status: "need proofread",
+      zh: [
+        原始块中的总行数。
+      ],
     ),
   ),
   "RawLine::text": (
@@ -533,6 +608,10 @@
       en: [
         The line of raw text.
       ],
+      zh-status: "need proofread",
+      zh: [
+        原始文本行。
+      ],
     ),
   ),
   "RawLine::body": (
@@ -540,6 +619,10 @@
     babel(
       en: [
         The highlighted raw text.
+      ],
+      zh-status: "need proofread",
+      zh: [
+        高亮的原始文本。
       ],
     ),
   ),

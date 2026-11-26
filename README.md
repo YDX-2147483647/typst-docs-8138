@@ -44,11 +44,19 @@ Typst文档有以下三种来源。
 
 ## 本地预览
 
-TODO: 准备typst-docs CLI下载页面和PR机器人。
-
 本地预览需要[安装just](https://just.systems/man/en/installation.html)、下载typst-docs CLI等准备工作，相对麻烦；一般使用 pull request 机器人即可。
 
 ```sh
 just setup
 just serve
 ```
+
+## TODO
+
+- 准备typst-docs CLI下载页面和PR机器人。
+
+- 统一术语。目前语法大表格、LaTeX指南、术语表并不一致。
+
+- [镜像链接](https://typst-doc-cn.github.io/guide/dev/mirror-link.html)
+
+- 翻译`stdx.describe`的`title`

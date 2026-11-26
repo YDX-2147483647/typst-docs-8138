@@ -287,8 +287,16 @@
 }
 
 #docs-category(
-  title: "Symbols",
-  description: "Predefined symbols in Typst.",
+  title: babel(
+    en: "Symbols",
+    zh-status: "need proofread",
+    zh: "符号",
+  ),
+  description: babel(
+    en: "Predefined symbols in Typst.",
+    zh-status: "need update",
+    zh: "Typst中与符号有关联的函数族的文档",
+  ),
   category: "symbols",
 )[
   The @sym and @emoji modules give names to symbols and emoji to make them easy to insert with a normal keyboard. Alternatively, you can also always directly enter Unicode symbols into your text and formulas. In addition to the symbols listed below, math mode defines `dif` and `Dif`. These are not normal symbol values because they also affect spacing and font style.
@@ -332,28 +340,56 @@
 #show: paged-heading-offset.with(1)
 
 #symbols-section(
-  title: "General Symbols",
+  title: babel(
+    en: "General Symbols",
+    zh-status: "need proofread",
+    zh: "通用符号",
+  ),
   route: "/reference/symbols/sym",
   def-target: <sym>,
   description: "Documentation for the `sym` module, which gives names to symbols.",
   mod: sym,
-)[
-  Named general symbols.
+  babel(
+    en: [
+      Named general symbols.
 
-  For example, `[#sym.arrow]` produces the → symbol. Within @math[math], these symbols can be used without the `[#sym.]` prefix.
+      For example, `[#sym.arrow]` produces the → symbol. Within @math[math], these symbols can be used without the `[#sym.]` prefix.
 
-  The `d` in an integral's `dx` can be written as `[$dif x$]`. Outside math formulas, `dif` can be accessed as `math.dif`.
-]
+      The `d` in an integral's `dx` can be written as `[$dif x$]`. Outside math formulas, `dif` can be accessed as `math.dif`.
+    ],
+    zh-status: "need proofread",
+    zh: [
+      命名的通用符号。
+
+      例如，`#sym.arrow`生成 → 符号。在@math[公式]中，这些符号可以在没有`#sym.`前缀的情况下使用。
+
+      积分中的`dx`中的`d`可以写为`[$dif x$]`。在数学公式之外，`dif`可以作为`math.dif`访问。
+    ],
+  ),
+)
 
 #symbols-section(
-  title: "Emoji",
+  title: babel(
+    en: "Emoji",
+    zh-status: "need proofread",
+    zh: "表情符号",
+  ),
   route: "/reference/symbols/emoji",
   def-target: <emoji>,
   description: "Documentation for the `emoji` module, which gives names to emoji.",
   mod: emoji,
   emoji: true,
-)[
-  Named emojis.
+  babel(
+    en: [
+      Named emojis.
 
-  For example, `[#emoji.face]` produces the 😀 emoji. If you frequently use certain emojis, you can also import them from the `emoji` module (`[#import emoji: face]`) to use them without the `emoji.` prefix.
-]
+      For example, `[#emoji.face]` produces the 😀 emoji. If you frequently use certain emojis, you can also import them from the `emoji` module (`[#import emoji: face]`) to use them without the `emoji.` prefix.
+    ],
+    zh-status: "need proofread",
+    zh: [
+      命名的表情符号。
+
+      例如，`#emoji.face`生成😀表情符号。如果经常使用某些表情符号，还可以从`emoji`模块导入它们（`[#import emoji:face]`）以在没有`#emoji.`前缀的情况下使用它们。
+    ],
+  ),
+)

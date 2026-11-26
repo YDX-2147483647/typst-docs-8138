@@ -122,7 +122,7 @@
             ```
           ],
           epilogue: [
-            = Global Attributes <global-attributes>
+            = #babel(en: [Global Attributes], zh-status: "validated", zh: [全局属性]) <global-attributes>
             These parameters are common to all typed HTML functions. They are
             listed here once instead of explicitly on each element for
             readability.

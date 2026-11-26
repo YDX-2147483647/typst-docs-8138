@@ -1,8 +1,8 @@
 diff --git a/docs/content/index.typ b/docs/content/index.typ
-index 6d8f2de31c..73091154bf 100644
+index 6d8f2de31c..c141e0cb4c 100644
 --- a/docs/content/index.typ
 +++ b/docs/content/index.typ
-@@ -1,5 +1,8 @@
+@@ -1,5 +1,14 @@
 -#include "overview.typ"
 -#include "tutorial/index.typ"
 -#include "reference/index.typ"
@@ -15,3 +15,9 @@ index 6d8f2de31c..73091154bf 100644
 +#include locale + "reference/index.typ"
 +#include locale + "guides/index.typ"
  #include "changelog/index.typ"
++
++#if locale != none {
++  // Passing extra chapters via `docs(extra-chapters: …)` in `main.typ` does not work, because `main.typ` is a symlink and that affects path resolution.
++  // Therefore, we add extra chapters here.
++  include locale + "glossary.typ"
++}

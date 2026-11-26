@@ -2,8 +2,16 @@
 #import "/components/index.typ": docs-category, scope
 
 #show: docs-category.with(
-  title: "Foundations",
-  description: "Documentation for foundational definitions that make up the bedrock of Typst.",
+  title: babel(
+    en: "Foundations",
+    zh-status: "need proofread",
+    zh: "基础",
+  ),
+  description: babel(
+    en: "Documentation for foundational definitions that make up the bedrock of Typst.",
+    zh-status: "need proofread",
+    zh: "Typst中与基础有关联的函数族的文档",
+  ),
   category: "foundations",
   scope-additions: (
     "none": type(none),
@@ -13,15 +21,27 @@
     (
       name: "calc",
       def-target: calc,
-      title: "Calculation",
+      title: babel(
+        en: "Calculation",
+        zh-status: "need proofread",
+        zh: "计算",
+      ),
       scope: scope(std, "calc"),
       definitions: dictionary(calc),
       description: "Documentation for the `calc` module, which contains definitions for mathematical computation.",
-      docs: [
-        Module for calculations and processing of numeric values.
+      docs: babel(
+        en: [
+          Module for calculations and processing of numeric values.
 
-        These definitions are part of the `calc` module and not imported by default.
-      ],
+          These definitions are part of the `calc` module and not imported by default.
+        ],
+        zh-status: "need proofread",
+        zh: [
+          用于计算和处理数字值的模块。
+
+          这些定义是`calc`模块的一部分，不会默认导入。
+        ],
+      ),
     ),
     (
       name: "std",
@@ -64,17 +84,32 @@
     (
       name: "sys",
       def-target: sys,
-      title: "System",
+      title: babel(en: "System", zh-status: "need proofread", zh: "系统"),
       scope: scope(std, "sys"),
       definitions: dictionary(sys),
       description: "Documentation for the `sys` module for system interactions.",
-      docs: [
-        Module for system interactions.
-      ],
+      docs: babel(
+        en: [
+          Module for system interactions.
+        ],
+        zh-status: "need proofread",
+        zh: [
+          用于系统交互的模块。
+        ],
+      ),
     ),
   ),
 )
 
-Foundational types and functions.
+#babel(
+  en: [
+    Foundational types and functions.
 
-Here, you'll find documentation for basic data types like @int[integers] and @str[strings] as well as details about core computational functions.
+    Here, you'll find documentation for basic data types like @int[integers] and @str[strings] as well as details about core computational functions.
+  ],
+  zh-status: "need proofread",
+  zh: [
+    基础类型和函数。
+    在这里，您将找到有关基本数据类型（如@int[整数]和@str[字符串]）以及核心计算功能的详细信息。
+  ],
+)

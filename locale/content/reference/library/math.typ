@@ -7,47 +7,95 @@
 }
 
 #show: docs-category.with(
-  title: "Math",
-  description: "Documentation for math mode and the `math` module, which together enable high-quality math typesetting.",
+  title: babel(
+    en: "Math",
+    zh-status: "need proofread",
+    zh: "数学",
+  ),
+  description: babel(
+    en: "Documentation for math mode and the `math` module, which together enable high-quality math typesetting.",
+    zh-status: "need proofread",
+    zh: "Typst中与数学有关联的函数族的文档",
+  ),
   category: "math",
   scope: scope(std, "math"),
   groups: (
     (
       name: "variants",
-      title: "Variants",
+      title: babel(
+        en: "Variants",
+        zh-status: "need proofread",
+        zh: "变体",
+      ),
       definitions: math-items("serif", "sans", "frak", "mono", "bb", "cal", "scr"),
       description: "Documentation for functions which allow switching to alternative math typefaces.",
-      docs: [
-        Alternate typefaces within formulas.
+      docs: babel(
+        en: [
+          Alternate typefaces within formulas.
 
-        These functions are distinct from the @text function because math fonts contain multiple variants of each letter.
-      ],
+          These functions are distinct from the @text function because math fonts contain multiple variants of each letter.
+        ],
+        zh-status: "need proofread",
+        zh: [
+          公式中的备用字体。
+
+          这些函数与@text\函数不同，因为数学字体包含每个字母的多个变体。
+        ],
+      ),
     ),
     (
       name: "styles",
-      title: "Styles",
+      title: babel(
+        en: "Styles",
+        zh-status: "need proofread",
+        zh: "样式",
+      ),
       definitions: math-items("upright", "italic", "bold"),
       description: "Documentation for functions which allow switching to alternative math letterforms.",
-      docs: [
-        Alternate letterforms within formulas.
+      docs: babel(
+        en: [
+          Alternate letterforms within formulas.
 
-        These functions are distinct from the @text function because math fonts contain multiple variants of each letter.
-      ],
+          These functions are distinct from the @text function because math fonts contain multiple variants of each letter.
+        ],
+        zh-status: "need proofread",
+        zh: [
+          公式中的备用字形。
+
+          这些函数与@text\函数不同，因为数学字体包含每个字母的多个变体。
+        ],
+      ),
     ),
     (
       name: "sizes",
-      title: "Sizes",
+      title: babel(
+        en: "Sizes",
+        zh-status: "need proofread",
+        zh: "大小",
+      ),
       definitions: math-items("display", "inline", "script", "sscript"),
       description: "Documentation for functions which allow switching to alternative math text sizes.",
-      docs: [
-        Forced size styles for expressions within formulas.
+      docs: babel(
+        en: [
+          Forced size styles for expressions within formulas.
 
-        These functions allow manual configuration of the size of equation elements to make them look as in a display/inline equation or as if used in a root or sub/superscripts.
-      ],
+          These functions allow manual configuration of the size of equation elements to make them look as in a display/inline equation or as if used in a root or sub/superscripts.
+        ],
+        zh-status: "need proofread",
+        zh: [
+          强制公式中表达式的大小样式。
+
+          这些函数允许手动配置方程元素的大小，使其看起来像在显示/行内方程中使用或像在根或上/下标中使用一样。
+        ],
+      ),
     ),
     (
       name: "underover",
-      title: "Under/Over",
+      title: babel(
+        en: "Under/Over",
+        zh-status: "need proofread",
+        zh: "下方/上方",
+      ),
       definitions: math-items(
         "underline",
         "overline",
@@ -61,23 +109,43 @@
         "overshell",
       ),
       description: "Documentation for functions that add delimiters above or below parts of an equation.",
-      docs: [
-        Delimiters above or below parts of an equation.
+      docs: babel(
+        en: [
+          Delimiters above or below parts of an equation.
 
-        The braces and brackets further allow you to add an optional annotation below or above themselves.
+          The braces and brackets further allow you to add an optional annotation below or above themselves.
 
-        These functions are intended specifically for adding delimiters. If you want to place two arbitrary parts of an equation over or under one another, without delimiters, use the @math.attach[`attach`] function instead.
-      ],
+          These functions are intended specifically for adding delimiters. If you want to place two arbitrary parts of an equation over or under one another, without delimiters, use the @math.attach[`attach`] function instead.
+        ],
+        zh-status: "need update",
+        zh: [
+          方程的部分上方或下方的定界符。
+
+          大括号和方括号还允许在它们自己的下方或上方添加可选的注释。
+        ],
+      ),
     ),
     (
       name: "roots",
-      title: "Roots",
+      title: babel(
+        en: "Roots",
+        zh-status: "need proofread",
+        zh: "根",
+      ),
       definitions: math-items("root", "sqrt"),
       description: "Documentation for functions that typeset mathematical roots.",
       docs: [
-        Square and non-square roots.
+        #babel(
+          en: [
+            Square and non-square roots.
+          ],
+          zh-status: "need proofread",
+          zh: [
+            平方根和非平方根。
+          ],
+        )
 
-        = Example <example>
+        = #babel(en: [Example], zh-status: "proofread", zh: [示例]) <example>
         ```example
         $ sqrt(3 - 2 sqrt(2)) = sqrt(2) - 1 $
         $ root(3, x) $
@@ -86,38 +154,74 @@
     ),
     (
       name: "attach",
-      title: "Attach",
+      title: babel(
+        en: "Attach",
+        zh-status: "need proofread",
+        zh: "附加",
+      ),
       definitions: math-items("attach", "scripts", "limits"),
       description: "Documentation for functions that allows to precisely attach sub-, superscripts, and limits to parts of an equation.",
       docs: [
-        Subscript, superscripts, and limits.
+        #babel(
+          en: [
+            Subscript, superscripts, and limits.
 
-        Attachments can be displayed either as sub/superscripts, or limits. Typst automatically decides which is more suitable depending on the base, but you can also control this manually with the `scripts` and `limits` functions.
+            Attachments can be displayed either as sub/superscripts, or limits. Typst automatically decides which is more suitable depending on the base, but you can also control this manually with the `scripts` and `limits` functions.
 
-        If you want the base to stretch to fit long top and bottom attachments (for example, an arrow with text above it), use the @math.stretch[`stretch`] function.
+            If you want the base to stretch to fit long top and bottom attachments (for example, an arrow with text above it), use the @math.stretch[`stretch`] function.
+          ],
+          zh-status: "need update",
+          zh: [
+            下标、上标和限制。
 
-        = Example <example>
+            附件可以显示为上/下标或限制。Typst会根据基数自动决定哪个更适合，但您还可以使用`scripts`和`limits`函数手动控制。
+          ],
+        )
+
+        = #babel(en: [Example], zh-status: "proofread", zh: [示例]) <example>
         ```example
         $ sum_(i=0)^n a_i = 2^(1+i) $
         ```
 
-        = Syntax <syntax>
-        This function also has dedicated syntax for attachments after the base: Use the underscore (`_`) to indicate a subscript i.e. bottom attachment and the hat (`^`) to indicate a superscript i.e. top attachment.
+        = #babel(en: [Syntax], zh-status: "proofread", zh: [语法]) <syntax>
+        #babel(
+          en: [
+            This function also has dedicated syntax for attachments after the base: Use the underscore (`_`) to indicate a subscript i.e. bottom attachment and the hat (`^`) to indicate a superscript i.e. top attachment.
+          ],
+          zh-status: "need proofread",
+          zh: [
+            此函数还具有用于在基数之后附加的专用语法：使用下划线（`_`）表示下标，即底部附件，使用脱帽（`^`）表示上标，即顶部附件。
+          ],
+        )
       ],
     ),
     (
       name: "lr",
-      title: "Left/Right",
+      title: babel(
+        en: "Left/Right",
+        zh-status: "need proofread",
+        zh: "左/右",
+      ),
       definitions: math-items("lr", "mid", "abs", "norm", "floor", "ceil", "round"),
       description: "Documentation for functions that enable typesetting of matched, potentially scaled, delimiters.",
       docs: [
-        Delimiter matching.
+        #babel(
+          en: [
+            Delimiter matching.
 
-        The `lr` function allows you to match two delimiters and scale them with the content they contain. While this also happens automatically for delimiters that match syntactically, `lr` allows you to match two arbitrary delimiters and control their size exactly. Apart from the `lr` function, Typst provides a few more functions that create delimiter pairings for absolute, ceiled, and floored values as well as norms.
+            The `lr` function allows you to match two delimiters and scale them with the content they contain. While this also happens automatically for delimiters that match syntactically, `lr` allows you to match two arbitrary delimiters and control their size exactly. Apart from the `lr` function, Typst provides a few more functions that create delimiter pairings for absolute, ceiled, and floored values as well as norms.
 
-        To prevent a delimiter from being matched by Typst, and thus auto-scaled, escape it with a backslash. To instead disable auto-scaling completely, use `{set math.lr(size: 1em)}`.
+            To prevent a delimiter from being matched by Typst, and thus auto-scaled, escape it with a backslash. To instead disable auto-scaling completely, use `{set math.lr(size: 1em)}`.
+          ],
+          zh-status: "need proofread",
+          zh: [
+            定界符匹配。
 
-        = Example <example>
+            `lr`函数允许您匹配两个定界符并按其包含的内容缩放它们。虽然在语法上匹配的定界符也会自动进行，但`lr`允许您匹配两个任意的定界符并精确控制它们的大小。除了`lr`函数外，Typst还提供了一些创建绝对值、上取整和下取整值以及范数的定界符配对的其他函数。
+          ],
+        )
+
+        = #babel(en: [Example], zh-status: "proofread", zh: [示例]) <example>
         ```example
         $ [a, b/2] $
         $ lr(]sum_(x=1)^n], size: #50%) x $

@@ -479,7 +479,7 @@
     zh: [注意 / Info],
   ),
   siteNoticeBannerDescription: babel(
-    // TODO: These descriptions should be rewritten.
+    // TODO: The en and ja descriptions should be rewritten.
     en: [
       This site is generated using the static site generator developed by the #link("https://github.com/typst-community")[Typst Community]. Please adjust the text content of this banner according to your usage requirements. At Typst GmbH's request, when publishing documentation, you must clearly indicate that it is non-official and display the version of Typst being documented. For details, refer to #link("https://github.com/typst/typst/issues/874#issuecomment-2273854138")[Issue \#874 on typst/typst].
     ],
@@ -489,11 +489,12 @@
 
       This site provides a Japanese translation of the #link("https://typst.app/docs/")[Typst v#sys.version documentation] maintained by the "#link("https://github.com/typst-jp")[Typst Japanese Community]" with permission from Typst GmbH. We recommend using this alongside the #link("https://typst.app/docs/")[official documentation]. We welcome contributions through Issues and Pull Requests on #link("https://github.com/typst-jp/docs")[our GitHub repository] for both translation improvements and website enhancements. Feel free to join #link("https://discord.gg/9xF7k4aAuH")[our Discord server "Kumihan Club"].
     ],
-    zh-status: "need update",
+    zh-status: "proofread",
     zh: [
-      本站经 Typst GmbH 许可，提供 #link("https://typst.app/docs/")[Typst v#sys.version 官方文档]的翻译，由#link("https://github.com/typst-doc-cn")[中文社区]维护。建议与#link("https://typst.app/docs/")[官方文档]一同阅读，因为可能存在错译、漏译或过时信息。如有意改进翻译内容或网站本身，可在#link("https://github.com/typst-doc-cn/docs-8138")[GitHub]上提出 Issue、发起 Pull Requests。此外，也欢迎加入#link("https://qm.qq.com/q/MQO6j6jCw2")[「Typst 非官方中文交流群」（QQ 793548390）]。
+      // 此段应与`overview.typ`首段译注同步更新
+      本站经 Typst GmbH 许可，提供 #link("https://typst.app/docs/")[Typst v#sys.version + dev #stdx.commit 官方文档]的翻译，由#link("https://github.com/typst-doc-cn")[中文社区]维护。目前翻译很不完全，存疑部分会标注⚠️，过时部分会标注⚠️💀。遇到这种情况，可单击页面上方或下方「转到官方文档」参照阅读。如有意改进翻译内容或网站本身，可在#link("https://github.com/typst-doc-cn/docs-8138")[GitHub]上提出 issue、发起 pull request。此外，也欢迎加入#link("https://qm.qq.com/q/MQO6j6jCw2")[「Typst 非官方中文交流群」（QQ 793548390）]。
 
-      This site provides a Chinese translation of the #link("https://typst.app/docs/")[Typst v#sys.version documentation] maintained by the “#link("https://github.com/typst-doc-cn")[Typst Chinese Community]” with permission from Typst GmbH. We recommend using this alongside the #link("https://typst.app/docs/")[official documentation]. We welcome contributions through Issues and Pull Requests on #link("https://github.com/typst-doc-cn/docs-8138")[our GitHub repository] for both translation improvements and website enhancements. Feel free to join #link("https://qm.qq.com/q/MQO6j6jCw2")[our QQ chat group “Typst 非官方中文交流群” (793548390)].
+      This site provides a Chinese translation of the #link("https://typst.app/docs/")[Typst v#sys.version documentation] maintained by the “#link("https://github.com/typst-doc-cn")[Typst Chinese Community]” with permission from Typst GmbH. The current translation is far from complete. Uncertain parts are marked with ⚠️, and outdated parts are marked with ⚠️💀. In such cases, you can click 转到官方文档 at the top or bottom of the page to read the page alongside the official version. We welcome contributions through issues and pull requests on #link("https://github.com/typst-doc-cn/docs-8138")[our GitHub repository] for both translation improvements and website enhancements. Feel free to join #link("https://qm.qq.com/q/MQO6j6jCw2")[our QQ chat group “Typst 非官方中文交流群” (793548390)].
     ],
   ),
 )
