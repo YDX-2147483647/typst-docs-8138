@@ -55,6 +55,10 @@
   [show-set规则],
   [详见@reference:styling:show-rules],
 
+  [everything show rule],
+  [show-全部规则],
+  [仅出现于@tutorial:making-a-template:set-and-show-rules；首次出现应予以解释],
+
   gap,
 
   [markup (mode)],
@@ -88,8 +92,8 @@
   [可灵活翻译成「在一行之内」等],
 
   [block-level math],
-  [独行公式],
-  [可灵活翻译成「独占一行」等],
+  [独行公式#footnote[避免将block-level译作「块级」。尽管「块级」一词本身无歧义，但它容易让人误以为「内容块」之类的都算block-level。]],
+  [可灵活翻译成「独占整行#footnote[注意不能译作「独占一行」。]」等],
 
   gap,
 
@@ -208,11 +212,23 @@
 
   [(square) bracket],
   [方括号],
-  `[[ ]]`,
+  `{[ ]}`,
 
   [angle bracket],
   [尖括号],
   `< >`,
+
+  [(curly) brace],
+  [大括号],
+  `{{ }}`,
+
+  [slash],
+  [斜线],
+  `/`,
+
+  [backslash],
+  [反斜杠#footnote[斜「线」与反斜「杠」特意没统一。Typst文档中，斜线通常与分数线对应，用「线」更合适；而反斜杠一般只是指那个字符，用「杠」更合适。况且北大CCL语料库也显示「斜线」比「斜杠」常用，但「反斜杠」比「反斜线」常用。另外，GB/T 15834—2011 将斜线称作「分隔号」。]],
+  `\`,
 
   gap,
 

@@ -183,11 +183,11 @@ Once you have entered code mode with `#`, you don't need to use further hashes u
   [`[$x &= 2 \ &= 3$]`],
   [@math[Math]],
 
-  babel(en: [Variable access], zh-status: "need proofread", zh: [变量访问]),
+  babel(en: [Variable access], zh-status: "proofread", zh: [获取变量]),
   [`[$#x$, $pi$]`],
   [@math[Math]],
 
-  babel(en: [Field access], zh-status: "need proofread", zh: [字段访问]),
+  babel(en: [Field access], zh-status: "proofread", zh: [获取字段]),
   [`[$arrow.r.long$]`],
   [@reference:scripting:fields[Scripting]],
 
@@ -286,15 +286,15 @@ Once you have entered code mode with `#`, you don't need to use further hashes u
   [``` [`print(1)`]```],
   [@raw],
 
-  babel(en: [Variable access], zh-status: "need proofread", zh: [变量访问]),
+  babel(en: [Variable access], zh-status: "proofread", zh: [获取变量]),
   [`{x}`],
   [@reference:scripting:blocks[Scripting]],
 
-  babel(en: [Code block], zh-status: "need proofread", zh: [代码块]),
+  babel(en: [Code block], zh-status: "proofread", zh: [脚本块]),
   [`{{ let x = 1; x + 2 }}`],
   [@reference:scripting:blocks[Scripting]],
 
-  babel(en: [Content block], zh-status: "need proofread", zh: [文档内容块]),
+  babel(en: [Content block], zh-status: "proofread", zh: [内容块]),
   [`{[*Hello*]}`],
   [@reference:scripting:blocks[Scripting]],
 
@@ -322,7 +322,7 @@ Once you have entered code mode with `#`, you don't need to use further hashes u
   [`{x = 1}`],
   [@reference:scripting:operators[Scripting]],
 
-  babel(en: [Field access], zh-status: "need proofread", zh: [字段访问]),
+  babel(en: [Field access], zh-status: "proofread", zh: [获取字段]),
   [`{x.y}`],
   [@reference:scripting:fields[Scripting]],
 
